@@ -1,6 +1,8 @@
 let dataPortfolio = [];
 let idsPortfolioElements = [];
 let countPortfolioElements = 0;
+let name = "Pedro Isac";
+let nameAtual = "P";
 
 /* CREATE ELEMENT PORTFOLIO */
 function createPortfolioElement(title, link, img, type) {
@@ -43,13 +45,27 @@ function createPortfolioElement(title, link, img, type) {
   ];
 }
 
+/* ANIMATION NAME */
+let indexName = 1;
+setInterval(function () {
+  if ($("#name").text() !== name && indexName < name.length) {
+    nameAtual += name[indexName];
+    $("#name").text(nameAtual);
+    indexName++;
+  } else {
+    nameAtual = "P";
+    $("#name").text(nameAtual);
+    indexName = 1;
+  }
+}, 400);
+
 /* ANIMATION PORTFOLIO ELEMENT */
 $(window).scroll(function () {
   for (let item of idsPortfolioElements) {
     $("#" + item).css({ opacity: 0, transition: "2s" });
     if (
       $(window).scrollTop() >
-      $("#" + item).offset().top - $(window).height() / 1.5
+      $("#" + item).offset().top - $(window).height()
     ) {
       $("#" + item).css({
         "animation-name": "portfolioElementAnimationScroll",
