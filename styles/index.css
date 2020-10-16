@@ -110,14 +110,13 @@
 @keyframes portfolioElementAnimationScroll {
   0% {
     opacity: 0;
-    transform: translate(100px, 0px);
+    transform: translateY(50px);
   }
   50% {
     opacity: 0.5;
-    transform: translate(50px, 0px);
+    transform: translateY(25px);
   }
   100% {
     opacity: 1;
-    transform: translate(0px);
   }
 }
