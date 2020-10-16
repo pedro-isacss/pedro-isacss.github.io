@@ -1,0 +1,20 @@
+{
+  "files": {
+    "main.css": "/portfolio/social-dash/build/static/css/main.73d25a5a.chunk.css",
+    "main.js": "/portfolio/social-dash/build/static/js/main.0fad2811.chunk.js",
+    "main.js.map": "/portfolio/social-dash/build/static/js/main.0fad2811.chunk.js.map",
+    "runtime~main.js": "/portfolio/social-dash/build/static/js/runtime~main.ef04d8b8.js",
+    "runtime~main.js.map": "/portfolio/social-dash/build/static/js/runtime~main.ef04d8b8.js.map",
+    "static/js/2.8eb66105.chunk.js": "/portfolio/social-dash/build/static/js/2.8eb66105.chunk.js",
+    "static/js/2.8eb66105.chunk.js.map": "/portfolio/social-dash/build/static/js/2.8eb66105.chunk.js.map",
+    "index.html": "/portfolio/social-dash/build/index.html",
+    "precache-manifest.9585e4497b25bced76fdd62869903ccb.js": "/portfolio/social-dash/build/precache-manifest.9585e4497b25bced76fdd62869903ccb.js",
+    "service-worker.js": "/portfolio/social-dash/build/service-worker.js",
+    "static/css/main.73d25a5a.chunk.css.map": "/portfolio/social-dash/build/static/css/main.73d25a5a.chunk.css.map",
+    "static/media/icon-facebook.svg": "/portfolio/social-dash/build/static/media/icon-facebook.a7383764.svg",
+    "static/media/icon-instagram.svg": "/portfolio/social-dash/build/static/media/icon-instagram.991487fe.svg",
+    "static/media/icon-twitter.svg": "/portfolio/social-dash/build/static/media/icon-twitter.810ccee8.svg",
+    "static/media/icon-up.svg": "/portfolio/social-dash/build/static/media/icon-up.95f916a5.svg",
+    "static/media/icon-youtube.svg": "/portfolio/social-dash/build/static/media/icon-youtube.8499da12.svg"
+  }
+}
