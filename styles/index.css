@@ -3,6 +3,7 @@
 .header {
   padding: 50px 30px;
   background-color: var(--whiteDark);
+  height: 100vh;
 }
 
 .social-container img {
@@ -26,18 +27,19 @@
 }
 
 .links-container {
-  margin: 15px 0;
+  width: 100%;
 }
 
 .links-container a {
   border: 1px solid var(--theme);
   padding: 5px 10px;
-  max-width: 150px;
+  max-width: 200px;
   width: 100%;
   text-align: center;
   margin: 0 10px;
   background-color: var(--white);
   color: var(--black);
+  margin: 7px 0;
 }
 
 .links-container a:hover {
@@ -79,6 +81,7 @@
   font-weight: 700;
 }
 
+/* RESPONSIVE */
 @media (max-width: 450px) {
   .info-portfolioElement-container {
     flex-direction: column;
@@ -92,5 +95,21 @@
   }
   .portfolio-container {
     padding: 30px 20px;
+  }
+}
+
+/* ANIMATIONS */
+@keyframes portfolioElementAnimationScroll {
+  0% {
+    opacity: 0;
+    transform: translate(100px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translate(50px);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(0px);
   }
 }

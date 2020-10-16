@@ -1,6 +1,10 @@
 let dataPortfolio = [];
+let idsPortfolioElements = [];
+let countPortfolioElements = 0;
 
-function createElementPortfolio(title, link, img, type) {
+/* CREATE ELEMENT PORTFOLIO */
+function createPortfolioElement(title, link, img, type) {
+  countPortfolioElements++;
   let portfolioContainer = document.querySelector("div.portfolio-container");
 
   let elementContainer = document.createElement("a");
@@ -11,6 +15,10 @@ function createElementPortfolio(title, link, img, type) {
 
   elementContainer.setAttribute("href", link);
   elementContainer.setAttribute("class", "portfolioElement");
+  elementContainer.setAttribute(
+    "id",
+    "portfolioElement" + countPortfolioElements
+  );
   if (type === "Front-End") {
     elementContainer.setAttribute("target", "__blank");
   }
@@ -29,14 +37,41 @@ function createElementPortfolio(title, link, img, type) {
   elementContainer.appendChild(infoContainer);
 
   portfolioContainer.appendChild(elementContainer);
+  idsPortfolioElements = [
+    ...idsPortfolioElements,
+    "portfolioElement" + countPortfolioElements,
+  ];
 }
 
+/* ANIMATION PORTFOLIO ELEMENT */
+$(window).scroll(function () {
+  for (let item of idsPortfolioElements) {
+    $("#" + item).css({ opacity: 0, transition: "2s" });
+    if (
+      $(window).scrollTop() >
+      $("#" + item).offset().top - $(window).height() / 1.5
+    ) {
+      $("#" + item).css({
+        "animation-name": "portfolioElementAnimationScroll",
+        "animation-duration": "2s",
+        "animation-iteration-count": 1,
+        opacity: 1,
+      });
+    } else {
+      $("#" + item).css({
+        animation: "none",
+      });
+    }
+  }
+});
+
+/* GET PORTFOLIO ELEMENTS */
 fetch("../data/portfolio.json")
   .then((response) => response.json())
   .then((res) => {
     dataPortfolio = res;
     dataPortfolio.map((element) => {
-      createElementPortfolio(
+      createPortfolioElement(
         element["title"],
         element["link"],
         element["img"],
