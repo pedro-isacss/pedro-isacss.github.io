@@ -1,0 +1,79 @@
+.dash-container {
+  margin: 20px 0px;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-column-gap: 30px;
+}
+
+.dash-container .card-dash-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: hsl(227, 47%, 96%);
+  padding: 20px;
+  border-radius: 5px;
+}
+
+.dash-container .card-dash-container .user-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.dash-container .card-dash-container .user-container span {
+  font-size: 12px;
+  margin-left: 10px;
+}
+
+.dash-container .card-dash-container .number-followers-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+}
+
+.dash-container
+  .card-dash-container
+  .number-followers-container
+  .number-followers {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.dash-container
+  .card-dash-container
+  .number-followers-container
+  .followers-name {
+  color: hsl(232, 10%, 57%);
+  letter-spacing: 2px;
+  font-size: 12px;
+}
+
+.dash-container .card-dash-container .statics-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(26, 170, 26);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.dash-container .card-dash-container .statics-container img {
+  margin-right: 5px;
+}
+
+.dash-container .card-dash-container input {
+  margin-top: 15px;
+  border: none;
+  padding: 3px;
+  text-align: center;
+  border-radius: 5px;
+}
+
+@media (max-width: 450px) {
+  .dash-container {
+    grid-template-columns: auto;
+    row-gap: 30px;
+  }
+}

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Pong</title>
+    <!--CSS-->
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <!--HEADER-->
+    <header>
+      <h1 id="title">Pong</h1>
+    </header>
+
+    <!--DIV START-->
+    <div id="start">
+      <input id="nameplayer1" type="text" value="Player1" />
+      <input id="nameplayer2" type="text" value="Player2" />
+      <input id="numberpoints" type="number" value="10" />
+      <button id="btnplay" type="button">Play</button>
+    </div>
+
+    <!--PLAY-->
+    <div id="play">
+      <canvas id="player1" width="10px" height="50px"></canvas>
+      <canvas id="bola" width="20px" height="20px"></canvas>
+      <canvas id="player2" width="10px" height="50px"></canvas>
+    </div>
+
+    <!--Footer-->
+    <footer id="rodape">
+      <span
+        ><a href="https://www.instagram.com/ss.pedroisac/"
+          >&copy; Pedro Isac</a
+        ></span
+      >
+    </footer>
+
+    <!--SCRIPTS-->
+    <script src="scripts.js"></script>
+  </body>
+</html>

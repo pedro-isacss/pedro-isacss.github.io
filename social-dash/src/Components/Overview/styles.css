@@ -1,0 +1,72 @@
+.overview-container h2 {
+  color: gray;
+}
+
+.overview-container .overview-container-data {
+  margin-top: 10px;
+  display: grid;
+  grid-template-columns: 23% 23% 23% 23%;
+  grid-template-rows: auto auto;
+  column-gap: 30px;
+  row-gap: 30px;
+}
+
+.overview-container .overview-container-data .overview-card {
+  background-color: hsl(227, 47%, 96%);
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+
+.overview-container .overview-container-data .overview-card div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+.overview-container
+  .overview-container-data
+  .overview-card
+  .overview-title-card
+  span {
+  font-weight: 700;
+  font-size: 0.9em;
+}
+
+.overview-container
+  .overview-container-data
+  .overview-card
+  .overview-data-card
+  .overview-card-number {
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.overview-container
+  .overview-container-data
+  .overview-card
+  .overview-data-card
+  .overview-card-statistic {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: rgb(19, 173, 19);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.overview-container
+  .overview-container-data
+  .overview-card
+  .overview-data-card
+  .overview-card-statistic
+  img {
+  margin-right: 3px;
+}
+
+@media (max-width: 450px) {
+  .overview-container .overview-container-data {
+    grid-template-columns: auto;
+    row-gap: 30px;
+  }
+}

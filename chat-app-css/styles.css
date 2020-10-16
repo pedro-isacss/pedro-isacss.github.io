@@ -1,0 +1,284 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap");
+:root {
+  --white: hsl(0, 0%, 100%);
+  --magenta: hsl(293, 100%, 63%);
+  --violet: hsl(264, 100%, 61%);
+  --receivedColor: hsl(276, 55%, 52%);
+  --receivedBackground: hsl(267, 22%, 90%);
+  --sentColor: hsl(271, 15%, 43%);
+  --sentBackground: hsl(0, 16%, 96%);
+  --violetDark: hsl(271, 36%, 24%);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+}
+
+.app-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.app-container #draw {
+  position: absolute;
+  top: 0;
+  left: -100px;
+  background-image: linear-gradient(var(--magenta), var(--violet));
+  height: 85vh;
+  width: 100%;
+  max-width: 500px;
+  z-index: -1;
+  border-bottom-left-radius: 50%;
+  border-bottom-right-radius: 50%;
+}
+
+.app-container .phone-container {
+  width: 100%;
+  max-width: 230px;
+  height: 100%;
+  max-height: 490px;
+  background-color: var(--white);
+  margin: 0 60px;
+  border-radius: 30px;
+  box-shadow: 3px 5px 50px rgba(0, 0, 0, 0.4);
+}
+
+.app-container .phone-container .phone-header {
+  width: 100%;
+  max-width: 200px;
+  height: 100%;
+  max-height: 70px;
+  background-image: linear-gradient(to right, var(--violet), var(--magenta));
+  margin: auto;
+  margin-top: 10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  border-bottom-right-radius: 3px;
+  border-bottom-left-radius: 3px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.app-container .phone-container .phone-header .user-container {
+  align-self: flex-start;
+  margin-left: 10px;
+  margin-top: 15px;
+}
+
+.app-container .phone-container .phone-header .user-container .user-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container .phone-container .phone-header .user-container .user-info img {
+  width: 100%;
+  max-width: 30px;
+  border-radius: 50%;
+  border: 2px solid var(--white);
+}
+
+.app-container .phone-container .phone-header .user-container .user-info div {
+  margin-left: 10px;
+}
+
+.app-container
+  .phone-container
+  .phone-header
+  .user-container
+  .user-info
+  div
+  span {
+  font-size: 0.6em;
+  display: block;
+  color: var(--white);
+}
+
+.app-container
+  .phone-container
+  .phone-header
+  .user-container
+  .user-info
+  div
+  #status-user {
+  font-size: 0.5em;
+  opacity: 0.6;
+  margin-top: 5px;
+}
+
+.app-container .phone-container .phone-header #draw-header {
+  width: 100%;
+  max-width: 130px;
+  height: 100%;
+  max-height: 25px;
+  border-radius: 20px;
+  background-color: var(--white);
+  margin-top: -30px;
+  position: absolute;
+}
+
+.app-container .phone-container .chat-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 200px;
+  margin: auto;
+}
+
+.app-container .phone-container .message-received {
+  background-color: var(--receivedBackground);
+  color: var(--receivedColor);
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  font-size: 0.7em;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.app-container .phone-container .gallery {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 5px;
+}
+
+.app-container .phone-container .gallery img {
+  width: 100%;
+  max-width: 50px;
+  margin-right: 5px;
+  border-radius: 10px;
+}
+
+.app-container .phone-container .message-sent {
+  background-color: var(--white);
+  box-shadow: 0.5px 1px 8px rgba(0, 0, 0, 0.2);
+  display: block;
+  width: 100%;
+  max-width: 150px;
+  font-size: 0.7em;
+  margin-left: 15px;
+  margin-top: 5px;
+  padding: 5px;
+  border-radius: 10px;
+  color: var(--sentColor);
+  align-self: flex-end;
+}
+
+.app-container .phone-container .transfer-message {
+  background-image: linear-gradient(to right, var(--magenta), var(--violet));
+  margin-top: 5px;
+  padding: 5px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 10px;
+}
+
+.app-container .phone-container .transfer-message #draw-transfer {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 1px solid var(--white);
+  margin-right: 10px;
+}
+
+.app-container .phone-container .transfer-message .info-transfer {
+  color: var(--white);
+  font-size: 0.5em;
+  opacity: 0.8;
+}
+
+.app-container .phone-container .transfer-message .cash-transfer {
+  color: var(--white);
+  font-weight: 700;
+}
+
+.app-container .phone-container .transfer-message .info-transfer,
+.app-container .phone-container .transfer-message .cash-transfer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app-container .phone-container .send-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0.5px 1px 8px rgba(0, 0, 0, 0.2);
+  margin: 10px 15px;
+  padding: 3px;
+  border-radius: 10px;
+}
+
+.app-container .phone-container .send-message input {
+  border: none;
+  outline: none;
+}
+
+.app-container .phone-container .send-message button {
+  background-color: var(--violetDark);
+  border: none;
+  padding: 3px;
+  border-radius: 50%;
+  color: var(--white);
+  font-weight: 700;
+  width: 100%;
+  max-width: 20px;
+}
+
+.app-container .text-container {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 60px;
+}
+
+.app-container .text-container h1 {
+  font-weight: 1.4em;
+  color: var(--violetDark);
+}
+
+.app-container .text-container p {
+  opacity: 0.5;
+  margin-top: 30px;
+}
+
+@media (max-width: 530px) {
+  .app-container {
+    flex-direction: column;
+    margin-top: 100px;
+  }
+  .app-container #draw {
+    height: 50vh;
+    left: -200px;
+  }
+  .app-container .phone-container {
+    margin: 50px 0px;
+    height: 650px;
+  }
+  .app-container .text-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .app-container .text-container p {
+    text-align: center;
+    margin: 30px 30px 0 30px;
+  }
+}
+
+@media (max-width: 320px) {
+  .app-container {
+    flex-direction: column;
+    margin-top: 150px;
+  }
+}

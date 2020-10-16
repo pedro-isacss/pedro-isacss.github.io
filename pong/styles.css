@@ -1,0 +1,105 @@
+/*All*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+html,
+body {
+  width: 100%;
+}
+
+/*Header*/
+header {
+  background-color: darkgreen;
+  text-align: center;
+  padding: 20px;
+}
+header h1 {
+  font-size: 35px;
+  color: snow;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/*Start*/
+div#start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  margin-top: 8%;
+  padding: 50px;
+  border: 2px solid darkgreen;
+}
+div#start input {
+  width: 350px;
+  padding: 5px;
+  margin: 10px;
+  border: 2px solid rgb(43, 150, 97);
+  font-size: 15px;
+  outline: darkgreen;
+}
+div#start button {
+  width: 100px;
+  padding: 10px;
+  background-color: rgb(43, 150, 97);
+  color: snow;
+  border: none;
+  font-size: 15px;
+}
+div#start button:hover {
+  background-color: darkgreen;
+}
+
+/*Play*/
+div#play {
+  width: 500px;
+  height: 300px;
+  background-color: green;
+  margin: auto;
+  margin-top: 8%;
+  border-bottom: 10px solid black;
+  border-top: 10px solid black;
+  display: none;
+}
+canvas#player1 {
+  background-color: gold;
+  margin-left: 20px;
+  margin-top: 125px;
+  border: 3px solid black;
+}
+canvas#player2 {
+  background-color: gold;
+  float: right;
+  margin-right: 20px;
+  margin-top: 125px;
+  border: 3px solid black;
+}
+canvas#bola {
+  background-color: gold;
+  border-radius: 20px;
+  margin-left: 210px;
+  border: 3px solid black;
+  position: absolute;
+  margin-top: 140px;
+}
+
+/*Footer*/
+#rodape {
+  background-color: green;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+  height: 10%;
+  color: snow;
+  font-weight: 900;
+  padding: 25px;
+}
+
+#rodape span a {
+  color: white;
+}

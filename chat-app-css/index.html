@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Chat app css illustration master</title>
+
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: absolute;
+        bottom: 10px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      @media (max-width: 530px) {
+        .attribution {
+          position: unset;
+          margin: 30px 0;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="app-container">
+      <canvas id="draw"></canvas>
+      <div class="phone-container">
+        <div class="phone-header">
+          <canvas id="draw-header"> </canvas>
+          <div class="user-container">
+            <div class="user-info">
+              <img src="images/avatar.jpg" alt="user" />
+              <div>
+                <span id="name-user">Samuel Green</span>
+                <span id="status-user">Available to Walk</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="chat-container">
+          <span class="message-received"
+            >That sounds great. I’d be happy with that.</span
+          >
+          <span class="message-received"
+            >Could you send over some pictures of your dog, please?</span
+          >
+          <div class="gallery">
+            <img src="images/dog-image-1.jpg" alt="dog1" />
+            <img src="images/dog-image-2.jpg" alt="dog2" />
+            <img src="images/dog-image-3.jpg" alt="dog3" />
+          </div>
+          <span class="message-sent"
+            >Here are a few pictures. She’s a happy girl!</span
+          >
+          <span class="message-sent">Can you make it?</span>
+          <span class="message-received">
+            She looks so happy! The time we discussed works. How long shall I
+            take her out for?
+          </span>
+          <span class="transfer-message">
+            <span class="info-transfer"
+              ><canvas id="draw-transfer"></canvas> 30 minute walk</span
+            >
+            <span class="cash-transfer">$29</span>
+          </span>
+          <span class="transfer-message">
+            <span class="info-transfer"
+              ><canvas id="draw-transfer"></canvas> 1 hour walk</span
+            >
+            <span class="cash-transfer">$49</span>
+          </span>
+        </div>
+        <div class="send-message">
+          <input type="text" placeholder="Type a message…" />
+          <button>></button>
+        </div>
+      </div>
+      <div class="text-container">
+        <h1>Simple booking</h1>
+        <p>
+          Stay in touch with our dog walkers through the chat interface. This
+          makes it easy to discuss arrangements and make bookings. Once the walk
+          has been completed you can rate your walker and book again all through
+          the chat.
+        </p>
+      </div>
+      <!-- ATTRIBUTION -->
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by
+        <a href="https://www.instagram.com/ss.pedroisac/">Pedro Isac</a>.
+      </div>
+    </div>
+  </body>
+</html>

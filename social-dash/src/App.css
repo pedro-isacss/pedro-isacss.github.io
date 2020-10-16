@@ -1,0 +1,75 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.App {
+  padding: 50px 100px;
+}
+
+.dark-app {
+  background-color: hsl(230, 17%, 14%);
+}
+
+.dark-app .dash-container .card-dash-container,
+.dark-app .overview-container .overview-container-data .overview-card {
+  background-color: hsl(228, 28%, 20%);
+}
+
+.dark-app .dash-container .card-dash-container input {
+  background-color: hsl(232, 19%, 15%);
+  color: #fff;
+}
+
+.dark-app span,
+.dark-app h1,
+.dark-app h2 {
+  color: #fff;
+}
+
+.dark-app span a {
+  color: gray;
+  font-weight: 700;
+}
+
+input {
+  cursor: pointer;
+  outline: none;
+}
+
+@media (max-width: 450px) {
+  .dark-app,
+  .App {
+    padding: 30px;
+  }
+  .dark-app .dash-container {
+    grid-template-columns: auto;
+    row-gap: 30px;
+  }
+  .dark-app .overview-container .overview-container-data {
+    grid-template-columns: auto;
+    row-gap: 30px;
+  }
+  .dark-app .header-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .dark-app .header-container .info-container h1 {
+    font-size: 1em;
+  }
+  .dark-app .header-container .info-container span {
+    font-size: 0.7em;
+  }
+  .dark-app .header-container .darkmode-container {
+    margin-top: 10px;
+    width: 100%;
+  }
+  .dark-app .header-container .darkmode-container label {
+    width: 100%;
+    justify-content: space-between;
+  }
+}

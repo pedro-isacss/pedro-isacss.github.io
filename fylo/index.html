@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Frontend Mentor | Fylo data storage component</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        position: relative;
+        margin-top: 20px;
+        color: gray;
+      }
+      .attribution a {
+        color: #fff;
+        font-weight: 700;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="component-container">
+      <section class="main">
+        <img src="./images/logo.svg" alt="Logo Fylo" />
+        <div class="buttons">
+          <button>
+            <img src="./images/icon-document.svg" alt="" />
+          </button>
+          <button>
+            <img src="./images/icon-folder.svg" alt="" />
+          </button>
+          <button>
+            <img src="./images/icon-upload.svg" alt="" />
+          </button>
+        </div>
+      </section>
+
+      <section class="progress-container">
+        <span
+          >You’ve used <span class="bold">815 GB</span> of your storage</span
+        >
+        <div class="progress-bar">
+          <div id="progress">
+            <div id="ball"></div>
+          </div>
+        </div>
+        <div class="legend-container">
+          <span><span class="bold"> 0 GB </span></span>
+          <span><span class="bold"> 1000 GB </span></span>
+        </div>
+        <div class="alert-progress">
+          <span><span class="bold"> 185</span> GB LEFT</span>
+        </div>
+      </section>
+    </div>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by
+      <a href="https://www.instagram.com/ss.pedroisac/">Pedro Isac</a>.
+    </div>
+  </body>
+</html>
