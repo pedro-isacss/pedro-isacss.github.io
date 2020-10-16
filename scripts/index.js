@@ -65,7 +65,7 @@ $(window).scroll(function () {
     $("#" + item).css({ opacity: 0, transition: "2s" });
     if (
       $(window).scrollTop() >
-      $("#" + item).offset().top - $(window).height()
+      $("#" + item).offset().top - $(window).height() / 1.2
     ) {
       $("#" + item).css({
         "animation-name": "portfolioElementAnimationScroll",
