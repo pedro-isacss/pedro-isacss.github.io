@@ -229,10 +229,7 @@ button {
     width: 90%;
     height: 1px;
   }
-  .jobs-list-container .job-container .job-info-container {
-    height: auto;
-    margin-top: 10px;
-  }
+
   .jobs-list-container .job-container .job-info-container .job-info h1 {
     max-width: 18ch;
     font-size: 1em;
@@ -244,6 +241,8 @@ button {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+    height: auto;
+    margin-top: 10px;
   }
   .jobs-list-container .job-container .job-info-container .job-info {
     align-items: center;
