@@ -18,7 +18,6 @@ interface Data {
 
 function App() {
   const [data, setData] = useState<Data[]>([]);
-  const [dataFiltered, setDataFiltered] = useState<Data[]>([]);
   const [tags, setTags] = useState<string[]>([]);
   let defaultTags = [
     "HTML",
@@ -39,30 +38,79 @@ function App() {
   ];
 
   useEffect(() => {
-    getJobs();
-  }, []);
-
-  function filterJobs(t: string) {
-    setData(
-      data.filter(
-        (job) =>
-          job["description"].toUpperCase().indexOf(t.toUpperCase()) !== -1
-      )
-    );
-  }
-
-  async function getJobs() {
-    await fetch(
+    fetch(
       "https://api.allorigins.win/raw?url=https://jobs.github.com/positions.json"
     )
       .then((response) => response.json())
       .then((res) => {
         setData(res);
       });
+  }, [tags]);
+
+  function createJob(job: Data) {
+    return (
+      <div className="job-container" key={job["id"]}>
+        <div className="job-info-container">
+          <div className="job-img-container">
+            <img
+              src={
+                job["company_logo"] !== null
+                  ? job["company_logo"]
+                  : businessLogo
+              }
+            />
+          </div>
+          <div className="job-info">
+            <h2>{job["company"]}</h2>
+            <a href={job["url"]}>
+              <h1>{job["title"]}</h1>
+            </a>
+            <div>
+              <span>{job["type"]}</span>
+              <span className="divisor">-</span>
+              <span>{job["location"]}</span>
+            </div>
+          </div>
+        </div>
+        <div className="hr-container">
+          <canvas style={{ backgroundColor: "#555" }}></canvas>
+        </div>
+        <div className="job-tags">
+          {defaultTags.map((tag) => {
+            if (
+              job["description"].toUpperCase().indexOf(tag.toUpperCase()) !== -1
+            ) {
+              return (
+                <button
+                  onClick={() => {
+                    if (tags.indexOf(tag) === -1) {
+                      setTags([...tags, tag]);
+                    }
+                  }}
+                >
+                  {tag}
+                </button>
+              );
+            }
+          })}
+        </div>
+      </div>
+    );
   }
 
   return (
     <div className="App">
+      <div className="attribution">
+        Challenge by{" "}
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">
+          Frontend Mentor
+        </a>
+        . Coded by{" "}
+        <a href="https://www.instagram.com/ss.pedroisac/#" target="_blank">
+          Pedro Isac
+        </a>
+        .
+      </div>
       <header className="header">
         <div className="search">
           <div className="search-tags">
@@ -73,26 +121,6 @@ function App() {
                   <button
                     onClick={() => {
                       setTags(tags.filter((item) => item !== tag));
-                      if (tags.filter((item) => item !== tag).length === 0) {
-                        getJobs();
-                      } else {
-                        setData([
-                          {
-                            id: "string",
-                            company_logo: "string",
-                            company: "string",
-                            url: "string",
-                            title: "string",
-                            type: "string",
-                            location: "string",
-                            description: "string",
-                          },
-                        ]);
-                        getJobs().then(() => {
-                          tags.map((item) => filterJobs(item));
-                          console.log(data);
-                        });
-                      }
                     }}
                   >
                     x
@@ -105,7 +133,6 @@ function App() {
             <button
               onClick={() => {
                 setTags([]);
-                getJobs();
               }}
             >
               Clear
@@ -114,57 +141,25 @@ function App() {
         </div>
       </header>
       <div className="jobs-list-container">
-        {data.map((job) => {
-          return (
-            <div className="job-container" key={job["id"]}>
-              <div className="job-info-container">
-                <div className="job-img-container">
-                  <img
-                    src={
-                      job["company_logo"] !== null
-                        ? job["company_logo"]
-                        : businessLogo
-                    }
-                  />
-                </div>
-                <div className="job-info">
-                  <h2>{job["company"]}</h2>
-                  <a href={job["url"]}>
-                    <h1>{job["title"]}</h1>
-                  </a>
-                  <div>
-                    <span>{job["type"]}</span>
-                    <span className="divisor">-</span>
-                    <span>{job["location"]}</span>
-                  </div>
-                </div>
-              </div>
-              <hr />
-              <div className="job-tags">
-                {defaultTags.map((tag) => {
+        {tags.length === 0
+          ? data.map((job) => createJob(job))
+          : data
+              .filter((job) => {
+                let tag;
+                let is = true;
+                for (tag of tags) {
                   if (
                     job["description"]
                       .toUpperCase()
-                      .indexOf(tag.toUpperCase()) !== -1
+                      .indexOf(tag.toUpperCase()) === -1
                   ) {
-                    return (
-                      <button
-                        onClick={() => {
-                          if (tags.indexOf(tag) === -1) {
-                            setTags([...tags, tag]);
-                            filterJobs(tag);
-                          }
-                        }}
-                      >
-                        {tag}
-                      </button>
-                    );
+                    is = false;
                   }
-                })}
-              </div>
-            </div>
-          );
-        })}
+                  console.log(tag);
+                }
+                return is;
+              })
+              .map((item) => createJob(item))}
       </div>
     </div>
   );

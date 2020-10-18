@@ -18,9 +18,15 @@
 button {
   outline: none;
 }
-
-hr {
+.hr-container {
   display: none;
+}
+
+.attribution {
+  background-color: silver;
+  text-align: center;
+  padding: 5px;
+  font-size: 12px;
 }
 
 /* HEADER */
@@ -33,6 +39,8 @@ hr {
   background-position: center center;
   padding: 50px 100px;
   background-repeat: no-repeat;
+  position: sticky;
+  top: 0;
 }
 
 .header .search {
@@ -157,9 +165,8 @@ hr {
 .jobs-list-container .job-container .job-info-container .job-info h1 {
   font-size: 1em;
   max-width: 35ch;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  margin-top: 5px;
+  line-height: 1.5em;
 }
 
 .jobs-list-container .job-container .job-info-container .job-info h2 {
@@ -183,8 +190,16 @@ hr {
   border: none;
   padding: 5px;
   margin-left: 15px;
+  margin: 5px 7px;
   border-radius: 5px;
   cursor: pointer;
+}
+
+.jobs-list-container .job-container .job-tags {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-wrap: wrap;
 }
 
 .jobs-list-container .job-container .job-tags button:hover {
@@ -199,17 +214,62 @@ hr {
   }
   .job-container {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
-  hr {
+  .hr-container {
     display: block;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0;
+  }
+  .hr-container canvas {
     width: 90%;
+    height: 1px;
+  }
+  .jobs-list-container .job-container .job-info-container {
+    height: auto;
+    margin-top: 10px;
   }
   .jobs-list-container .job-container .job-info-container .job-info h1 {
-    width: 50%;
+    max-width: 18ch;
+    font-size: 1em;
+    word-wrap: normal;
+    text-align: center;
+    margin-top: 10px;
   }
   .job-info-container {
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
+  }
+  .jobs-list-container .job-container .job-info-container .job-info {
+    align-items: center;
+    height: auto;
+  }
+  .jobs-list-container .job-container .job-tags {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .jobs-list-container .job-container .job-info-container .job-info div {
+    text-align: center;
+    margin: 10px 0;
+  }
+  .jobs-list-container .job-container .job-info-container .job-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 7px;
+  }
+  .jobs-list-container
+    .job-container
+    .job-info-container
+    .job-img-container
+    img {
+    margin: 0;
   }
 }
