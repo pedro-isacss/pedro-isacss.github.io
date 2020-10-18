@@ -15,6 +15,14 @@
   font-family: "Spartan", sans-serif;
 }
 
+button {
+  outline: none;
+}
+
+hr {
+  display: none;
+}
+
 /* HEADER */
 .header {
   display: flex;
@@ -84,6 +92,12 @@
   background-color: transparent;
   color: var(--desaturatedDarkCyan);
   font-weight: 700;
+  cursor: pointer;
+  outline: none;
+}
+
+.header .search .btn-clear-container button:hover {
+  text-decoration: underline;
 }
 
 /* JOB */
@@ -176,4 +190,26 @@
 .jobs-list-container .job-container .job-tags button:hover {
   background-color: var(--desaturatedDarkCyan);
   color: #fff;
+}
+
+/* RESPONSIVE */
+@media (max-width: 860px) {
+  .header .search .search-tags {
+    flex-wrap: wrap;
+  }
+  .job-container {
+    flex-direction: column;
+  }
+  hr {
+    display: block;
+    width: 90%;
+  }
+  .jobs-list-container .job-container .job-info-container .job-info h1 {
+    width: 50%;
+  }
+  .job-info-container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
 }
