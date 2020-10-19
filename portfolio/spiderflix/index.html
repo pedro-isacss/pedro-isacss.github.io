@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SpiderFlix</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="app">
+      <!-- SIDE BAR -->
+      <div class="sidebar-container">
+        <input type="text" id="search" placeholder="Search..." />
+        <div class="sidebar">
+          <!-- LAST RELEASES -->
+          <div class="last-releases-container">
+            <span>Last releases</span>
+            <a href="#"
+              >Spider-Man vs Doctor Octopus
+              <img
+                src="images/play-circle-outline.png"
+                alt="play-circle-outline"
+              />
+            </a>
+            <a href="#"
+              >Spider-Man vs Dennis Carradine
+              <img
+                src="images/play-circle-outline.png"
+                alt="play-circle-outline"
+              />
+            </a>
+            <a href="#"
+              >Spider-Man vs Venom
+              <img
+                src="images/play-circle-outline.png"
+                alt="play-circle-outline"
+              />
+            </a>
+            <div>
+              <canvas class="divisor"></canvas>
+              <button>
+                <img src="./images/menu-down.png" alt="menu-down" />
+              </button>
+            </div>
+          </div>
+
+          <!-- POPULAR MOVIES -->
+          <div class="popular-container">
+            <span>Popular movies</span>
+            <div class="popular-content">
+              <div>
+                <a href="#" style="background-image: url(./images/movie1.jpg)">
+                  <img
+                    src="./images/play-circle-outline.png"
+                    alt="play-circle-outline"
+                    class="play-hover"
+                  />
+                </a>
+              </div>
+              <div>
+                <a href="#" style="background-image: url(./images/movie2.jpg)">
+                  <img
+                    src="./images/play-circle-outline.png"
+                    alt="play-circle-outline"
+                    class="play-hover"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#" class="btn-popular-content">See all movies</a>
+          </div>
+          <canvas class="divisor"></canvas>
+          <!-- POPULAR SERIES -->
+          <div class="popular-container">
+            <span>Popular series</span>
+            <div class="popular-content">
+              <div>
+                <a href="#" style="background-image: url(./images/serie1.jpg)">
+                  <img
+                    src="./images/play-circle-outline.png"
+                    alt="play-circle-outline"
+                    class="play-hover"
+                  />
+                </a>
+              </div>
+              <div>
+                <a href="#" style="background-image: url(./images/serie2.jpg)">
+                  <img
+                    src="./images/play-circle-outline.png"
+                    alt="play-circle-outline"
+                    class="play-hover"
+                  />
+                </a>
+              </div>
+            </div>
+            <a href="#" class="btn-popular-content">See all series</a>
+          </div>
+          <canvas id="divisorwhite"></canvas>
+          <!-- DARK MODE -->
+          <div class="darkmode">
+            <span>Dark mode</span>
+            <button>
+              <span>Off</span>
+              <img src="images/logo1.png" alt="logo" />
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- MAIN SECTION -->
+      <div class="main-section">
+        <div class="banner-container">
+          <div class="text-banner">
+            <span class="title">New episodes</span>
+            <span class="description">Starting 21/09/10</span>
+          </div>
+        </div>
+        <div class="banner-controlers">
+          <button class="active"></button>
+          <button></button>
+          <button></button>
+        </div>
+        <div class="catalog-container"></div>
+      </div>
+    </div>
+  </body>
+</html>

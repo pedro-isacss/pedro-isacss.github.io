@@ -1,0 +1,336 @@
+@import url("https://fonts.googleapis.com/css2?family=Patrick+Hand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Patua+One&display=swap");
+
+:root {
+  --redTheme: #b11313;
+  --blueTheme: #2b3784;
+  --red: #ff0000;
+  --white: #fff;
+  --gradientTheme: linear-gradient(to bottom, var(--red), var(--redTheme));
+  --gradientButton: linear-gradient(to right, var(--blueTheme), #0424f3);
+  --radius: 20px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Patrick Hand", cursive;
+  height: 100vh;
+}
+
+input,
+button {
+  outline: none;
+  cursor: pointer;
+}
+
+::-webkit-input-placeholder {
+  color: var(--white);
+}
+
+.divisor {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 240px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--redTheme);
+}
+
+.app {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--redTheme);
+  padding: 0 48px;
+}
+
+.sidebar-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25%;
+  padding: 48px 0;
+}
+
+#search {
+  max-width: 240px;
+  width: 100%;
+  max-height: 32px;
+  height: 100%;
+  padding: 5px 8px;
+  border-radius: var(--radius);
+  border: 1px solid var(--white);
+  background-color: var(--redTheme);
+  color: var(--white);
+  position: relative;
+  z-index: 4;
+  background-image: url(./images/search.png);
+  background-repeat: no-repeat;
+  background-size: 24px;
+  background-position: right center;
+  background-origin: content-box;
+}
+
+.sidebar {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  background-image: var(--gradientTheme);
+  border-radius: var(--radius);
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  margin-top: -16px;
+}
+
+.last-releases-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.last-releases-container span {
+  color: var(--white);
+  font-size: 16px;
+  height: auto;
+}
+
+.last-releases-container a {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: var(--redTheme);
+  border-radius: var(--radius);
+  text-decoration: none;
+  color: var(--white);
+  max-width: 240px;
+  width: 100%;
+  max-height: 24px;
+  height: 100%;
+  padding: 3px 8px;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.last-releases-container a:hover {
+  opacity: 0.8;
+}
+
+.last-releases-container a img {
+  width: 16px;
+  height: 16px;
+}
+
+.last-releases-container div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 48px;
+  margin-top: 16px;
+}
+
+.last-releases-container div button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background-color: var(--blueTheme);
+  border-radius: 50%;
+  margin-top: -16px;
+  z-index: 1;
+}
+
+.last-releases-container div button:hover {
+  opacity: 0.8;
+}
+
+.last-releases-container div button img {
+  width: 24px;
+  height: 24px;
+}
+
+.popular-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  margin: 24px 0;
+  max-width: 240px;
+  width: 100%;
+  height: auto;
+}
+
+.popular-container span {
+  color: var(--white);
+  height: auto;
+  font-size: 16px;
+}
+
+.popular-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  height: auto;
+  margin-top: 16px;
+}
+
+.popular-content div {
+  height: 144px;
+  min-width: 110px;
+  background-color: black;
+  border-radius: var(--radius);
+}
+
+.popular-content div a {
+  border-radius: var(--radius);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-height: 144px;
+  min-width: 110px;
+  background-size: cover;
+  background-position: center center;
+}
+
+.play-hover {
+  display: none;
+  width: 24px;
+  height: 24px;
+  z-index: 1;
+}
+
+.popular-container div a:hover .play-hover {
+  display: block;
+}
+
+.popular-container div a:hover {
+  opacity: 0.3;
+}
+
+.btn-popular-content {
+  height: auto;
+  background-image: var(--gradientButton);
+  width: 100%;
+  color: var(--white);
+  text-align: center;
+  border-radius: var(--radius);
+  text-decoration: none;
+  margin-top: 16px;
+  font-size: 12px;
+  padding: 3px;
+}
+
+.btn-popular-content:hover {
+  opacity: 0.8;
+}
+
+#divisorwhite {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 240px;
+  width: 100%;
+  height: 1px;
+  background-color: var(--white);
+}
+
+.darkmode {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 240px;
+  width: 100%;
+  margin-top: 24px;
+}
+
+.darkmode span {
+  color: var(--white);
+  height: auto;
+}
+
+.darkmode button {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 24px;
+  width: 56px;
+  border: 1px solid var(--white);
+  border-radius: var(--radius);
+  padding: 0px 5px;
+  background: none;
+}
+
+.darkmode button span {
+  font-size: 12px;
+}
+
+.darkmode button img {
+  max-height: 32px;
+  margin-left: 15px;
+}
+
+.main-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 64px 0 0 48px;
+  width: 75%;
+}
+
+.banner-container {
+  width: 100%;
+  background-image: url(./images/spider.png), var(--gradientTheme);
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-size: 20%, 100%;
+  border-radius: var(--radius);
+  font-family: "Patua One", cursive;
+  height: auto;
+  padding: 64px 48px 40px 48px;
+}
+
+.text-banner {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+}
+
+.text-banner .title {
+  font-family: "Patua One", cursive;
+  font-size: 56px;
+  height: auto;
+  color: #c4c4c4;
+}
+
+.text-banner .description {
+  font-family: "Patua One", cursive;
+  font-size: 24px;
+  height: auto;
+  color: #c4c4c4;
+}
+
+.banner-controlers button {
+  width: 25px;
+  margin: 0 5px;
+  height: 3px;
+  border: none;
+}
+
+.banner-controlers .active {
+  background-color: var(--blueTheme);
+}
