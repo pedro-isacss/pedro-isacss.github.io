@@ -21,6 +21,18 @@
   font-family: "Patrick Hand", cursive;
 }
 
+::-webkit-scrollbar-track {
+  background-color: rgb(165, 18, 18);
+}
+::-webkit-scrollbar {
+  width: 1px;
+  background: var(--gradientTheme);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--red);
+  border-radius: var(--radius);
+}
+
 input,
 button {
   outline: none;
@@ -397,6 +409,9 @@ button {
   .popular-content div a {
     width: 80px;
   }
+  .movies-continer {
+    gap: 16px;
+  }
 }
 
 @media (max-width: 1030px) {
@@ -408,6 +423,22 @@ button {
   }
 }
 
+@media (max-width: 290px) {
+  .popular-content div {
+    height: 115px;
+  }
+  .popular-content div a {
+    width: 85px;
+    border-radius: 20px;
+  }
+}
+
+@media (max-width: 940px) {
+  .movies-continer {
+    grid-template-columns: auto auto auto;
+  }
+}
+
 @media (max-width: 500px) {
   .app {
     flex-direction: column;
@@ -416,8 +447,12 @@ button {
   }
   .sidebar-container {
     width: 100%;
-
-    height: auto;
+    height: 100%;
+    padding: 5px 0;
+  }
+  .sidebar {
+    overflow: hidden;
+    padding-bottom: 5px;
   }
   .popular-content div {
     height: 140px;
@@ -477,15 +512,5 @@ button {
     width: 24px;
     height: 24px;
     z-index: 1;
-  }
-}
-
-@media (max-width: 290px) {
-  .popular-content div {
-    height: 115px;
-  }
-  .popular-content div a {
-    width: 85px;
-    border-radius: 20px;
   }
 }
