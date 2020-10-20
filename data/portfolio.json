@@ -1,11 +1,5 @@
 [
   {
-    "title": "SpiderFlix",
-    "link": "https://pedro-isacss.github.io/portfolio/spiderflix/index.html",
-    "img": "../images/portfolio-spiderflix.jpg",
-    "type": "Front-End"
-  },
-  {
     "title": "Job Listings Master",
     "link": "https://pedro-isacss.github.io/portfolio/static-job-listings-master/build/index.html",
     "img": "../images/portfolio-static-job-listings-master.jpg",
