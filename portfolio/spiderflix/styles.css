@@ -479,3 +479,13 @@ button {
     z-index: 1;
   }
 }
+
+@media (max-width: 290px) {
+  .popular-content div {
+    height: 115px;
+  }
+  .popular-content div a {
+    width: 85px;
+    border-radius: 20px;
+  }
+}
