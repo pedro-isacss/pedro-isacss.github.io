@@ -5,9 +5,12 @@
   --redTheme: #b11313;
   --blueTheme: #2b3784;
   --red: #ff0000;
+  --dark: #000;
+  --redDark: #3c0000;
   --white: #fff;
   --gradientTheme: linear-gradient(to bottom, var(--red), var(--redTheme));
   --gradientButton: linear-gradient(to right, var(--blueTheme), #0424f3);
+  --gradientDark: linear-gradient(to bottom, var(--redDark), var(--dark));
   --radius: 20px;
 }
 

@@ -15,21 +15,21 @@
           <!-- LAST RELEASES -->
           <div class="last-releases-container">
             <span>Last releases</span>
-            <a href="#"
+            <a href="#" class="last-episode"
               >Spider-Man vs Doctor Octopus
               <img
                 src="images/play-circle-outline.png"
                 alt="play-circle-outline"
               />
             </a>
-            <a href="#"
+            <a href="#" class="last-episode"
               >Spider-Man vs Dennis Carradine
               <img
                 src="images/play-circle-outline.png"
                 alt="play-circle-outline"
               />
             </a>
-            <a href="#"
+            <a href="#" class="last-episode"
               >Spider-Man vs Venom
               <img
                 src="images/play-circle-outline.png"
@@ -99,9 +99,9 @@
           <!-- DARK MODE -->
           <div class="darkmode">
             <span>Dark mode</span>
-            <button>
-              <span>Off</span>
-              <img src="images/logo1.png" alt="logo" />
+            <button id="btn-darkmode">
+              <span class="span-darkmode">Off</span>
+              <img src="images/logo1.png" alt="logo" class="img-darkmode" />
             </button>
           </div>
         </div>
@@ -230,5 +230,67 @@
         </div>
       </div>
     </div>
+    <script>
+      let btnDM = document.getElementById("btn-darkmode");
+      let dark = false;
+
+      btnDM.addEventListener("click", function () {
+        if (dark) {
+          let i;
+          let app = document.querySelector("div.app");
+          let sideBar = document.querySelector("div.sidebar");
+          let banner = document.querySelector("div.banner-container");
+          let search = document.querySelector("input#search");
+          let lastEpesode = document.querySelectorAll("a.last-episode");
+          let divisor = document.querySelectorAll("canvas.divisor");
+          let imgDM = document.querySelector("img.img-darkmode");
+          let spanDM = document.querySelector("span.span-darkmode");
+
+          app.style.backgroundColor = "var(--redTheme)";
+          sideBar.style.backgroundImage = "var(--gradientTheme)";
+          banner.style.backgroundImage =
+            "url(./images/spider.png), var(--gradientTheme)";
+          search.style.backgroundColor = "var(--redTheme)";
+          for (i of lastEpesode) {
+            i.style.backgroundColor = "var(--redTheme)";
+          }
+          for (i of divisor) {
+            i.style.backgroundColor = "var(--redTheme)";
+          }
+          imgDM.src = "./images/logo1.png";
+          imgDM.style.marginLeft = "15px";
+          btnDM.style.flexDirection = "row";
+          spanDM.innerHTML = "Off";
+          dark = false;
+        } else {
+          let i;
+          let app = document.querySelector("div.app");
+          let sideBar = document.querySelector("div.sidebar");
+          let banner = document.querySelector("div.banner-container");
+          let search = document.querySelector("input#search");
+          let lastEpesode = document.querySelectorAll("a.last-episode");
+          let divisor = document.querySelectorAll("canvas.divisor");
+          let imgDM = document.querySelector("img.img-darkmode");
+          let spanDM = document.querySelector("span.span-darkmode");
+
+          app.style.backgroundColor = "var(--dark)";
+          sideBar.style.backgroundImage = "var(--gradientDark)";
+          banner.style.backgroundImage =
+            "url(./images/spider.png), var(--gradientDark)";
+          search.style.backgroundColor = "var(--dark)";
+          for (i of lastEpesode) {
+            i.style.backgroundColor = "var(--dark)";
+          }
+          for (i of divisor) {
+            i.style.backgroundColor = "var(--dark)";
+          }
+          imgDM.src = "./images/logo2.png";
+          imgDM.style.marginLeft = "-15px";
+          btnDM.style.flexDirection = "row-reverse";
+          spanDM.innerHTML = "On";
+          dark = true;
+        }
+      });
+    </script>
   </body>
 </html>
