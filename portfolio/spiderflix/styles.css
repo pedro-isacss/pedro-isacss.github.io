@@ -429,5 +429,53 @@ button {
   .main-section {
     padding: 16px;
     width: 100%;
+    margin-top: 16px;
+  }
+  .banner-container {
+    background-size: 40%, 100%;
+    border-radius: var(--radius);
+    font-family: "Patua One", cursive;
+    height: auto;
+    padding: 64px 0px 16px 24px;
+  }
+
+  .text-banner .title {
+    font-size: 32px;
+  }
+
+  .text-banner .description {
+    font-size: 24px;
+  }
+
+  .movies-continer {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 24px;
+    margin-top: 16px;
+  }
+
+  .movie {
+    height: 200px;
+    min-width: 110px;
+    background-color: black;
+    border-radius: var(--radius);
+  }
+
+  .movie a {
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    min-width: 110px;
+    background-size: cover;
+    background-position: center center;
+  }
+
+  .movie a img {
+    display: none;
+    width: 24px;
+    height: 24px;
+    z-index: 1;
   }
 }
