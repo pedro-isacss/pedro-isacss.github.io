@@ -191,7 +191,7 @@ button {
 
 .popular-content div {
   height: 144px;
-  min-width: 110px;
+  max-width: 110px;
   background-color: black;
   border-radius: var(--radius);
 }
@@ -202,7 +202,7 @@ button {
   justify-content: center;
   align-items: center;
   height: 100%;
-  min-width: 110px;
+  width: 110px;
   background-size: cover;
   background-position: center center;
 }
@@ -388,4 +388,46 @@ button {
 
 .movie a:hover {
   opacity: 0.3;
+}
+
+@media (max-width: 1110px) {
+  .popular-content div {
+    height: 110px;
+  }
+  .popular-content div a {
+    width: 80px;
+  }
+}
+
+@media (max-width: 1030px) {
+  .popular-content div {
+    height: 100px;
+  }
+  .popular-content div a {
+    width: 70px;
+  }
+}
+
+@media (max-width: 500px) {
+  .app {
+    flex-direction: column;
+    height: auto;
+    padding: 16px;
+  }
+  .sidebar-container {
+    width: 100%;
+
+    height: auto;
+  }
+  .popular-content div {
+    height: 140px;
+  }
+  .popular-content div a {
+    width: 110px;
+    border-radius: 20px;
+  }
+  .main-section {
+    padding: 16px;
+    width: 100%;
+  }
 }
