@@ -1,0 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Bangers&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-image: url(./images/background.png),
+    linear-gradient(to bottom, #050521, #161686);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 32px;
+}
+
+.characters-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: linear-gradient(180deg, #070737 0%, rgba(0, 0, 160, 0) 100%);
+  padding: 8px;
+  max-height: 260px;
+}
+
+.character {
+  margin: 8px 0;
+}
+
+.character img {
+  max-width: 56px;
+  width: 100%;
+  max-height: 56px;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.controler-characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #00f;
+  border-radius: 50%;
+}
+
+.controler-characters img {
+  max-width: 24px;
+  width: 100%;
+  max-height: 24px;
+  height: 100%;
+}
+
+.main-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: fit-content;
+  padding: 0 8px;
+}
+
+.logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Bangers", cursive;
+  color: #eee;
+  font-size: 32px;
+}
+
+.logo-container img {
+  max-height: 120px;
+  height: 100%;
+}
+
+.logo-container span {
+  margin-top: 8px;
+}
+
+.movies-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+
+.movies-container a {
+  margin: 0 8px;
+}
+
+.movie img {
+  max-width: 164px;
+  width: 100%;
+  max-height: 192px;
+  height: 100%;
+}
+
+.controler-movies {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background-color: #00f;
+  border-radius: 50%;
+}
+
+.controler-movies img {
+  max-width: 24px;
+  width: 100%;
+  max-height: 24px;
+  height: 100%;
+}
+
+#text {
+  font-family: "Roboto Mono", monospace;
+  color: #eee;
+  text-align: center;
+  margin-top: 32px;
+  width: 50%;
+}
+
+.social-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.social-container a {
+  margin: 8px 0;
+}
+
+.social-container a img {
+  max-width: 164px;
+  width: 100%;
+  max-height: 192px;
+  height: 100%;
+}
