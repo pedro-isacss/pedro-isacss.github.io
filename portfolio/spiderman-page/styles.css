@@ -53,10 +53,8 @@ main {
 }
 
 .controler-characters img {
-  max-width: 24px;
-  width: 100%;
-  max-height: 24px;
-  height: 100%;
+  width: 24px;
+  height: 24px;
 }
 
 .main-container {
