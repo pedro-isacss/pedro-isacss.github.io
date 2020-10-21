@@ -10,8 +10,8 @@
     <main>
       <!-- CHARACTERS -->
       <div class="characters-container">
-        <a href="#" class="controler-characters" id="top">
-          <img src="./images/chevron-up.png" alt="chevron-up" />
+        <a href="#" class="controler-characters">
+          <img src="./images/chevron-up.png" id="top" alt="chevron-up" />
         </a>
         <a href="#" class="character">
           <img src="./images/spider-man.jpg" alt="spider-man" />
@@ -22,8 +22,8 @@
         <a href="#" class="character">
           <img src="./images/green-elf.jpg" alt="green-elf" />
         </a>
-        <a href="#" class="controler-characters" id="bottom">
-          <img src="./images/chevron-down.png" alt="chevron-down" />
+        <a href="#" class="controler-characters">
+          <img src="./images/chevron-down.png" id="bottom" alt="chevron-down" />
         </a>
       </div>
       <!-- MAIN -->
@@ -42,10 +42,10 @@
           <a href="#" class="movie">
             <img src="./images/movie2.jpg" alt="movie2" />
           </a>
-          <a href="#" class="movie">
+          <a href="#" class="movie disabled">
             <img src="./images/movie3.jpg" alt="movie3" />
           </a>
-          <a href="#" class="movie">
+          <a href="#" class="movie disabled">
             <img src="./images/movie4.jpg" alt="movie4" />
           </a>
           <a href="#" class="controler-movies" id="bottom">
@@ -66,10 +66,20 @@
         <a href="#">
           <img src="./images/facebook.png" alt="facebook" />
         </a>
-        <a href="#">
+        <a href="https://www.instagram.com/ss.pedroisac/">
           <img src="./images/instagram.png" alt="instagram" />
         </a>
       </div>
     </main>
+
+    <!-- SCRIPTS -->
+    <script>
+      if (screen.width <= 550) {
+        let top = document.getElementById("top");
+        let bottom = document.getElementById("bottom");
+        top.src = "./images/chevron-left.png";
+        bottom.src = "./images/chevron-right.png";
+      }
+    </script>
   </body>
 </html>
