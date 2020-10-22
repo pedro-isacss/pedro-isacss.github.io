@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+}
+
+.footer {
+  position: absolute;
+  bottom: 10px;
+}
+
+.footer a {
+  color: white;
+}
+
+/* LOGO1 */
+.logo1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.logo1 span {
+  margin-top: 15px;
+  font-family: "Squada One", cursive;
+  font-size: 50px;
+  color: white;
+  animation-name: opacitySpan;
+  animation-duration: 5s;
+  animation-timing-function: 1;
+}
+
+.logo1 div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.stripe {
+  height: 50px;
+  width: 70px;
+  background-color: white;
+  transform: skewY(10deg);
+}
+
+.stripe1 {
+  transform: rotate(70deg);
+  position: absolute;
+  margin-left: -43px;
+  margin-top: 14px;
+  border-radius: 100% 0;
+  animation-name: opacity;
+  animation-duration: 1s;
+  animation-iteration-count: 1;
+}
+
+.stripe2 {
+  transform: rotate(125deg);
+  border-radius: 100% 0;
+  animation-name: down;
+  animation-duration: 6s;
+  animation-iteration-count: 1;
+}
+
+.stripe3 {
+  transform: rotate(-70deg);
+  position: absolute;
+  margin-left: 40px;
+  margin-top: 14px;
+  border-radius: 0 100%;
+  animation-name: opacity;
+  animation-duration: 2s;
+  animation-iteration-count: 1;
+}
+
+.leaf {
+  position: absolute;
+  width: 150px;
+  height: 8px;
+  background-color: black;
+}
+
+.leaf1 {
+  margin-top: 10px;
+  animation-name: opacity;
+  animation-duration: 3s;
+  animation-iteration-count: 1;
+}
+
+.leaf2 {
+  margin-top: 20px;
+  animation-name: opacity;
+  animation-duration: 4s;
+  animation-iteration-count: 1;
+}
+
+.leaf3 {
+  margin-top: 30px;
+  animation-name: opacity;
+  animation-duration: 5s;
+  animation-iteration-count: 1;
+}
+
+/* ANIMATION */
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes down {
+  0% {
+    position: absolute;
+    top: 0;
+  }
+  25% {
+    position: absolute;
+    top: 10%;
+  }
+  50% {
+    position: absolute;
+    top: 20%;
+  }
+  75% {
+    position: absolute;
+    top: 30%;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes opacitySpan {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}

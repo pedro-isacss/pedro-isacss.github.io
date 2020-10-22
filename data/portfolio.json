@@ -1,5 +1,11 @@
 [
   {
+    "title": "Adidas logo animation",
+    "link": "https://pedro-isacss.github.io/portfolio/adidas-logo-animation/index.html",
+    "img": "../images/portfolio-adidas-logo-animation.jpg",
+    "type": "Animation"
+  },
+  {
     "title": "Spider-man page",
     "link": "https://pedro-isacss.github.io/portfolio/spiderman-page/index.html",
     "img": "../images/portfolio-spiderman-page.jpg",
