@@ -307,6 +307,7 @@ main {
 @media (max-width: 500px) {
   .nav-banner a {
     margin: 0 10px;
+    font-size: 12px;
   }
   .banner-main h2 {
     text-align: center;
