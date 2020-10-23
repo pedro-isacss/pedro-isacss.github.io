@@ -22,12 +22,16 @@ main {
   overflow: auto;
 }
 
-.copy {
+.copy-desktop {
   color: #eee;
   margin-top: 10px;
   position: absolute;
   bottom: 10px;
   text-align: center;
+}
+
+.copy-mobile {
+  display: none;
 }
 
 .characters-container {
@@ -184,5 +188,13 @@ main {
   }
   .disabled {
     display: none;
+  }
+  .copy-desktop {
+    display: none;
+  }
+  .copy-mobile {
+    display: block;
+    color: #eee;
+    margin-top: 10px;
   }
 }
