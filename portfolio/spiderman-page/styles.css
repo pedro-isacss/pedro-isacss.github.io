@@ -19,6 +19,15 @@ main {
   background-repeat: no-repeat;
   background-position: center center;
   padding: 32px;
+  overflow: auto;
+}
+
+.copy {
+  color: #eee;
+  margin-top: 10px;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
 }
 
 .characters-container {
