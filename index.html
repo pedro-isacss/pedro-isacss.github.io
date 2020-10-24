@@ -1,44 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Pedro Isac</title>
-  <link rel="stylesheet" href="./styles/index.css">
-</head>
-<body>
-  <!-- HEADER -->
-  <header class="flex-column-center-center header">
-    <div class="flex-column-center-center content-header">
-      <div class="flex-row-center-center name-logo-container">
-        <img src="./icons/logo.png">
-        <h1 id="name"></h1>
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9SG7SXHDQP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-9SG7SXHDQP");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pedro Isac</title>
+    <link rel="stylesheet" href="./styles/index.css" />
+  </head>
+  <body>
+    <!-- HEADER -->
+    <header class="flex-column-center-center header">
+      <div class="flex-column-center-center content-header">
+        <div class="flex-row-center-center name-logo-container">
+          <img src="./icons/logo.png" />
+          <h1 id="name"></h1>
+        </div>
+        <span>Front-end - UI design</span>
       </div>
-      <span>Front-end - UI design</span>
-    </div>
-    <div class="flex-column-center-center links-container">
-      <a href="#">Services</a>
-      <a href="#">Products</a>
-    </div>
-    <div class="social-container">
-      <a href="#" target="__blank">
-        <img src="./icons/mail.png" >
-      </a>
-      <a href="https://instagram.com/ss.pedroisac/" target="__blank">
-        <img src="./icons/instagram.png" >
-      </a>
-      <a href="https://github.com/pedro-isacss" target="__blank">
-        <img src="./icons/github.png">
-      </a>
-    </div>
-  </header>
+      <div class="flex-column-center-center links-container">
+        <a href="#">Services</a>
+        <a href="#">Products</a>
+      </div>
+      <div class="social-container">
+        <a href="#" target="__blank">
+          <img src="./icons/mail.png" />
+        </a>
+        <a href="https://instagram.com/ss.pedroisac/" target="__blank">
+          <img src="./icons/instagram.png" />
+        </a>
+        <a href="https://github.com/pedro-isacss" target="__blank">
+          <img src="./icons/github.png" />
+        </a>
+      </div>
+    </header>
 
-  <!-- PORTFOLIO -->
-  <div class="grid-3-300 portfolio-container flex-row-center-center">
-  </div>
+    <!-- PORTFOLIO -->
+    <div class="grid-3-300 portfolio-container flex-row-center-center"></div>
 
-  <!-- SCRIPTS -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="./scripts/index.js"></script>
-</body>
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./scripts/index.js"></script>
+  </body>
 </html>
