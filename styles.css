@@ -102,6 +102,7 @@ button {
 @media (max-width: 530px) {
   .nav-main {
     flex-direction: column;
+    padding: 10px 20px;
   }
   .nav-link {
     display: none;
