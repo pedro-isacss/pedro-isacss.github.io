@@ -2,11 +2,13 @@
 
 :root {
   --theme: #12114b;
+  --themeStrong: #09092b;
   --white: #ffffff;
   --black: #000000;
   --whiteDark: #eeeeee;
   --textDarkLight: #888888;
   --textDarkStrong: #333333;
+  --gradient: linear-gradient(to right, var(--themeStrong), var(--theme));
 }
 
 * {
@@ -61,18 +63,27 @@ button {
 
 .nav-main {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 20px;
   position: sticky;
   top: 0;
-  background-color: var(--theme);
+  background-image: var(--gradient);
   z-index: 2;
+  border-bottom: 1px solid rgba(21, 19, 116, 0.7);
 }
 
 .nav-link {
   margin: 0 10px;
   color: var(--white);
+}
+
+.nav-link-main {
+  background-color: var(--white);
+  color: var(--theme);
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-weight: 700;
 }
 
 .nav-button {
@@ -95,9 +106,7 @@ button {
   .nav-link {
     display: none;
     margin: 10px 0;
-    background-color: white;
     width: 200px;
-    color: var(--theme);
     padding: 5px 0;
     text-align: center;
   }

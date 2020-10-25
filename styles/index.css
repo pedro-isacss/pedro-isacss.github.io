@@ -4,10 +4,12 @@
   padding: 50px 30px;
   background-color: var(--whiteDark);
   height: 100vh;
+  background-image: var(--gradient);
 }
 
 .name-logo-container h1 {
   font-weight: 500;
+  color: var(--white);
 }
 
 .social-container {
