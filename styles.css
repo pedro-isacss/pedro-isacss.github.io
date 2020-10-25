@@ -21,6 +21,10 @@ a {
   text-decoration: none;
 }
 
+button {
+  outline: none;
+}
+
 /* CLASSES */
 .flex-column-center-center {
   display: flex;
@@ -50,9 +54,56 @@ a {
   max-width: 100%;
 }
 
+.name-section {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.nav-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0;
+  position: sticky;
+  top: 0;
+  background-color: var(--theme);
+  z-index: 2;
+}
+
+.nav-link {
+  margin: 0 10px;
+  color: var(--white);
+}
+
+.nav-button {
+  display: none;
+  border: none;
+  background-color: transparent;
+}
+
 /* RESPONSIVE */
 @media (max-width: 700px) {
   .grid-3-300 {
     grid-template-columns: auto auto;
+  }
+}
+
+@media (max-width: 530px) {
+  .nav-main {
+    flex-direction: column;
+  }
+  .nav-link {
+    display: none;
+    margin: 10px 0;
+    background-color: white;
+    width: 200px;
+    color: var(--theme);
+    padding: 5px 0;
+    text-align: center;
+  }
+  .nav-button {
+    display: block;
+    align-self: flex-end;
+    margin-right: 10px;
   }
 }
