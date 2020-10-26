@@ -74,6 +74,10 @@ button {
   border-bottom: 1px solid rgba(21, 19, 116, 0.7);
 }
 
+.logo-img {
+  max-width: 50px;
+}
+
 .nav-link {
   margin: 0 10px;
   color: var(--white);
@@ -114,7 +118,11 @@ button {
   }
   .nav-button {
     display: block;
-    align-self: flex-end;
-    margin-right: 10px;
+    position: absolute;
+    right: 20px;
+    top: 23px;
+  }
+  .logo-img-link {
+    align-self: flex-start;
   }
 }
