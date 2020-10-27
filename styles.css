@@ -66,7 +66,7 @@ button {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px;
+  padding: 10px 20px;
   position: sticky;
   top: 0;
   background-image: var(--gradient);
@@ -81,6 +81,19 @@ button {
 .nav-link {
   margin: 0 10px;
   color: var(--white);
+}
+
+.logo-img-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo-img-link h1 {
+  color: var(--white);
+}
+
+.link-container {
 }
 
 .nav-link-main {

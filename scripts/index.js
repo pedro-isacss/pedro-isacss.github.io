@@ -1,8 +1,8 @@
 let dataPortfolio = [];
 let idsPortfolioElements = [];
 let countPortfolioElements = 0;
-let name = "Pedro Isac";
-let nameAtual = "P";
+let name = "Hello welcome!";
+let nameAtual = "H";
 
 /* CREATE ELEMENT PORTFOLIO */
 function createPortfolioElement(title, link, img, type) {
@@ -45,16 +45,16 @@ function createPortfolioElement(title, link, img, type) {
   ];
 }
 
-/* ANIMATION NAME */
+/* ANIMATION TYPING */
 let indexName = 1;
 setInterval(function () {
-  if ($("#name").text() !== name && indexName < name.length) {
+  if ($("#text").text() !== name && indexName < name.length) {
     nameAtual += name[indexName];
-    $("#name").text(nameAtual);
+    $("#text").text(nameAtual);
     indexName++;
   } else {
-    nameAtual = "P";
-    $("#name").text(nameAtual);
+    nameAtual = "H";
+    $("#text").text(nameAtual);
     indexName = 1;
   }
 }, 400);
