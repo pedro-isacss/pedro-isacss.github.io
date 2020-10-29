@@ -27,7 +27,7 @@ button {
   outline: none;
 }
 
-/* CLASSES */
+/* GENERIC CLASSES */
 .flex-column-center-center {
   display: flex;
   flex-direction: column;

@@ -1,8 +1,6 @@
-let dataPortfolio = [];
-let idsPortfolioElements = [];
-let countPortfolioElements = 0;
-let name = "Hello welcome!";
-let nameAtual = "H";
+let dataProducts = [];
+let idsProductsElements = [];
+let countProductsElements = 0;
 
 /* RESPONSIVE MENU */
 let open = false;
@@ -11,51 +9,48 @@ $(".nav-button").click(function () {
   open = !open;
   if (open) {
     $(".nav-link").css("display", "block");
-    $(".nav-button-img").attr("src", "./icons/close.png");
+    $(".nav-button-img").attr("src", "../../images/icon-close.png");
   } else {
     $(".nav-link").css("display", "none");
-    $(".nav-button-img").attr("src", "./icons/menu.png");
+    $(".nav-button-img").attr("src", "../../images/icon-menu.png");
   }
 });
 
-/* CREATE ELEMENT PORTFOLIO */
-function createPortfolioElement(title, link, img, type) {
-  countPortfolioElements++;
-  let portfolioContainer = document.querySelector("div.portfolio-container");
+/* CREATE ELEMENT PRODUCT */
+function createProductElement(title, link, img, value) {
+  countProductsElements++;
+  let productContainer = document.querySelector("div.products-container");
 
   let elementContainer = document.createElement("a");
   let imgElement = document.createElement("img");
   let infoContainer = document.createElement("div");
   let titleElement = document.createElement("h2");
-  let typeElement = document.createElement("span");
+  let valueElement = document.createElement("span");
 
   elementContainer.setAttribute("href", link);
-  elementContainer.setAttribute("class", "portfolioElement");
+  elementContainer.setAttribute("class", "productsElement");
   elementContainer.setAttribute(
     "id",
-    "portfolioElement" + countPortfolioElements
+    "productsElement" + countProductsElements
   );
-  if (type === "Front-End") {
-    elementContainer.setAttribute("target", "__blank");
-  }
   infoContainer.setAttribute(
     "class",
-    "info-portfolioElement-container flex-row-column-between-center"
+    "info-productsElement-container flex-row-column-between-center"
   );
   imgElement.setAttribute("src", img);
   imgElement.setAttribute("alt", title);
   titleElement.innerHTML = title;
-  typeElement.innerHTML = type;
+  valueElement.innerHTML = value;
 
   infoContainer.appendChild(titleElement);
-  infoContainer.appendChild(typeElement);
+  infoContainer.appendChild(valueElement);
   elementContainer.appendChild(imgElement);
   elementContainer.appendChild(infoContainer);
 
-  portfolioContainer.appendChild(elementContainer);
-  idsPortfolioElements = [
-    ...idsPortfolioElements,
-    "portfolioElement" + countPortfolioElements,
+  productContainer.appendChild(elementContainer);
+  idsProductsElements = [
+    ...idsProductsElements,
+    "productsElement" + countProductsElements,
   ];
 }
 
@@ -73,16 +68,16 @@ setInterval(function () {
   }
 }, 400);
 
-/* ANIMATION PORTFOLIO ELEMENT */
+/* ANIMATION PRODUCTS ELEMENT */
 $(window).scroll(function () {
-  for (let item of idsPortfolioElements) {
+  for (let item of idsProductsElements) {
     $("#" + item).css({ opacity: 0, transition: "2s" });
     if (
       $(window).scrollTop() >
       $("#" + item).offset().top - $(window).height() / 1.2
     ) {
       $("#" + item).css({
-        "animation-name": "portfolioElementAnimationScroll",
+        "animation-name": "productsElementAnimationScroll",
         "animation-duration": "2s",
         "animation-iteration-count": 1,
         opacity: 1,
@@ -95,17 +90,17 @@ $(window).scroll(function () {
   }
 });
 
-/* GET PORTFOLIO ELEMENTS */
-fetch("../data/portfolio.json")
+/* GET PRODUCTS ELEMENTS */
+fetch("../../data/products.json")
   .then((response) => response.json())
   .then((res) => {
-    dataPortfolio = res;
-    dataPortfolio.map((element) => {
-      createPortfolioElement(
+    dataProducts = res;
+    dataProducts.map((element) => {
+      createProductElement(
         element["title"],
         element["link"],
         element["img"],
-        element["type"]
+        element["value"]
       );
     });
   });

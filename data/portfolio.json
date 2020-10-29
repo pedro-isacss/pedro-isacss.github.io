@@ -1,49 +1,49 @@
 [
   {
     "title": "Electronic Week",
-    "link": "https://pedro-isacss.github.io/portfolio/electronic-week/index.html",
+    "link": "../portfolio/electronic-week/index.html",
     "img": "../images/portfolio-electronic-week.jpg",
     "type": "Website and UI"
   },
   {
     "title": "Adidas logo animation",
-    "link": "https://pedro-isacss.github.io/portfolio/adidas-logo-animation/index.html",
+    "link": "../portfolio/adidas-logo-animation/index.html",
     "img": "../images/portfolio-adidas-logo-animation.jpg",
     "type": "Animation"
   },
   {
     "title": "Spider-man page",
-    "link": "https://pedro-isacss.github.io/portfolio/spiderman-page/index.html",
+    "link": "../portfolio/spiderman-page/index.html",
     "img": "../images/portfolio-spiderman-page.jpg",
     "type": "Website and UI"
   },
   {
     "title": "Job Listings Master",
-    "link": "https://pedro-isacss.github.io/portfolio/static-job-listings-master/build/index.html",
+    "link": "../portfolio/static-job-listings-master/build/index.html",
     "img": "../images/portfolio-static-job-listings-master.jpg",
     "type": "Website"
   },
   {
     "title": "Social Dash",
-    "link": "https://pedro-isacss.github.io/portfolio/social-dash/build/index.html",
+    "link": "../portfolio/social-dash/build/index.html",
     "img": "../images/portfolio-social-dash.jpg",
     "type": "Website"
   },
   {
     "title": "Easy Bank",
-    "link": "https://pedro-isacss.github.io/portfolio/easybank/index.html",
+    "link": "../portfolio/easybank/index.html",
     "img": "../images/portfolio-easybank.jpg",
     "type": "Website"
   },
   {
     "title": "Fylo",
-    "link": "https://pedro-isacss.github.io/portfolio/fylo/index.html",
+    "link": "../portfolio/fylo/index.html",
     "img": "../images/portfolio-fylo.jpg",
     "type": "Website"
   },
   {
     "title": "Chat-App-CSS",
-    "link": "https://pedro-isacss.github.io/portfolio/chat-app-css/index.html",
+    "link": "../portfolio/chat-app-css/index.html",
     "img": "../images/portfolio-chat-app-css.jpg",
     "type": "Website"
   }
