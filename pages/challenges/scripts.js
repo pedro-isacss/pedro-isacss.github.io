@@ -38,6 +38,11 @@ function createChallengeElement(title, link, img, type, value) {
   $(".challenges-container").append(elementContainer);
 }
 
+/* ATTENTION */
+$("#close-attention").click(function () {
+  $(".attention").css("display", "none");
+});
+
 /* GET CHALLENGE ELEMENTS */
 fetch("../../data/challenges.json")
   .then((response) => response.json())
