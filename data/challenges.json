@@ -1,0 +1,16 @@
+[
+  {
+    "title": "Electronic week",
+    "img": "../../images/portfolio-electronic-week.jpg",
+    "link": "https://sun.eduzz.com/642089",
+    "type": "Frontend",
+    "value": "R$15,00"
+  },
+  {
+    "title": "Spider-man page",
+    "type": "Frontend",
+    "value": "Free",
+    "img": "../../images/portfolio-spiderman-page.jpg",
+    "link": "../../challenges/spider-man-page.zip"
+  }
+]

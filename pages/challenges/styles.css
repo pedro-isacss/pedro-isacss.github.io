@@ -1,0 +1,72 @@
+@import "../../styles.css";
+
+.challenges-container {
+  padding: 30px;
+  max-width: 100%;
+}
+
+.challengeElement {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #000;
+  box-shadow: 1px 3px 10px rgba(0, 0, 0, 0.4);
+  max-width: 300px;
+  width: 100%;
+}
+
+.challengeElement:hover img {
+  opacity: 0.1;
+}
+
+.challengeElement img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.info-challengeElement-container {
+  padding: 10px;
+}
+
+.challengeElement h2 {
+  font-size: 1.2em;
+  color: var(--white);
+  position: absolute;
+  display: none;
+  text-align: center;
+}
+
+.challengeElement:hover h2 {
+  display: block;
+}
+
+.info-challengeElement-container {
+  background-color: var(--whiteDark);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.info-challengeElement-container span {
+  color: var(--theme);
+  font-size: 0.9em;
+  font-weight: 700;
+}
+
+.info-challengeElement-container .free-challenge {
+  color: green;
+}
+
+@media (max-width: 450px) {
+  .info-challengeElement-container span {
+    margin-top: 5px;
+  }
+  .grid-3-300 {
+    gap: 20px;
+  }
+  .challengeElement h2 {
+    width: 10ch;
+    word-wrap: break-word;
+  }
+}

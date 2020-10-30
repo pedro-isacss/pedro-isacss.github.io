@@ -88,6 +88,7 @@
   color: var(--white);
   position: absolute;
   display: none;
+  text-align: center;
 }
 
 .portfolioElement:hover h2 {
@@ -115,7 +116,8 @@
   .grid-3-300 {
     gap: 20px;
   }
-  .portfolio-container {
-    padding: 30px 20px;
+  .portfolioElement h2 {
+    width: 10ch;
+    word-wrap: break-word;
   }
 }

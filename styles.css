@@ -113,7 +113,7 @@ button {
 /* RESPONSIVE */
 @media (max-width: 700px) {
   .grid-3-300 {
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
   }
 }
 
