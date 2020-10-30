@@ -25,6 +25,7 @@ a {
 
 button {
   outline: none;
+  cursor: pointer;
 }
 
 /* GENERIC CLASSES */
@@ -93,9 +94,6 @@ button {
   color: var(--white);
 }
 
-.link-container {
-}
-
 .nav-link-main {
   background-color: var(--white);
   color: var(--theme);
@@ -108,6 +106,36 @@ button {
   display: none;
   border: none;
   background-color: transparent;
+}
+
+.attention {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  padding: 30px 30px 0 30px;
+  max-width: 100%;
+}
+
+.attention div {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: var(--white);
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: var(--theme);
+  width: 100%;
+}
+
+.attention button {
+  background-color: transparent;
+  border: none;
+}
+
+.attention a {
+  color: var(--white);
+  text-decoration: underline;
 }
 
 /* RESPONSIVE */

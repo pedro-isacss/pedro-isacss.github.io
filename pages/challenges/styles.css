@@ -59,6 +59,9 @@
 }
 
 @media (max-width: 450px) {
+  .info-challengeElement-container {
+    flex-direction: column;
+  }
   .info-challengeElement-container span {
     margin-top: 5px;
   }

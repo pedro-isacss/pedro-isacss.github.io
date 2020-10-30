@@ -17,9 +17,7 @@ $(".nav-button").click(function () {
 function createChallengeElement(title, link, img, type, value) {
   let elementContainer;
   let imgElement = $(`<img src="${img}" alt="${title}" />`);
-  let infoContainer = $(
-    `<div class="info-challengeElement-container flex-row-column-between-center"></div>`
-  );
+  let infoContainer = $(`<div class="info-challengeElement-container"></div>`);
   let titleElement = $(`<h2>${title}</h2>`);
   let typeElement = $(`<span>${type}</span>`);
   let valueElement;
@@ -29,7 +27,7 @@ function createChallengeElement(title, link, img, type, value) {
         .toLowerCase()
         .replace(" ", "-")}.zip"></a>`
     );
-    valueElement = $(`<span class="free-challenge">${value}</span>`);
+    valueElement = $(`<span class="free-challenge value">${value}</span>`);
   } else {
     elementContainer = $(`<a href="${link}" class="challengeElement"></a>`);
     valueElement = $(`<span>${value}</span>`);
