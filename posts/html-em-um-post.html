@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9SG7SXHDQP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-9SG7SXHDQP");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML em um post - Aprenda o básico de html</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav-main">
+      <a href="../index.html" class="logo-img-link">
+        <img src="../images/logo.png" class="logo-img" />
+        <h1>Pedro Isac</h1>
+      </a>
+      <button class="nav-button">
+        <img src="../images/icon-menu.png" alt="menu" class="nav-button-img" />
+      </button>
+      <div class="link-container">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a
+          href="https://app.jobzz.com.br/service/preview/efb2f900"
+          class="nav-link"
+          >Services</a
+        >
+        <a href="https://front-ui.alumy.com/" class="nav-link">FrontUI</a>
+        <a href="../pages/blog/index.html" class="nav-link">Blog</a>
+      </div>
+    </nav>
+
+    <!-- POST -->
+    <section class="post-container">
+      <h1>HTML em um post</h1>
+      <img
+        class="capa-img"
+        src="https://i.pinimg.com/564x/55/0c/80/550c801e97dccf66facd348e4fc2f647.jpg"
+        alt="um computtador exibindo um código html"
+      />
+      <p>O objetivo é apresentar o html de forma rápida e direta.</p>
+      <hr />
+      <h2>Os elementos html</h2>
+      <p>
+        Os elementos html são formados por uma tag, pelos atributos e pelo
+        conteúdo. Sintaxe:
+      </p>
+      <pre>
+<code> < tag atributo="valor"> Conteúdo < /tag> </code>
+      </pre>
+      <ul>
+        <li>
+          <b>< tag > :</b> indica onde o elemento começa (tag de abertura).
+        </li>
+        <li>
+          <b>< /tag >:</b> indica onde o elemento termina (tag de fechamento).
+        </li>
+        <li>
+          <b>atributo:</b> especifica uma determinada propriedade para o
+          elemento.
+        </li>
+        <li><b>Conteúdo:</b> o que sera mostrado.</li>
+      </ul>
+      <p>
+        <b>OBS:</b> alguns elementos são formados sem tag de fechamento.
+        Sintaxe:
+      </p>
+      <h2>Comentários</h2>
+      <pre>
+<code>< !-- Aqui fica um comentário -- ></code>
+      </pre>
+      <h2>Criando um documento html</h2>
+      <p>Crie um arquivo e adicione a extensão html. Exemplo: mypage.html</p>
+      <h2>Estrutura básica de um documento html</h2>
+      <pre>
+<code>
+<!DOCTYPE html>
+< html >
+    < head >
+        < meta charset="utf-8" >
+        < title >< /title >
+    < /head >
+            
+    < body >
+    < /body >
+< /html >
+</code>
+      </pre>
+      <ul>
+        <li>
+          <b>< !DOCTYPE html >:</b> define o tipo do documento, no caso html.
+        </li>
+        <li>
+          <b>< html >< /html >: ​indica o fim e o começo do documento html.​</b>
+        </li>
+        <li>
+          <b>< head >< /head ></b>: aqui ficam as informações do documento html,
+          como o tipo de caracteres <b>(< meta charset=”utf-8" >)</b> e o título
+          da página <b>(< title >< /title >)</b>.
+        </li>
+        <li>
+          <b>< body >< /body >:</b> dentro dessa tag ficarão todos os elementos
+          que serão vistos em tela como textos, imagens, vídeos e outros.
+        </li>
+      </ul>
+      <h2>Tags de contêiner</h2>
+      <p>Um elemento contêiner serve para abrigar outros elementos.</p>
+      <ul>
+        <li><b>< header >< /header >:</b> abriga o cabeçalho da página.</li>
+        <li><b>< nav >< /nav >:</b> abriga a navegação da página.</li>
+        <li><b>< div >< /div >:</b> abriga um conteúdo da página.</li>
+        <li><b>< form >< /form >:</b> abriga um formulário da página.</li>
+        <li><b>< footer >< /footer >:</b> abriga o rodapé da página.</li>
+      </ul>
+      <h2>Tags de texto</h2>
+      <ul>
+        <li>
+          <b>< h1 >< /h1 > … < h6 >< /h6 >:</b> definem títulos, subtítulos e
+          tópicos.
+        </li>
+        <li><b>< p >< /p >:</b> define um parágrafo.</li>
+        <li><b>< span >< /span >:</b> define um texto sem valor semântico.</li>
+        <li><b>< a href=”link” >< /a >:</b> define um link.</li>
+      </ul>
+      <p>
+        <b>OBS:</b> uma tag < a > não necessariamente tem como conteúdo um
+        texto. Também pode ser utilizada para colocar links em imagens, por
+        exemplo.
+      </p>
+
+      <h2>Criando tabelas</h2>
+      <p>Para construir uma tabela, utilizamos as seguintes tags:</p>
+      <ul>
+        <li><b>< table >< /table >:</b> define uma tabela.</li>
+        <li><b>< tr >< /tr >:</b> define uma linha (table row).</li>
+        <li>
+          <b>< th >< /th >:</b> define o título/cabeçalho de uma coluna (table
+          header).
+        </li>
+        <li><b>< td >< /td >:</b> define os dados (table date).</li>
+      </ul>
+      <h2>Criando listas</h2>
+      <p>Existem dois tipos de listas: as ordenadas e as não ordenadas.</p>
+      <p>Criando uma lista não ordenada:</p>
+      <ul>
+        <li><b>< ul >< /ul >:</b> define uma lista não ordenada.</li>
+        <li><b>< li >< /li >:</b> define um elemento da lista.</li>
+      </ul>
+      <p>Criando uma lista ordenada:</p>
+      <ul>
+        <li>
+          <b>< ol type=”tipo de ordenação” >< /ol >:</b> define uma lista
+          ordenada.
+        </li>
+        <li><b>< li >< /li >:</b> define um elemento da lista.</li>
+      </ul>
+      <h2>Tags de Formatação</h2>
+      <ul>
+        <li><b>< br >:</b> quebra de linha.</li>
+        <li><b>< b >< /b >:</b> texto em negrito.</li>
+        <li><b>< i >< /i >:</b> texto em itálico.</li>
+        <li><b>< sub >< /sub >:</b> texto subscrito.</li>
+        <li><b>< sup >< /sup >:</b> texto sobrescrito.</li>
+        <li><b>< mark >< /mark >:</b> texto marcado.</li>
+        <li><b> < del >< /del >: </b> palavra deletada.</li>
+      </ul>
+      <h2>Inserindo mídias</h2>
+      <p>Inserindo uma imagem:</p>
+      <pre>
+<code>
+< img src="caminho" alt="texto alternativo" >
+</code>
+    </pre>
+      <ul>
+        <li>
+          <b>src:</b> define onde a imagem está localizada. Pode ser o caminho
+          até uma pasta ou o endereço da imagem na web.
+        </li>
+        <li>
+          <b>alt: </b> um texto que será exibido quando a sua imagem, por algum
+          motivo, não puder ser carregada ou quando o usuário tiver alguma
+          deficiência.
+        </li>
+      </ul>
+      <p>Inserindo um iframe:</p>
+      <pre>
+<code>
+< iframe src="endereço" >< /iframe >
+</code>
+    </pre>
+      <p><b>OBS:</b> um iframe incorpora uma outra página web na sua página.</p>
+      <p>Inserindo um vídeo:</p>
+      <pre>
+<code>
+< video controls >
+    < source src="caminho" type="video/mp4" >
+< /videos >
+</code>
+    </pre>
+      <ul>
+        <li>
+          <b>controls:</b> adiciona os controles do vídeo (botão de play,
+          volume…).
+        </li>
+        <li>
+          <b>< source >:</b> são as especificações do vídeo como o
+          <b>src</b> (caminho para o vídeo) e o <b>type</b> (tipo do vídeo,
+          geralmente mp4).
+        </li>
+      </ul>
+      <p>E é isso :)</p>
+    </section>
+
+    <footer>
+      <span>&copy; Pedro Isac</span>
+      <div>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ss.pedroisac@email.com"
+        >
+          <img src="../images/icon-mail.png" alt="email" />
+        </a>
+        <a href="https://www.youtube.com/channel/UCK0Bkq6RNwoo6o0rmlyteFQ">
+          <img src="../images/icon-youtube.png" alt="youtube" />
+        </a>
+        <a href="https://instagram.com/ss.pedroisac/">
+          <img src="../images/icon-instagram.png" alt="instagram" />
+        </a>
+        <a href="https://github.com/pedro-isacss">
+          <img src="../images/icon-github.png" alt="github" />
+        </a>
+        <a href="https://wa.me/message/L3M4YGWO74UCK1">
+          <img src="../images/icon-whatsapp.png" alt="whatsapp" />
+        </a>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>

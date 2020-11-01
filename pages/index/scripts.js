@@ -1,6 +1,6 @@
 let dataPortfolio = [];
-let name = "Hello welcome!";
-let nameAtual = "H";
+let name = "Pedro Isac";
+let nameAtual = "P";
 
 /* RESPONSIVE MENU */
 let openMenu = false;
@@ -38,14 +38,14 @@ setInterval(function () {
     $("#text").text(nameAtual);
     indexName++;
   } else {
-    nameAtual = "H";
+    nameAtual = "P";
     $("#text").text(nameAtual);
     indexName = 1;
   }
 }, 400);
 
 /* GET PORTFOLIO ELEMENTS */
-fetch("./portfolio.json")
+fetch("../data/portfolio.json")
   .then((response) => response.json())
   .then((res) => {
     dataPortfolio = res;
