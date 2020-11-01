@@ -45,7 +45,7 @@ setInterval(function () {
 }, 400);
 
 /* GET PORTFOLIO ELEMENTS */
-fetch("../data/portfolio.json")
+fetch("./portfolio.json")
   .then((response) => response.json())
   .then((res) => {
     dataPortfolio = res;

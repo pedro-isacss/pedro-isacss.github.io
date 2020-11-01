@@ -3,7 +3,7 @@
     "title": "Electronic Week",
     "link": "http://pedro-isacss.github.io/electronic-week/",
     "img": "../images/portfolio-electronic-week.jpg",
-    "type": "Website and UI"
+    "type": "Front-end and UI"
   },
   {
     "title": "Adidas logo animation",
@@ -15,36 +15,36 @@
     "title": "Spider-man page",
     "link": "http://pedro-isacss.github.io/spiderman-page/",
     "img": "../images/portfolio-spiderman-page.jpg",
-    "type": "Website and UI"
+    "type": "Front-end and UI"
   },
   {
     "title": "Job Listings Master",
     "link": "http://pedro-isacss.github.io/static-job-listings-master/",
     "img": "../images/portfolio-static-job-listings-master.jpg",
-    "type": "Website"
+    "type": "Front-end"
   },
   {
     "title": "Social Dash",
     "link": "http://pedro-isacss.github.io/social-dash/",
     "img": "../images/portfolio-social-dash.jpg",
-    "type": "Website"
+    "type": "Front-end"
   },
   {
     "title": "Easy Bank",
     "link": "http://pedro-isacss.github.io/easybank/",
     "img": "../images/portfolio-easybank.jpg",
-    "type": "Website"
+    "type": "Front-end"
   },
   {
     "title": "Fylo",
     "link": "http://pedro-isacss.github.io/fylo/",
     "img": "../images/portfolio-fylo.jpg",
-    "type": "Website"
+    "type": "Front-end"
   },
   {
     "title": "Chat-App-CSS",
     "link": "http://pedro-isacss.github.io/chat-app-css/",
     "img": "../images/portfolio-chat-app-css.jpg",
-    "type": "Website"
+    "type": "Front-end"
   }
 ]
