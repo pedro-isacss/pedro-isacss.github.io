@@ -15,6 +15,11 @@
   font-size: 1.6em;
 }
 
+.post-container h3 {
+  color: var(--textDarkStrong);
+  font-size: 1.2em;
+}
+
 .post-container p {
   color: var(--textDarkStrong);
   font-size: 1.2em;
@@ -38,6 +43,7 @@
   background-color: var(--whiteDark);
   padding: 10px;
   overflow: auto;
+  line-height: 25px;
 }
 
 .post-container ul {
@@ -58,6 +64,25 @@
   max-height: 300px;
   height: 100%;
   margin: 10px 0;
+}
+
+.post-container figure {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.post-container figure img {
+  max-width: 300px;
+  width: 100%;
+}
+
+.post-container figure figcaption {
+  color: var(--textDarkStrong);
+  font-size: 0.9em;
 }
 
 footer {

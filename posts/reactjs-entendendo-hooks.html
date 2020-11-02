@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-9SG7SXHDQP"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-9SG7SXHDQP");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- SEO -->
+    <title>ReactJS: Entendendo hooks</title>
+    <link rel="stylesheet" href="./styles.css" />
+    <meta
+      name="keywords"
+      content="Desenvolvimento Web, React, hooks, entendendo hooks, aprender react, javascript, pedro isac, reactjs, useState, useEffect, useContext"
+    />
+    <meta
+      name="description"
+      content="Os hooks nos permitem criar componentes funcionais com estado, ciclo de
+      vida e outras propriedades que antes só seriam possessíveis utilizando
+      classes. Isso nos permite escrever um código mais limpo e
+      consequentemente mais legível. Neste post eu falo um pouco sobre como funcionam e 
+      como devem ser utilizadas as principais hooks do React.js: useState, useEffect e 
+      useContext. "
+    />
+  </head>
+  <body>
+    <!-- NAV -->
+    <nav class="nav-main">
+      <a href="../index.html" class="logo-img-link">
+        <img src="../images/logo.png" class="logo-img" />
+        <h1>Pedro Isac</h1>
+      </a>
+      <button class="nav-button">
+        <img src="../images/icon-menu.png" alt="menu" class="nav-button-img" />
+      </button>
+      <div class="link-container">
+        <a href="../index.html" class="nav-link">Home</a>
+        <a
+          href="https://app.jobzz.com.br/service/preview/efb2f900"
+          class="nav-link"
+          >Services</a
+        >
+        <a href="https://front-ui.alumy.com/" class="nav-link">FrontUI</a>
+        <a href="../pages/blog/index.html" class="nav-link">Blog</a>
+      </div>
+    </nav>
+
+    <!-- POST -->
+    <section class="post-container">
+      <h1>ReactJS: entendendo hooks</h1>
+      <img
+        class="capa-img"
+        src="https://i.pinimg.com/564x/86/bc/80/86bc803470ab1f208cfd1fd668c95a19.jpg"
+        alt="O logo do React"
+      />
+      <p>
+        Os hooks nos permitem criar componentes funcionais com estado, ciclo de
+        vida e outras propriedades que antes só seriam possessíveis utilizando
+        classes. Isso nos permite escrever um código mais limpo e
+        consequentemente mais legível.
+      </p>
+      <p>
+        Neste tutorial, aprenderemos a usar os três hooks principais: useState,
+        useEffect e o useContext.
+      </p>
+      <hr />
+      <h2>useState</h2>
+      <p>
+        O useState é o hook que nos permite adicionar estados a um componente
+        criado com função.
+      </p>
+      <p>Para ver como esse hook funciona vamos criar um contador.</p>
+      <p>Primeiramente, vamos criar a estrutura básica do nosso componente:</p>
+      <pre>
+<code>import React from "react";
+
+function Counter() {
+   return (
+      &lt;div&gt;
+        &lt;button&gt;Contar&lt;/button&gt;
+        &lt;p&gt;0&lt;/p&gt;
+      &lt;/div&gt;
+   );
+}
+ 
+
+export default Counter;
+</code>
+      </pre>
+      <p>Agora importe o hook useState:</p>
+      <pre>
+<code>import React, {useState} from "react";/</code>
+      </pre>
+      <p>E finalmente, vamos criar um estado para o nosso componente:</p>
+      <pre>
+<code>const [counter, setConter] = useState(0);</code>
+      </pre>
+      <p>Explicação:</p>
+      <p>
+        Utilizando a desestruturação, atribuímos o valor zero ao nosso estado
+        “counter” e uma função “setCounter” que utilizaremos para alterar o
+        valor do nosso estado.
+      </p>
+      <p>
+        Feito isso, só precisamos atribuir a função que altere o estado no
+        elemento “button” e fazer com que o elemento “p” mostre o valor do
+        estado, ou seja:
+      </p>
+      <pre>
+<code>&lt;button onClick​={() => setConter(counter + 1)}&gt;Contar&lt;/button&gt;
+&lt;p&gt;{counter}&lt;/p&gt;
+</code>
+      </pre>
+      <p>Ao final, teremos o seguinte código:</p>
+      <pre>
+<code>import React, { useState } from "react";
+	function Counter() {
+	   const [counter, setConter] = useState(0);
+	   
+	   return (
+	        &lt;div&gt;
+                &lt;button
+	            onClick​={() => setConter(counter + 1)}&gt;
+	                Contar
+	            &lt;/button&gt;
+	            &lt;p>{counter}&lt;/p&gt;
+            &lt;/div&gt;
+	   );
+	}
+	 
+export default Counter;
+</code>
+      </pre>
+      <p>E em tela teremos como resultado:</p>
+      <figure>
+        <img
+          src="https://i.pinimg.com/originals/8c/09/f8/8c09f8147d976d56ce1b73c0ff1a8bc4.gif"
+          alt="Exemplo useState"
+        />
+        <figcaption>Exemplo useState</figcaption>
+      </figure>
+      <p>
+        OBS: assim como no estado de classes, sempre que o estado for alterado,
+        o componente será renderizado novamente.
+      </p>
+      <h2>useEffect</h2>
+      <p>
+        Se você já está familiarizado com o uso de classes para criar
+        componentes, o hook useEffect pode ser comparado aos métodos de ciclo de
+        vida (componentDidMount(), componentWillUnmount() e
+        componentWillUpdate()), apesar de funcionarem de maneiras diferente.
+      </p>
+      <p>
+        O useEffect recebe dois parâmetros: uma função e um array de
+        dependências. Veja:
+      </p>
+      <pre>
+<code>useEffect(() => {}, [])</code>
+      </pre>
+      <p>
+        O useEffect guarda a função passada para executá-la em uma de três
+        situações: sempre que um elemento do array de dependências for
+        atualizado, após o componente ser renderizado ou depois que o componente
+        for desmontado.
+      </p>
+      <h3>
+        Executando sempre que um elemento do array de dependências for
+        atualizado
+      </h3>
+      <p>
+        Para executar a função sempre que um elemento do array de dependências
+        for atualizado basta adicionar esse elemento no array de dependências.
+      </p>
+      <pre>
+<code>useEffect(() => {}, [elemento])</code>
+      </pre>
+      <p>
+        Para exemplificar, vamos reaproveitar o exemplo do useState. Vamos
+        atualizar o título da nossa página de acordo com o valor do state
+        counter.
+      </p>
+      <p>Primeiramente precisamos importar o useEffect:</p>
+      <pre>
+<code>import React, { useState, useEffect } from "react";</code>
+      </pre>
+      <p>
+        Agora vamos criar a função que mudará o título da página e adicionar o
+        state counter ao array de dependências:
+      </p>
+      <pre>
+<code>useEffect(() => {
+    document.title = `${counter} cliks`;
+}, [counter]);
+</code>
+      </pre>
+      <p>Ao final disso o nosso código será:</p>
+      <pre>
+<code>import React, { useState, useEffect } from "react";
+function Counter() {
+    const [counter, setConter] = useState(0);
+	
+    useEffect(() => {
+        document.title = `${counter} cliks`;
+    }, [counter]);
+	
+    return (
+	    &lt;div&gt;
+                &lt;button onClick​={() => setConter(counter + 1)}&gt;Contar&lt;/button&gt;
+	    &lt;/div&gt;
+    );
+}
+export default Counter;
+</code>
+      </pre>
+      <p>E o resultado em tela será:</p>
+      <figure>
+        <img
+          src="https://i.pinimg.com/originals/8b/60/24/8b6024647245784d89ee79b4d44c72f1.gif"
+          alt="Exemplo useEffect"
+        />
+        <figcaption>Exemplo useEffect</figcaption>
+      </figure>
+      <h3>Executando após o componente ser renderizado</h3>
+      <p>
+        Para executar a função depois que o componente for renderizado (apenas
+        uma vez), basta deixar o array de dependências vazio.
+      </p>
+      <pre>
+<code>useEffect(() => {}, [])</code>
+      </pre>
+      <p>
+        Para exemplificar, vamos criar um componente chamado Text e vamos
+        renderiza-lo após três segundos. Após ele ser montado em tela, o título
+        da nossa página será alterado.
+      </p>
+      <p>
+        Primeiramente vamos criar o componente Text passando dois parâmetros
+        para o useEffect. O primeiro uma função que irá alterar o título da
+        página e o segundo um array vazio.
+      </p>
+      <pre>
+<code>function Text() {
+    useEffect(() => {
+        document.title = "O componente foi montado";
+    }, []);
+     
+    return &lt;p&gt;O contador está visível!&lt;/p&gt;;
+}
+</code>
+      </pre>
+      <p>
+        Agora vamos recriar o nosso componente Counter adicionando a ele um
+        estado “visible” (com um valor default false) e uma função setTimeout
+        que alterará o valor do estado após 3 segundos:
+      </p>
+      <pre>
+<code>const [visible, setVisible] = useState(false);
+
+setTimeout(() => {
+   setVisible(true);
+}, 3000);
+</code>
+      </pre>
+      <p>
+        Por último, vamos renderizar o componente Text apenas se o estado
+        “visible” tiver o valor true:
+      </p>
+      <pre>
+<code>return &lt;div&gt;{visible ? &lt;Text /&gt; : ""}&lt;/div&gt;;</code>
+      </pre>
+      <p>O código final será:</p>
+      <pre>
+<code>import React, { useEffect, useState } from "react";
+	
+
+function Counter() {
+    const [visible, setVisible] = useState(false);
+    setTimeout(() => {
+	    setVisible(true);
+    }, 3000);
+	return &lt;div&gt;{visible ? &lt;Text /&gt; : ""}&lt;/div&gt;;
+}
+	
+
+function Text() {
+	useEffect(() => {
+	    document.title = "O componente foi montado";
+        }, []);
+    return &lt;p&gt;O contador está visível!&lt;/p&gt;;
+}
+	
+export default Counter;
+</code>
+      </pre>
+      <p>E o resultado em tela:</p>
+      <figure>
+        <img
+          src="https://i.pinimg.com/originals/71/df/7d/71df7d7ed8c19b655c4ea41f4e3dc813.gif"
+          alt="Exemplo useEffect"
+        />
+        <figcaption>Exemplo useEffect</figcaption>
+      </figure>
+      <h3>Executando depois que o componente for desmontado</h3>
+      <p>
+        Para executar a função após o componente ser desmontado, basta retornar
+        uma função:
+      </p>
+      <pre>
+useEffect(() => {
+    return () => {}
+}, [])
+      </pre>
+      <p>
+        Para exemplificar, vamos fazer o contrário do exemplo anterior. Dessa
+        vez vamos alterar o título da nossa página quando o componente for
+        desmontado.
+      </p>
+      <p>
+        Para isso vamos manter a estrutura do exemplo anterior, realizando
+        apenas três alterações no nosso código.
+      </p>
+      <p>
+        Primeiro, vamos trocar o valor do state “visible” de false para true:
+      </p>
+      <pre>
+const [visible, setVisible] = useState(true);
+      </pre>
+      <p>
+        Segundo, na função setTimeout, vamos alterar o valor passado no
+        setVisible de true para false:
+      </p>
+      <pre>
+setTimeout(() => {
+    setVisible(false);
+}, 3000);
+      </pre>
+      <p>
+        Terceiro, vamos retornar, no useEffect, uma função que altere o título
+        da nossa página:
+      </p>
+      <pre>
+useEffect(() => {
+    document.title = "O componente foi montado";
+    return () => {
+        document.title = "O componente foi desmontado";
+    };
+      </pre>
+      <p>Ao final, teremos o seguinte código:</p>
+      <pre>
+import React, { useEffect, useState } from "react";
+	
+function Counter() {
+    const [visible, setVisible] = useState(true);    
+    setTimeout(() => {
+        setVisible(false);
+    }, 3000);
+        
+    return &lt;div&gt;{visible ? &lt;Text /&gt; : ""}&lt;/div&gt;;
+}
+        
+function Text() {
+    useEffect(() => {
+        document.title = "O componente foi montado";
+        return () => {
+            document.title = "O componente foi desmontado";
+        };
+    }, []);
+        
+    return &lt;p&gt;O contador está visível!&lt;/p&gt;;
+}
+        
+export default Counter;
+      </pre>
+      <p>E em tela:</p>
+      <figure>
+        <img
+          src="https://i.pinimg.com/originals/6c/03/4e/6c034e692d31b35e69093a1a46d05b86.gif"
+          alt="Exemplo useEffect"
+        />
+        <figcaption>Exemplo useEffect</figcaption>
+      </figure>
+      <h2>useContext</h2>
+      <p>
+        Esse hook tem como objetivo permitir o compartilhamento de dados entre
+        os componentes.
+      </p>
+      <p>
+        Para exemplificar o uso desse hook nós vamos criar dois componentes
+        diferente. Em um nós vamos incrementar o counter e no outro vamos
+        mostrar o valor do counter. Além disso iremos criar um arquivo chamado
+        “Context.js”, o qual será o responsável por compartilhar o valor do
+        counter:
+      </p>
+      <h3>Criando o arquivo Context.js</h3>
+      <p>Após criar o arquivo Context.js, faça as seguintes importações:</p>
+      <pre>
+import React, { useState } from "react";
+      </pre>
+      <p>Agora crie o context:</p>
+      <pre>
+const ConunterContext = React.createContext();
+      </pre>
+      <p>
+        Por último crie o componente que irá prover os dados e exporte o
+        “ConunterContext”:
+      </p>
+      <pre>
+export function Context(props) {
+    const [counter, setCounter] = useState(0);
+    return (
+        &lt;ConunterContext.Provider value={{ counter, setCounter }}&gt;
+            {props.children}
+        &lt;/ConunterContext.Provider&gt;
+    );
+}
+
+export default ConunterContext;
+      </pre>
+      <p>
+        Explicação: com o componente “Context” você irá permitir/prover os dados
+        e com o “ConunterContext” você irá buscar os dados.
+      </p>
+      <h3>Permitindo o acesso aos dados</h3>
+      <p>
+        No arquivo App.js, importe o “Context” e coloque o componente “Counter”
+        dentro do provider “Context”:
+      </p>
+      <pre>
+import React from "react";
+import Counter from "./Components/Counter";
+import { Context } from "./Components/Context";
+
+function App() {
+    return (
+        &lt;div className="App"&gt;
+            &lt;Context&gt;
+                &lt;Counter /&gt;
+            &lt;/Context&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default App;
+      </pre>
+      <h3>Criando o arquivo Text.js</h3>
+      <p>Importe o useContext e “ConunterContext”:</p>
+      <pre>
+import React, { useContext } from "react";
+import ConunterContext from "./Context";
+      </pre>
+      <p>
+        Crie o componente Text e use a desestruturação para buscar os dados
+        necessários, no caso o counter:
+      </p>
+      <pre>
+function Text() {
+    const { counter } = useContext(ConunterContext);
+    return (
+        &lt;div&gt;
+            &lt;p&gt;{counter}&lt;/p&gt;
+        &lt;/div&gt;
+    );
+}
+
+export default Text;
+      </pre>
+      <h3>Criando o arquivo Counter.js</h3>
+      <p>Faça as seguintes importações:</p>
+      <pre>
+import React, { useContext } from "react";
+import ConunterContext from "./Context";
+import Text from "./Text";
+      </pre>
+      <p>
+        Crie o componente Counter e dê acesso aos dados necessários, no caso o
+        counter e o setCounter:
+      </p>
+      <pre>
+function Counter() {
+    const { setCounter, counter } = useContext(ConunterContext);
+    return (
+        &lt;div&gt;
+            &lt;button onClick​={() => setCounter(counter + 1)}>Contar&lt;/button>
+            &lt;Text />
+        &lt;/div>
+    );
+}
+
+export default Counter;
+      </pre>
+      <p>Como resultado final teremos os seguintes arquivos:</p>
+      <p>Context.js:</p>
+      <pre>
+import React, { useState } from "react";
+	
+const ConunterContext = React.createContext();
+        
+export function Context(props) {
+    const [counter, setCounter] = useState(0);    
+    return (
+        &lt;ConunterContext.Provider value={{ counter, setCounter }}>
+            {props.children}
+        &lt;/ConunterContext.Provider>
+    );
+}
+        
+export default ConunterContext;
+      </pre>
+      <p>App.js:</p>
+      <pre>
+import React from "react";
+import Counter from "./Components/Counter";
+import { Context } from "./Components/Context";
+	
+function App() {
+    return (
+        &lt;div className="App">
+            &lt;Context>
+                &lt;Counter />
+            &lt;/Context>
+        &lt;/div>
+    );
+}
+	
+export default App;
+      </pre>
+      <p>Text.js:</p>
+      <pre>
+import React, { useContext } from "react";
+import ConunterContext from "./Context";
+        
+function Text() {
+    const { counter } = useContext(ConunterContext);
+        
+    return (
+        &lt;div>
+            &lt;p>{counter}&lt;/p>
+        &lt;/div>
+    );
+}
+        
+export default Text;
+      </pre>
+      <p>Counter.js:</p>
+      <pre>
+import React, { useContext } from "react";
+import ConunterContext from "./Context";
+import Text from "./Text";
+        
+function Counter() {
+    const { setCounter, counter } = useContext(ConunterContext);
+        
+    return (
+        &lt;div>
+            &lt;button onClick​={() => setCounter(counter + 1)}>Contar&lt;/button>
+            &lt;Text />
+        &lt;/div>
+    );
+}
+        
+export default Counter;
+      </pre>
+      <hr />
+      <p>
+        E é isso :) Espero ter ajudado você a compreender melhor esses três
+        importantes hooks.
+      </p>
+    </section>
+
+    <footer>
+      <span>&copy; Pedro Isac</span>
+      <div>
+        <a
+          href="https://mail.google.com/mail/?view=cm&fs=1&tf=1&to=ss.pedroisac@email.com"
+        >
+          <img src="../images/icon-mail.png" alt="email" />
+        </a>
+        <a href="https://www.youtube.com/channel/UCK0Bkq6RNwoo6o0rmlyteFQ">
+          <img src="../images/icon-youtube.png" alt="youtube" />
+        </a>
+        <a href="https://instagram.com/ss.pedroisac/">
+          <img src="../images/icon-instagram.png" alt="instagram" />
+        </a>
+        <a href="https://github.com/pedro-isacss">
+          <img src="../images/icon-github.png" alt="github" />
+        </a>
+        <a href="https://wa.me/message/L3M4YGWO74UCK1">
+          <img src="../images/icon-whatsapp.png" alt="whatsapp" />
+        </a>
+      </div>
+    </footer>
+
+    <!-- SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./scripts.js"></script>
+  </body>
+</html>
