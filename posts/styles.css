@@ -30,6 +30,9 @@
 }
 
 .post-container pre {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   margin: 30px 0;
   color: var(--textDarkStrong);
   background-color: var(--whiteDark);
