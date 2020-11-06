@@ -19,13 +19,13 @@
   },
   {
     "title": "Job Listings Master",
-    "link": "#",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/static-job-listings-master/build/index.html",
     "img": "../images/portfolio-static-job-listings-master.jpg",
     "type": "Front-end"
   },
   {
     "title": "Social Dash",
-    "link": "#",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/social-dash/build/index.html",
     "img": "../images/portfolio-social-dash.jpg",
     "type": "Front-end"
   },
