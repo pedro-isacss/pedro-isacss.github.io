@@ -2,7 +2,7 @@
 
 .header {
   background-color: var(--whiteDark);
-  height: 95vh;
+  height: 100vh;
   background-image: var(--gradient);
 }
 
