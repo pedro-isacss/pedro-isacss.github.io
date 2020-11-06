@@ -1,5 +1,11 @@
 [
   {
+    "title": "Dropbox animation",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/dropbox-animation/index.html",
+    "img": "../images/portfolio-dropbox-animation.jpg",
+    "type": "Animation"
+  },
+  {
     "title": "Electronic Week",
     "link": "https://pedro-isacss.github.io/portfolio/frontend/electronic-week/index.html",
     "img": "../images/portfolio-electronic-week.jpg",
