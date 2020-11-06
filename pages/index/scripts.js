@@ -17,7 +17,9 @@ $(".nav-button").click(function () {
 
 /* CREATE ELEMENT PORTFOLIO */
 function createPortfolioElement(title, link, img, type) {
-  let elementContainer = $(`<a href="${link}" class="portfolioElement"></a>`);
+  let elementContainer = $(
+    `<a href="${link}" class="portfolioElement" target="__blank"></a>`
+  );
   let imgElement = $(`<img src="${img}" alt="${title}" />`);
   let infoContainer = $(
     `<div class="info-portfolioElement-container flex-row-column-between-center"></div>`
@@ -45,7 +47,7 @@ setInterval(function () {
 }, 400);
 
 /* GET PORTFOLIO ELEMENTS */
-fetch("../data/portfolio.json")
+fetch("../portfolio.json")
   .then((response) => response.json())
   .then((res) => {
     dataPortfolio = res;

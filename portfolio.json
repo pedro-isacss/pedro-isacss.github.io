@@ -1,49 +1,49 @@
 [
   {
     "title": "Electronic Week",
-    "link": "http://pedro-isacss.github.io/electronic-week/",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/electronic-week/index.html",
     "img": "../images/portfolio-electronic-week.jpg",
     "type": "Front-end and UI"
   },
   {
     "title": "Adidas logo animation",
-    "link": "http://pedro-isacss.github.io/adidas-logo-animation",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/adidas-logo-animation/index.html",
     "img": "../images/portfolio-adidas-logo-animation.jpg",
     "type": "Animation"
   },
   {
     "title": "Spider-man page",
-    "link": "http://pedro-isacss.github.io/spiderman-page/",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/spiderman-page/index.html",
     "img": "../images/portfolio-spiderman-page.jpg",
     "type": "Front-end and UI"
   },
   {
     "title": "Job Listings Master",
-    "link": "http://pedro-isacss.github.io/static-job-listings-master/",
+    "link": "#",
     "img": "../images/portfolio-static-job-listings-master.jpg",
     "type": "Front-end"
   },
   {
     "title": "Social Dash",
-    "link": "http://pedro-isacss.github.io/social-dash/",
+    "link": "#",
     "img": "../images/portfolio-social-dash.jpg",
     "type": "Front-end"
   },
   {
     "title": "Easy Bank",
-    "link": "http://pedro-isacss.github.io/easy-bank/",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/easy-bank/index.html",
     "img": "../images/portfolio-easybank.jpg",
     "type": "Front-end"
   },
   {
     "title": "Fylo",
-    "link": "http://pedro-isacss.github.io/fylo/",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/fylo/index.html",
     "img": "../images/portfolio-fylo.jpg",
     "type": "Front-end"
   },
   {
     "title": "Chat-App-CSS",
-    "link": "http://pedro-isacss.github.io/chat-app-css/",
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/chat-app-css/index.html",
     "img": "../images/portfolio-chat-app-css.jpg",
     "type": "Front-end"
   }
