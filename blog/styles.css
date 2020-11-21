@@ -8,6 +8,10 @@ nav {
   width: 75%;
 }
 
+.description {
+  width: 75%;
+}
+
 h1 {
   color: #007bff;
 }
@@ -23,7 +27,8 @@ li {
 }
 
 @media (max-width: 600px) {
-  .jumbotron {
+  .jumbotron,
+  .description {
     width: 100%;
   }
   ul {
