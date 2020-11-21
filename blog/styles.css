@@ -1,0 +1,29 @@
+nav {
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+.jumbotron {
+  border-radius: 20px;
+  width: 75%;
+}
+
+h1 {
+  color: #007bff;
+}
+
+pre {
+  padding: 15px 5px 0 10px;
+  background-color: rgb(194, 191, 191);
+  border-radius: 10px;
+}
+
+li {
+  margin: 10px 0;
+}
+
+@media (max-width: 600px) {
+  .jumbotron {
+    width: 100%;
+  }
+}
