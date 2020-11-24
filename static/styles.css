@@ -143,30 +143,3 @@ header .links-container a {
     grid-template-columns: auto auto;
   }
 }
-
-#header-effect1 {
-  position: absolute;
-  background-color: var(--theme2);
-  z-index: -1;
-  animation-name: effect1;
-  animation-duration: 10s;
-  animation-iteration-count: infinite;
-  border-radius: 50%;
-  padding: 2px;
-  color: aliceblue;
-}
-
-@keyframes effect1 {
-  0% {
-    transform: rotate3d(1, 1, 1, 150deg);
-    left: 0;
-  }
-  50% {
-    transform: rotate3d(1, 1, 1, 360deg);
-    left: 30%;
-  }
-  100% {
-    transform: rotate3d(1, 1, 1, 150deg);
-    left: 0;
-  }
-}
