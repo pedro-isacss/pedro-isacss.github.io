@@ -29,6 +29,10 @@ header #logo {
   margin-right: 24px;
 }
 
+header #logo img {
+  max-width: 40px;
+}
+
 header div h1 {
   color: #fff;
   letter-spacing: 0.05em;
