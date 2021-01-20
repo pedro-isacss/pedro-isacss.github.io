@@ -67,7 +67,7 @@ header .social a {
 .links a {
   width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   align-items: center;
   background: linear-gradient(270deg, #007cf0 0%, #003b5b 100%);
   border-radius: 10px;
@@ -89,7 +89,7 @@ header .social a {
   width: 56px;
 }
 
-.links a .link-icon:first-child {
+.links a .link-icon {
   box-shadow: 2px 2px 10px rgba(0, 124, 240, 0.1);
   border-left: 1px solid rgba(0, 124, 240, 0.4);
   border-top-left-radius: 10px;
