@@ -16,12 +16,12 @@
   grid-template-columns: 23% 23% 23% 23%;
   justify-content: space-between;
   width: 100%;
-  margin: 0;
+  margin-top: 24px;
 }
 
 .portfolio div a {
   width: 100%;
-  filter: drop-shadow(5px 5px 20px rgba(0, 124, 240, 0.1));
+  filter: drop-shadow(5px 5px 15px #07060c);
   border-radius: 10px;
   margin-top: var(--padding);
 }
@@ -32,14 +32,15 @@
 }
 
 .portfolio .seemore {
-  background-color: var(--themeBlue);
-  filter: drop-shadow(5px 5px 20px rgba(0, 124, 240, 0.1));
+  background-color: #fff;
   margin-top: var(--padding);
   align-self: flex-end;
   text-decoration: none;
-  color: #fff;
-  padding: 16px 24px;
-  border-radius: 10px;
+  color: var(--themeBlue);
+  padding: 8px 24px;
+  width: 100%;
+  border-radius: 100px;
+  text-align: center;
 }
 
 /* RESPONSIVE */

@@ -2,7 +2,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
   padding: var(--padding);
+}
+
+.header .about {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .header .logo {
@@ -14,7 +21,7 @@
 }
 
 .header div h1 {
-  color: #fff;
+  color: var(--themeBlack);
   letter-spacing: 0.05em;
   font-size: 32px;
 }
@@ -26,11 +33,23 @@
 }
 
 .header .social {
-  margin-top: 8px;
+  margin-top: 24px;
+  width: 100%;
 }
 
 .header .social a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
   text-decoration: none;
+  background: var(--bgGradientBlue);
+  color: #fff;
+  padding: 8px 24px;
+  width: 100%;
+  border-radius: 100px;
+}
+
+.header .social a img {
   margin-right: 8px;
 }
 

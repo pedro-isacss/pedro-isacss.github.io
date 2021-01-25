@@ -2,8 +2,9 @@
 
 :root {
   --themeBlue: #007cf0;
-  --themeBlack: #07060c;
+  --themeBlack: #001427;
   --themeGray: #9e9e9e;
+  --bgGradientBlue: linear-gradient(180deg, #007cf0 0%, #003a70 100%);
   --padding: 24px;
 }
 

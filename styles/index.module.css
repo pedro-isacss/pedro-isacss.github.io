@@ -1,3 +1,27 @@
-.index {
-  background-color: var(--themeBlack);
+.section {
+  display: flex;
+  width: 100%;
+  height: 100vh;
+}
+
+.subsection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+.bggradentblue {
+  background: var(--bgGradientBlue);
+}
+
+@media (max-width: 760px) {
+  .section {
+    flex-direction: column;
+    height: auto;
+  }
+  .subsection {
+    width: 100%;
+    min-height: 100vh;
+  }
 }
