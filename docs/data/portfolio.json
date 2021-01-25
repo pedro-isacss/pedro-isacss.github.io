@@ -1,0 +1,42 @@
+[
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/room-homepage-master/index.html",
+    "img": "../images/portfolio-room-homepage.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/dropbox-animation/index.html",
+    "img": "../images/portfolio-dropbox-animation.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/electronic-week/index.html",
+    "img": "../images/portfolio-electronic-week.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/adidas-logo-animation/index.html",
+    "img": "../images/portfolio-adidas-logo-animation.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/spiderman-page/index.html",
+    "img": "../images/portfolio-spiderman-page.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/static-job-listings-master/build/index.html",
+    "img": "../images/portfolio-static-job-listings-master.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/social-dash/build/index.html",
+    "img": "../images/portfolio-social-dash.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/easy-bank/index.html",
+    "img": "../images/portfolio-easybank.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/fylo/index.html",
+    "img": "../images/portfolio-fylo.jpg"
+  },
+  {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/chat-app-css/index.html",
+    "img": "../images/portfolio-chat-app-css.jpg"
+  }
+]
