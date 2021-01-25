@@ -5,10 +5,10 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && next export",
     "start": "next start",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d out"
   },
   "dependencies": {
     "next": "10.0.5",
@@ -20,5 +20,8 @@
     "@types/react": "^17.0.0",
     "gh-pages": "^3.1.0",
     "typescript": "^4.1.3"
+  },
+  "repository": {
+    "url": "https://github.com/pedro-isacss/pedro-isacss.github.io"
   }
 }
