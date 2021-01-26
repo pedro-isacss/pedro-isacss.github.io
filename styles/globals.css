@@ -15,10 +15,12 @@
   font-family: "Roboto", sans-serif;
 }
 
-.divisor {
-  color: var(--themeBlue);
-  height: 0px;
-  border: none;
-  border-top: 1px solid var(--themeBlue);
-  margin: var(--padding);
+::-webkit-scrollbar-track {
+  background-color: #fff;
+}
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--themeBlack);
 }

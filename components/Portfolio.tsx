@@ -12,13 +12,11 @@ export default function Portfolio() {
     fetch("./data/portfolio.json")
       .then((response) => response.json())
       .then((res) => {
-        res = res.slice(0, 8);
         setPortfolioItems(res);
       });
   }, []);
   return (
     <section className={styles.portfolio}>
-      <h1>Portfolio</h1>
       <div>
         {portfolioItems.map((item: PortfolioItem) => {
           return (
@@ -28,9 +26,6 @@ export default function Portfolio() {
           );
         })}
       </div>
-      <a className={styles.seemore} href="#">
-        See more {">>"}
-      </a>
     </section>
   );
 }
