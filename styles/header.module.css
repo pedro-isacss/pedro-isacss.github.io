@@ -19,7 +19,7 @@
 
 .infos img {
   max-width: 40px;
-  margin-right: 8px;
+  margin-right: 16px;
 }
 
 .infos h1 {
@@ -149,9 +149,6 @@
   .container {
     width: 300px;
     padding: 32px;
-  }
-  .infos img {
-    margin-right: 16px;
   }
   .closebtn {
     left: 288px;

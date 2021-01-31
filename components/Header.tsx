@@ -21,7 +21,11 @@ function Header() {
         </div>
         {/* LINKS */}
         <div className={styles.links}>
-          <a href="#" target="__blank" className={styles.mainlink}>
+          <a
+            href="https://www.fiverr.com/sspedroisac"
+            target="__blank"
+            className={styles.mainlink}
+          >
             <CgWorkAlt
               size={16}
               color="var(--white)"
@@ -29,7 +33,7 @@ function Header() {
             />
             Services
           </a>
-          <a href="#" target="__blank">
+          <a href="https://github.com/pedro-isacss" target="__blank">
             <FiGithub
               size={16}
               color="var(--white)"
@@ -37,7 +41,7 @@ function Header() {
             />
             GitHub
           </a>
-          <a href="#" target="__blank">
+          <a href="https://www.instagram.com/ss.pedroisac/" target="__blank">
             <FiInstagram
               size={16}
               color="var(--white)"
@@ -49,7 +53,7 @@ function Header() {
         {/* MAIL */}
         <span className={styles.mail}>
           Do you need something? send me an email:{" "}
-          <a href="#">ss.pedroisac@gmail.com</a>
+          <a href="mailto:ss.pedroisac@gmail.com">ss.pedroisac@gmail.com</a>
         </span>
         {/* MUSIC CONTROLLERS */}
         <div className={styles.musiccontrollers}>
@@ -75,13 +79,13 @@ function Header() {
     return (
       <div className={styles.containerhidden}>
         <img src="./images/logo.svg" />
-        <a href="#" target="__blank">
+        <a href="https://www.fiverr.com/sspedroisac" target="__blank">
           <CgWorkAlt size={24} color="var(--white)" />
         </a>
-        <a href="#" target="__blank">
+        <a href="https://github.com/pedro-isacss" target="__blank">
           <FiGithub size={24} color="var(--white)" />
         </a>
-        <a href="#" target="__blank">
+        <a href="https://www.instagram.com/ss.pedroisac/" target="__blank">
           <FiInstagram size={24} color="var(--white)" />
         </a>
         <div>
