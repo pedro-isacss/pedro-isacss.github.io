@@ -1,17 +1,17 @@
 import styles from "../styles/index.module.css";
 import Header from "../components/Header";
-import Portfolio from "../components/Portfolio";
+import Nav from "../components/Nav";
+import Projects from "../components/Projects";
 
 export default function Home() {
   return (
-    <div>
-      <div className={styles.section}>
-        <div className={styles.subsection}>
-          <Header />
-        </div>
-        <div className={`${styles.subsection} ${styles.bggradentblue}`}>
-          <Portfolio />
-        </div>
+    <div className={styles.container}>
+      <div className={styles.header}>
+        <Header />
+      </div>
+      <div className={styles.content}>
+        <Nav />
+        <Projects />
       </div>
     </div>
   );

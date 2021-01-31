@@ -1,0 +1,23 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px;
+  position: sticky;
+  top: 0;
+  background-color: var(--white);
+  width: 100%;
+  z-index: 100;
+}
+
+.container button {
+  border: none;
+  background-color: transparent;
+  font-size: 16px;
+  margin: 0 8px;
+  padding: 4px;
+}
+
+button.active {
+  border-bottom: 2px solid var(--blue);
+}

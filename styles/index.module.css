@@ -1,27 +1,23 @@
-.section {
-  display: flex;
-  width: 100%;
-  height: 100vh;
-}
-
-.subsection {
+.container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 50%;
+  width: 100%;
+  min-height: 100vh;
 }
 
-.bggradentblue {
-  background: var(--bgGradientBlue);
+.header {
+  max-width: 500px;
+  width: 100%;
 }
 
-@media (max-width: 760px) {
-  .section {
-    flex-direction: column;
-    height: auto;
-  }
-  .subsection {
-    width: 100%;
-    min-height: 100vh;
-  }
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  align-self: flex-start;
+  height: 100vh;
+  overflow: auto;
 }

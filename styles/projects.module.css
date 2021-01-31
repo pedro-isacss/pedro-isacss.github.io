@@ -1,0 +1,20 @@
+.container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 24px;
+  padding: 24px;
+}
+
+.container a {
+  width: 100%;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+}
+
+.container a:hover {
+  filter: drop-shadow(1px 1px 10px rgba(0, 124, 240, 0.5));
+}
+
+.container a img {
+  width: 100%;
+  border-radius: 12px;
+}

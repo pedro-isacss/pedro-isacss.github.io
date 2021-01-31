@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradientBlack);
+  min-height: 100vh;
+  width: 100%;
+  border-top-right-radius: 8%;
+  border-bottom-right-radius: 8%;
+  padding: 24px;
+}
+
+.infos {
+  display: flex;
+}
+
+.infos img {
+  max-width: 40px;
+  margin-right: 8px;
+}
+
+.infos h1 {
+  color: var(--white);
+}
+
+.infos span {
+  color: var(--gray);
+}
+
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.links a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  text-decoration: none;
+  color: var(--white);
+  border: 1px solid var(--blue);
+  max-width: 250px;
+  width: 100%;
+  border-radius: 100px;
+  padding: 8px 16px;
+  margin: 8px 0;
+}
+
+.links .mainlink {
+  background: var(--gradientBlue);
+}
+
+.mail {
+  color: var(--white);
+  max-width: 250px;
+  width: 100%;
+  text-align: center;
+  margin: 24px;
+  font-size: 12px;
+}
+
+.mail a {
+  color: var(--blue);
+}
+
+.musiccontrollers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.musiccontrollers button {
+  background-color: transparent;
+  border: none;
+  margin: 0 4px;
+}
+
+.closebtn {
+  border: none;
+  background-color: transparent;
+  position: absolute;
+  align-self: flex-end;
+}
