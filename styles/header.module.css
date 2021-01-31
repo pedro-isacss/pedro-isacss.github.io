@@ -144,3 +144,16 @@
   align-items: center;
   left: 52px;
 }
+
+@media (max-width: 500px) {
+  .container {
+    width: 300px;
+    padding: 32px;
+  }
+  .infos img {
+    margin-right: 16px;
+  }
+  .closebtn {
+    left: 288px;
+  }
+}
