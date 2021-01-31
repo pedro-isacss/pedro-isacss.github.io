@@ -65,7 +65,7 @@ function Header() {
         <button
           className={styles.closebtn}
           onClick={() => {
-            setHeaderHidden(true);
+            setHeaderHidden({ headerHidden: true, setHeaderHidden });
             console.log(headerHidden);
           }}
         >
@@ -96,8 +96,8 @@ function Header() {
         </div>
         <button
           className={styles.openbtn}
-          onClick={(e) => {
-            setHeaderHidden(false);
+          onClick={() => {
+            setHeaderHidden({ headerHidden: false, setHeaderHidden });
             console.log(headerHidden);
           }}
         >

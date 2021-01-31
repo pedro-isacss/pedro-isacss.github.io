@@ -1,10 +1,9 @@
-import React, { useState } from "react";
+import React, { useState, Dispatch, SetStateAction } from "react";
 
 type Initial = {
   headerHidden: boolean;
-  setHeaderHidden: Function;
+  setHeaderHidden: Dispatch<SetStateAction<Initial>>;
 };
-// Dispatch<SetStateAction<Initial>>
 
 const initial: Initial = {
   headerHidden: false,
