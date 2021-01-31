@@ -1,63 +1,111 @@
+import { useContext } from "react";
+import GlobalStates from "../contex";
 import styles from "../styles/header.module.css";
 import { CgWorkAlt } from "react-icons/cg";
 import { FiGithub, FiInstagram } from "react-icons/fi";
 import { BiPlay, BiSkipNext } from "react-icons/bi";
-import { AiOutlineLeft } from "react-icons/ai";
+import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 function Header() {
-  return (
-    <div className={styles.container}>
-      {/* INFOS */}
-      <div className={styles.infos}>
-        <img src="./images/logo.svg" alt="Pedro Isac logo" />
-        <div>
-          <h1>Pedro Isac</h1>
-          <span>Front-end developer and Web designer</span>
+  const { setHeaderHidden, headerHidden } = useContext(GlobalStates);
+  console.log(headerHidden);
+  if (headerHidden === false) {
+    return (
+      <div className={styles.container}>
+        {/* INFOS */}
+        <div className={styles.infos}>
+          <img src="./images/logo.svg" alt="Pedro Isac logo" />
+          <div>
+            <h1>Pedro Isac</h1>
+            <span>Front-end developer and Web designer</span>
+          </div>
         </div>
+        {/* LINKS */}
+        <div className={styles.links}>
+          <a href="#" target="__blank" className={styles.mainlink}>
+            <CgWorkAlt
+              size={16}
+              color="var(--white)"
+              style={{ marginRight: 8 }}
+            />
+            Services
+          </a>
+          <a href="#" target="__blank">
+            <FiGithub
+              size={16}
+              color="var(--white)"
+              style={{ marginRight: 8 }}
+            />
+            GitHub
+          </a>
+          <a href="#" target="__blank">
+            <FiInstagram
+              size={16}
+              color="var(--white)"
+              style={{ marginRight: 8 }}
+            />
+            Instagram
+          </a>
+        </div>
+        {/* MAIL */}
+        <span className={styles.mail}>
+          Do you need something? send me an email:{" "}
+          <a href="#">ss.pedroisac@gmail.com</a>
+        </span>
+        {/* MUSIC CONTROLLERS */}
+        <div className={styles.musiccontrollers}>
+          <button>
+            <BiPlay size={24} color="var(--white)" />
+          </button>
+          <button>
+            <BiSkipNext size={24} color="var(--white)" />
+          </button>
+        </div>
+        {/* CLOSE BTN */}
+        <button
+          className={styles.closebtn}
+          onClick={() => {
+            setHeaderHidden(true);
+            console.log(headerHidden);
+          }}
+        >
+          <AiOutlineLeft size={16} color="var(--blue)" />
+        </button>
       </div>
-      {/* LINKS */}
-      <div className={styles.links}>
-        <a href="#" target="__blank" className={styles.mainlink}>
-          <CgWorkAlt
-            size={16}
-            color="var(--white)"
-            style={{ marginRight: 8 }}
-          />
-          Services
+    );
+  } else {
+    return (
+      <div className={styles.containerhidden}>
+        <img src="./images/logo.svg" />
+        <a href="#" target="__blank">
+          <CgWorkAlt size={24} color="var(--white)" />
         </a>
         <a href="#" target="__blank">
-          <FiGithub size={16} color="var(--white)" style={{ marginRight: 8 }} />
-          GitHub
+          <FiGithub size={24} color="var(--white)" />
         </a>
         <a href="#" target="__blank">
-          <FiInstagram
-            size={16}
-            color="var(--white)"
-            style={{ marginRight: 8 }}
-          />
-          Instagram
+          <FiInstagram size={24} color="var(--white)" />
         </a>
-      </div>
-      {/* MAIL */}
-      <span className={styles.mail}>
-        Do you need something? send me an email:{" "}
-        <a href="#">ss.pedroisac@gmail.com</a>
-      </span>
-      {/* MUSIC CONTROLLERS */}
-      <div className={styles.musiccontrollers}>
-        <button>
-          <BiPlay size={24} color="var(--white)" />
+        <div>
+          <button>
+            <BiPlay size={24} color="var(--white)" />
+          </button>
+          <button>
+            <BiSkipNext size={24} color="var(--white)" />
+          </button>
+        </div>
+        <button
+          className={styles.openbtn}
+          onClick={(e) => {
+            setHeaderHidden(false);
+            console.log(headerHidden);
+          }}
+        >
+          <AiOutlineRight size={16} color="var(--blue)" />
         </button>
-        <button>
-          <BiSkipNext size={24} color="var(--white)" />
-        </button>
       </div>
-      {/* CLOSE BTN */}
-      <button className={styles.closebtn}>
-        <AiOutlineLeft size={16} color="var(--blue)" />
-      </button>
-    </div>
-  );
+    );
+  }
 }
 
 export default Header;

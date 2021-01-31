@@ -5,14 +5,16 @@
   align-items: center;
   background: var(--gradientBlack);
   min-height: 100vh;
-  width: 100%;
-  border-top-right-radius: 8%;
-  border-bottom-right-radius: 8%;
+  width: 350px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
   padding: 24px;
 }
 
 .infos {
   display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .infos img {
@@ -82,7 +84,63 @@
 
 .closebtn {
   border: none;
-  background-color: transparent;
+  background-color: var(--black);
+  padding: 4px;
+  border-radius: 50%;
   position: absolute;
   align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 336px;
+}
+
+/* HIDDEN */
+.containerhidden {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradientBlack);
+  min-height: 100vh;
+  width: 64px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding: 16px;
+}
+
+.containerhidden img {
+  max-width: 32px;
+  margin-bottom: 32px;
+}
+
+.containerhidden a {
+  margin: 12px 0;
+}
+
+.containerhidden div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 32px;
+}
+
+.containerhidden div button {
+  margin: 4px 0;
+  border: none;
+  background-color: transparent;
+}
+
+.openbtn {
+  border: none;
+  background-color: var(--black);
+  padding: 4px;
+  border-radius: 50%;
+  position: absolute;
+  align-self: flex-end;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: 52px;
 }

@@ -19,7 +19,7 @@ function Projects() {
     <div className={styles.container}>
       {projects.map((project: Project) => {
         return (
-          <a href={project.link} target="__blank">
+          <a href={project.link} target="__blank" key={project.img}>
             <img src={project.img} alt="Pedro Isac portfolio item" />
           </a>
         );

@@ -7,8 +7,11 @@
 }
 
 .header {
-  max-width: 500px;
-  width: 100%;
+  width: 500px;
+}
+
+.headerhidden {
+  width: 64px;
 }
 
 .content {
