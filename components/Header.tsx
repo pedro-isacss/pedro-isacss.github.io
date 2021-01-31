@@ -8,7 +8,6 @@ import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
 
 function Header() {
   const { setHeaderHidden, headerHidden } = useContext(GlobalStates);
-  console.log(headerHidden);
   if (headerHidden === false) {
     return (
       <div className={styles.container}>
@@ -66,7 +65,6 @@ function Header() {
           className={styles.closebtn}
           onClick={() => {
             setHeaderHidden({ headerHidden: true, setHeaderHidden });
-            console.log(headerHidden);
           }}
         >
           <AiOutlineLeft size={16} color="var(--blue)" />
@@ -98,7 +96,6 @@ function Header() {
           className={styles.openbtn}
           onClick={() => {
             setHeaderHidden({ headerHidden: false, setHeaderHidden });
-            console.log(headerHidden);
           }}
         >
           <AiOutlineRight size={16} color="var(--blue)" />

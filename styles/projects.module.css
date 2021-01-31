@@ -18,3 +18,15 @@
   width: 100%;
   border-radius: 12px;
 }
+
+@media (max-width: 680px) {
+  .container {
+    grid-template-columns: auto auto auto;
+  }
+}
+
+@media (max-width: 500px) {
+  .container {
+    grid-template-columns: auto auto;
+  }
+}
