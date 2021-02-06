@@ -9,10 +9,10 @@ export default function Home() {
   const { headerHidden } = useContext(GlobalStates);
   return (
     <div className={styles.container}>
-      <div className={headerHidden ? "headerhidden" : "header"}>
+      <div className={headerHidden ? styles.headerhidden : styles.header}>
         <Header />
       </div>
-      <div className={styles.content}>
+      <div className={headerHidden ? styles.content : styles.displaynone}>
         <Nav active="projects" />
         <Projects />
       </div>

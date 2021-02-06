@@ -5,16 +5,17 @@
   align-items: center;
   background: var(--gradientBlack);
   min-height: 100vh;
-  width: 350px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
+  width: 100%;
   padding: 24px;
+  transition: width ease-out 0.4s;
 }
 
 .infos {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: containerchildren;
+  animation-duration: 1.2s;
 }
 
 .infos img {
@@ -37,6 +38,8 @@
   flex-direction: column;
   width: 100%;
   margin-top: 16px;
+  animation-name: containerchildren;
+  animation-duration: 1.2s;
 }
 
 .links a {
@@ -64,6 +67,8 @@
   text-align: center;
   margin: 24px;
   font-size: 12px;
+  animation-name: containerchildren;
+  animation-duration: 1.2s;
 }
 
 .mail a {
@@ -74,6 +79,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  animation-name: containerchildren;
+  animation-duration: 1.2s;
 }
 
 .musiccontrollers button {
@@ -84,7 +91,7 @@
 
 .closebtn {
   border: none;
-  background-color: var(--black);
+  background-color: transparent;
   padding: 4px;
   border-radius: 50%;
   position: absolute;
@@ -92,7 +99,30 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 336px;
+  animation-name: closebtn;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes containerchildren {
+  0% {
+    opacity: 0;
+    transform: translateX(-500px);
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
+@keyframes closebtn {
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* HIDDEN */
@@ -107,15 +137,28 @@
   border-top-right-radius: 50px;
   border-bottom-right-radius: 50px;
   padding: 16px;
+  transition: all ease-out 0.4s;
+  animation-name: containerhidden;
+  animation-duration: 0.4s;
+}
+
+@keyframes containerhidden {
+  0% {
+    width: 300px;
+  }
 }
 
 .containerhidden img {
   max-width: 32px;
   margin-bottom: 32px;
+  animation-name: containerchildrenHidden;
+  animation-duration: 1.2s;
 }
 
 .containerhidden a {
   margin: 12px 0;
+  animation-name: containerchildrenHidden;
+  animation-duration: 1.2s;
 }
 
 .containerhidden div {
@@ -124,6 +167,8 @@
   align-items: center;
   flex-direction: column;
   margin-top: 32px;
+  animation-name: containerchildrenHidden;
+  animation-duration: 1.2s;
 }
 
 .containerhidden div button {
@@ -145,12 +190,21 @@
   left: 52px;
 }
 
+@keyframes containerchildrenHidden {
+  0% {
+    opacity: 0;
+    transform: translateX(88px);
+  }
+  50% {
+    opacity: 0.2;
+  }
+}
+
 @media (max-width: 500px) {
   .container {
-    width: 300px;
-    padding: 32px;
+    padding: 48px;
   }
   .closebtn {
-    left: 288px;
+    right: 5px;
   }
 }

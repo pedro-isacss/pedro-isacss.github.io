@@ -4,7 +4,11 @@ import styles from "../styles/header.module.css";
 import { CgWorkAlt } from "react-icons/cg";
 import { FiGithub, FiInstagram } from "react-icons/fi";
 import { BiPlay, BiSkipNext } from "react-icons/bi";
-import { AiOutlineLeft, AiOutlineRight } from "react-icons/ai";
+import {
+  AiOutlineLeft,
+  AiOutlineRight,
+  AiOutlineLinkedin,
+} from "react-icons/ai";
 
 function Header() {
   const { setHeaderHidden, headerHidden } = useContext(GlobalStates);
@@ -49,6 +53,14 @@ function Header() {
             />
             Instagram
           </a>
+          <a href="https://www.linkedin.com/in/pedro-isacss/" target="__blank">
+            <AiOutlineLinkedin
+              size={18}
+              color="var(--white)"
+              style={{ marginRight: 8 }}
+            />
+            LinkedIn
+          </a>
         </div>
         {/* MAIL */}
         <span className={styles.mail}>
@@ -87,6 +99,9 @@ function Header() {
         </a>
         <a href="https://www.instagram.com/ss.pedroisac/" target="__blank">
           <FiInstagram size={24} color="var(--white)" />
+        </a>
+        <a href="https://www.linkedin.com/in/pedro-isacss/" target="__blank">
+          <AiOutlineLinkedin size={24} color="var(--white)" />
         </a>
         <div>
           <button>

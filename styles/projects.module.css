@@ -19,13 +19,13 @@
   border-radius: 12px;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 960px) {
   .container {
     grid-template-columns: auto auto auto;
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 720px) {
   .container {
     grid-template-columns: auto auto;
   }

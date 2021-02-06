@@ -7,7 +7,7 @@
 }
 
 .header {
-  width: 500px;
+  width: 100%;
 }
 
 .headerhidden {
@@ -23,4 +23,19 @@
   align-self: flex-start;
   height: 100vh;
   overflow: auto;
+  animation-name: content;
+  animation-duration: 1.6s;
+}
+
+@keyframes content {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+.displaynone {
+  display: none;
 }
