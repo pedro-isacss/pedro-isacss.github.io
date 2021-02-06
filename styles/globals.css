@@ -20,7 +20,9 @@ body {
   background-color: var(--white);
 }
 
-button {
+button,
+input,
+select {
   cursor: pointer;
   outline: none;
 }

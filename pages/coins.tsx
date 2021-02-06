@@ -2,9 +2,10 @@ import { useContext } from "react";
 import GlobalStates from "../contex";
 import styles from "../styles/pages.module.css";
 import Header from "../components/Header";
-import Nav from "../components/Nav";
+import ToolsHeader from "../components/ToolsHeader";
+import ToolCoins from "../components/ToolCoins";
 
-export default function Tools() {
+function Coins() {
   const { headerHidden } = useContext(GlobalStates);
   return (
     <div className={styles.container}>
@@ -12,9 +13,11 @@ export default function Tools() {
         <Header />
       </div>
       <div className={headerHidden ? styles.content : styles.displaynone}>
-        <Nav active="tools" />
-        <span>Under development...</span>
+        <ToolsHeader title="Coins" />
+        <ToolCoins />
       </div>
     </div>
   );
 }
+
+export default Coins;

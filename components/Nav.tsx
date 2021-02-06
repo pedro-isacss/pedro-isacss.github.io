@@ -13,8 +13,10 @@ function Nav(props: Props) {
           Projects
         </a>
       </Link>
-      <Link href="/others">
-        <a className={props.active === "others" ? styles.active : ""}>Others</a>
+      <Link href="/content">
+        <a className={props.active === "content" ? styles.active : ""}>
+          Content
+        </a>
       </Link>
       <Link href="/tools">
         <a className={props.active === "tools" ? styles.active : ""}>Tools</a>

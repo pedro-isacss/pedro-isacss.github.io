@@ -8,11 +8,11 @@ export default function Others() {
   const { headerHidden } = useContext(GlobalStates);
   return (
     <div className={styles.container}>
-      <div className={headerHidden ? "headerhidden" : "header"}>
+      <div className={headerHidden ? styles.headerhidden : styles.header}>
         <Header />
       </div>
-      <div className={styles.content}>
-        <Nav active="others" />
+      <div className={headerHidden ? styles.content : styles.displaynone}>
+        <Nav active="content" />
         <span>Under development...</span>
       </div>
     </div>

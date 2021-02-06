@@ -1,0 +1,62 @@
+.container {
+  width: 100%;
+  padding: 0 24px;
+}
+
+.container input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 100px;
+  border: 1px solid var(--black);
+}
+
+.coins {
+}
+
+.coin {
+  background-color: var(--black);
+  width: 100%;
+  border-radius: 12px;
+  padding: 24px;
+  color: var(--white);
+  display: flex;
+  flex-direction: column;
+  margin: 24px 0;
+}
+
+.infos,
+.chartcontrollers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infos select {
+  background-color: var(--black);
+  border: 1px solid var(--white);
+  color: var(--white);
+  border-radius: 100px;
+  padding: 4px 8px;
+}
+
+.infos span {
+  font-size: 24px;
+}
+
+.chartcontrollers {
+  margin-top: 16px;
+}
+
+.chartcontrollers button {
+  border: none;
+  background-color: transparent;
+  color: var(--white);
+}
+
+.chartcontrollers div button {
+  margin: 0 8px;
+}
+
+.chartcontrollers .viewhiddechart {
+  color: var(--blue);
+}
