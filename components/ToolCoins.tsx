@@ -9,8 +9,6 @@ interface Coin {
 function ToolCoins() {
   const [chartView, setChartView] = useState(false);
   const [currency, setCurrency] = useState("BRL");
-  //Just to deploy
-  setCurrency("BRL");
   const [coinsCode, setCoinsCode] = useState<string[]>([]);
   const [coins, setCoins] = useState<Object[]>([]);
 
@@ -41,7 +39,7 @@ function ToolCoins() {
                   {coin.bid ? parseFloat(coin.bid).toFixed(2) : ""}
                   {currency}
                 </span>
-                <select>
+                <select onChange={(e) => setCurrency(e.target.value)}>
                   {coinsCode.map((item) => {
                     return (
                       <option value={item} key={item}>
