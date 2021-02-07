@@ -3,14 +3,11 @@
   padding: 0 24px;
 }
 
-.container input {
-  width: 100%;
-  padding: 8px;
-  border-radius: 100px;
-  border: 1px solid var(--black);
-}
-
 .coins {
+  display: grid;
+  grid-template-columns: auto auto;
+  gap: 24px;
+  margin: 8px 0 24px 0;
 }
 
 .coin {
@@ -21,7 +18,6 @@
   color: var(--white);
   display: flex;
   flex-direction: column;
-  margin: 24px 0;
 }
 
 .infos,
@@ -59,4 +55,26 @@
 
 .chartcontrollers .viewhiddechart {
   color: var(--blue);
+}
+
+@media (max-width: 830px) {
+  .coins {
+    grid-template-columns: auto;
+  }
+}
+@media (max-width: 400px) {
+  .coin {
+    padding: 16px;
+  }
+  .infos span {
+    font-size: 12px;
+  }
+  .infos select {
+    background-color: var(--black);
+    border: 1px solid var(--white);
+    color: var(--white);
+    border-radius: 100px;
+    padding: 2px 4px;
+    font-size: 12px;
+  }
 }
