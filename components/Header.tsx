@@ -1,9 +1,9 @@
-import { useContext } from "react";
+import { useContext, useState, useRef } from "react";
 import GlobalStates from "../contex";
 import styles from "../styles/header.module.css";
 import { CgWorkAlt } from "react-icons/cg";
 import { FiGithub, FiInstagram } from "react-icons/fi";
-import { BiPlay, BiSkipNext } from "react-icons/bi";
+import { BiPlay, BiSkipNext, BiPause } from "react-icons/bi";
 import {
   AiOutlineLeft,
   AiOutlineRight,
@@ -11,6 +11,9 @@ import {
 } from "react-icons/ai";
 
 function Header() {
+  const [playing, setPlaying] = useState(false);
+  const [music, setMusic] = useState(1);
+  const audioRef = useRef<HTMLAudioElement>(null);
   const { setHeaderHidden, headerHidden } = useContext(GlobalStates);
   if (headerHidden === false) {
     return (
@@ -69,10 +72,33 @@ function Header() {
         </span>
         {/* MUSIC CONTROLLERS */}
         <div className={styles.musiccontrollers}>
-          <button>
-            <BiPlay size={24} color="var(--white)" />
-          </button>
-          <button>
+          <audio ref={audioRef} src={`./music/music0${music}.mp3`}></audio>
+          {playing ? (
+            <button
+              onClick={() => {
+                setPlaying(false);
+                audioRef.current?.pause();
+              }}
+            >
+              <BiPause size={24} color="var(--white)" />
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                setPlaying(true);
+                audioRef.current?.play();
+              }}
+            >
+              <BiPlay size={24} color="var(--white)" />
+            </button>
+          )}
+
+          <button
+            onClick={() => {
+              music === 3 ? setMusic(1) : setMusic(music + 1);
+              audioRef.current?.play();
+            }}
+          >
             <BiSkipNext size={24} color="var(--white)" />
           </button>
         </div>
@@ -112,10 +138,32 @@ function Header() {
           <AiOutlineLinkedin size={24} color="var(--white)" />
         </a>
         <div>
-          <button>
-            <BiPlay size={24} color="var(--white)" />
-          </button>
-          <button>
+          <audio ref={audioRef} src={`./music/music0${music}.mp3`}></audio>
+          {playing ? (
+            <button
+              onClick={() => {
+                setPlaying(false);
+                audioRef.current?.pause();
+              }}
+            >
+              <BiPause size={24} color="var(--white)" />
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                setPlaying(true);
+                audioRef.current?.play();
+              }}
+            >
+              <BiPlay size={24} color="var(--white)" />
+            </button>
+          )}
+          <button
+            onClick={() => {
+              music === 3 ? setMusic(1) : setMusic(music + 1);
+              audioRef.current?.play();
+            }}
+          >
             <BiSkipNext size={24} color="var(--white)" />
           </button>
         </div>
