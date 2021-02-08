@@ -3,7 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--gradientBlack);
+  background: var(--gradientGreen);
   min-height: 100vh;
   width: 100%;
   padding: 24px;
@@ -49,7 +49,7 @@
   text-decoration: none;
   color: var(--white);
   border: 1px solid var(--blue);
-  max-width: 250px;
+  max-width: 328px;
   width: 100%;
   border-radius: 100px;
   padding: 8px 16px;
@@ -131,11 +131,9 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background: var(--gradientBlack);
+  background: var(--gradientGreen);
   min-height: 100vh;
   width: 64px;
-  border-top-right-radius: 50px;
-  border-bottom-right-radius: 50px;
   padding: 16px;
   transition: all ease-out 0.4s;
   animation-name: containerhidden;
@@ -179,15 +177,27 @@
 
 .openbtn {
   border: none;
-  background-color: var(--black);
+  background-color: transparent;
   padding: 4px;
-  border-radius: 50%;
-  position: absolute;
-  align-self: flex-end;
   display: flex;
   justify-content: center;
   align-items: center;
-  left: 52px;
+  position: absolute;
+  top: 32px;
+  animation-name: openbtn;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes openbtn {
+  50% {
+    opacity: 0.5;
+    transform: scale(1.5);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 @keyframes containerchildrenHidden {

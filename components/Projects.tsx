@@ -17,13 +17,17 @@ function Projects() {
   }, []);
   return (
     <div className={styles.container}>
-      {projects.map((project: Project) => {
-        return (
-          <a href={project.link} target="__blank" key={project.img}>
-            <img src={project.img} alt="Pedro Isac portfolio item" />
-          </a>
-        );
-      })}
+      <h1>Projects</h1>
+      <span>Some projects that I have already developed.</span>
+      <div className={styles.projects}>
+        {projects.map((project: Project) => {
+          return (
+            <a href={project.link} target="__blank" key={project.img}>
+              <img src={project.img} alt="Pedro Isac portfolio item" />
+            </a>
+          );
+        })}
+      </div>
     </div>
   );
 }

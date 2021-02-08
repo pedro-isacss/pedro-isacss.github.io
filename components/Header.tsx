@@ -90,6 +90,14 @@ function Header() {
   } else {
     return (
       <div className={styles.containerhidden}>
+        <button
+          className={styles.openbtn}
+          onClick={() => {
+            setHeaderHidden({ headerHidden: false, setHeaderHidden });
+          }}
+        >
+          <AiOutlineRight size={16} color="var(--blue)" />
+        </button>
         <img src="./images/logo.svg" />
         <a href="https://www.fiverr.com/sspedroisac" target="__blank">
           <CgWorkAlt size={24} color="var(--white)" />
@@ -111,14 +119,6 @@ function Header() {
             <BiSkipNext size={24} color="var(--white)" />
           </button>
         </div>
-        <button
-          className={styles.openbtn}
-          onClick={() => {
-            setHeaderHidden({ headerHidden: false, setHeaderHidden });
-          }}
-        >
-          <AiOutlineRight size={16} color="var(--blue)" />
-        </button>
       </div>
     );
   }

@@ -3,10 +3,11 @@
 :root {
   --blue: #007cf0;
   --black: #07060c;
-  --white: #fff;
+  --white: #f3f3f3;
   --gray: #7e7e7e;
   --gradientBlack: linear-gradient(116.82deg, #07060c 0%, #0a0a0a 100%);
   --gradientBlue: linear-gradient(270deg, #007cf0 0%, #003a70 100%);
+  --gradientGreen: linear-gradient(270deg, #003b5b 0%, #001427 100%);
 }
 
 * {
