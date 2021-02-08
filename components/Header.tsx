@@ -1,4 +1,4 @@
-import { useContext, useState, useRef } from "react";
+import { useContext, useState, RefObject } from "react";
 import GlobalStates from "../contex";
 import styles from "../styles/header.module.css";
 import { CgWorkAlt } from "react-icons/cg";
@@ -10,11 +10,15 @@ import {
   AiOutlineLinkedin,
 } from "react-icons/ai";
 
-function Header() {
-  const [playing, setPlaying] = useState(false);
-  const [music, setMusic] = useState(1);
-  const audioRef = useRef<HTMLAudioElement>(null);
+interface Props {
+  audio: RefObject<HTMLAudioElement>;
+  music: number;
+  setMusic: Function;
+}
+
+function Header(props: Props) {
   const { setHeaderHidden, headerHidden } = useContext(GlobalStates);
+  const [playing, setPlaying] = useState(false);
   if (headerHidden === false) {
     return (
       <div className={styles.container}>
@@ -72,12 +76,11 @@ function Header() {
         </span>
         {/* MUSIC CONTROLLERS */}
         <div className={styles.musiccontrollers}>
-          <audio ref={audioRef} src={`./music/music0${music}.mp3`}></audio>
           {playing ? (
             <button
               onClick={() => {
                 setPlaying(false);
-                audioRef.current?.pause();
+                props.audio.current?.pause();
               }}
             >
               <BiPause size={24} color="var(--white)" />
@@ -86,7 +89,7 @@ function Header() {
             <button
               onClick={() => {
                 setPlaying(true);
-                audioRef.current?.play();
+                props.audio.current?.play();
               }}
             >
               <BiPlay size={24} color="var(--white)" />
@@ -95,8 +98,10 @@ function Header() {
 
           <button
             onClick={() => {
-              music === 3 ? setMusic(1) : setMusic(music + 1);
-              audioRef.current?.play();
+              props.music === 3
+                ? props.setMusic(1)
+                : props.setMusic(props.music + 1);
+              props.audio.current?.play();
             }}
           >
             <BiSkipNext size={24} color="var(--white)" />
@@ -138,12 +143,11 @@ function Header() {
           <AiOutlineLinkedin size={24} color="var(--white)" />
         </a>
         <div>
-          <audio ref={audioRef} src={`./music/music0${music}.mp3`}></audio>
           {playing ? (
             <button
               onClick={() => {
                 setPlaying(false);
-                audioRef.current?.pause();
+                props.audio.current?.pause();
               }}
             >
               <BiPause size={24} color="var(--white)" />
@@ -152,7 +156,7 @@ function Header() {
             <button
               onClick={() => {
                 setPlaying(true);
-                audioRef.current?.play();
+                props.audio.current?.play();
               }}
             >
               <BiPlay size={24} color="var(--white)" />
@@ -160,8 +164,10 @@ function Header() {
           )}
           <button
             onClick={() => {
-              music === 3 ? setMusic(1) : setMusic(music + 1);
-              audioRef.current?.play();
+              props.music === 3
+                ? props.setMusic(1)
+                : props.setMusic(props.music + 1);
+              props.audio.current?.play();
             }}
           >
             <BiSkipNext size={24} color="var(--white)" />
