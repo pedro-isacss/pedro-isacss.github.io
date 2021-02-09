@@ -1,8 +1,13 @@
 // ===== Variables =====
 let isMenuOpen = false;
+let isMusicPlaying = false;
+let currentMusic = 1;
 
 // ===== Elements =====
 const menuBtn = document.querySelector("button#menu-btn");
+const playPauseMusic = document.querySelector("button#play-pause-music");
+const skipMusic = document.querySelector("button#skip-music");
+const musics = document.querySelector("audio#musics");
 
 // ==== Open/Close menu event =====
 menuBtn.addEventListener("click", () => {
@@ -16,4 +21,28 @@ menuBtn.addEventListener("click", () => {
     imgMenuBtn.src = "./images/menu-open.svg";
     menu.style.display = "none";
   }
+});
+
+// ===== Play/Pause music =====
+playPauseMusic.addEventListener("click", () => {
+  const playPauseMusicImg = document.querySelector("img#play-pause-music-icon");
+  isMusicPlaying = !isMusicPlaying;
+  if (isMusicPlaying) {
+    musics.play();
+    playPauseMusicImg.src = "./images/pause.svg";
+  } else {
+    musics.pause();
+    playPauseMusicImg.src = "./images/play.svg";
+  }
+});
+
+// ===== Skip music =====
+skipMusic.addEventListener("click", () => {
+  if (currentMusic === 3) {
+    currentMusic = 1;
+  } else {
+    currentMusic++;
+  }
+  musics.src = `./music/music0${currentMusic}.mp3`;
+  musics.play();
 });

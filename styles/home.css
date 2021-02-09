@@ -207,4 +207,7 @@ header nav ul li a {
     max-width: 168px;
     width: 100%;
   }
+  .main {
+    margin-top: 16px;
+  }
 }
