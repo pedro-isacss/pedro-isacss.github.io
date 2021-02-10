@@ -46,3 +46,18 @@ skipMusic.addEventListener("click", () => {
   musics.src = `./music/music0${currentMusic}.mp3`;
   musics.play();
 });
+
+// ===== Loading projects =====
+fetch("../data/projects.json")
+  .then((response) => response.json())
+  .then((res) => {
+    const projects = document.querySelector("section#projects-container div");
+    [...res].map((project) => {
+      const container = document.createElement("a");
+      const img = document.createElement("img");
+      container.setAttribute("href", project.link);
+      img.setAttribute("src", project.img);
+      container.appendChild(img);
+      projects.appendChild(container);
+    });
+  });
