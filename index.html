@@ -11,61 +11,46 @@
 </head>
 
 <body>
-  <section class="container-100vh">
-    <!-- ===== HEADER ===== -->
-    <header>
-      <a href="#" id="logo">
-        <img src="./images/logo.svg" alt="Pedro Isac">
+  <!-- ====== HEADER ===== -->
+  <header>
+    <div class="social">
+      <a href="https://github.com/pedro-isacss" target="__blank">
+        <img src="./images/github.svg" alt="github">
       </a>
-      <button id="menu-btn">
-        <img id="menu-img-btn" src="./images/menu-open.svg" alt="open menu">
-      </button>
-      <nav id="nav-menu">
-        <ul>
-          <li><a href="#">Link Beta</a></li>
-          <li><a href="#">Link Beta</a></li>
-          <li><a href="#">Link Beta</a></li>
-        </ul>
-      </nav>
-    </header>
-    <!-- ====== MAIN ===== -->
-    <section class="main">
-      <div class="social">
-        <a href="https://github.com/pedro-isacss" target="__blank">
-          <img src="./images/github.svg" alt="github">
-        </a>
-        <a href="https://www.linkedin.com/in/pedro-isacss/" target="__blank">
-          <img src="./images/linkedin.svg" alt="linkedin">
-        </a>
-        <a href="https://www.instagram.com/ss.pedroisac/" target="__blank">
-          <img src="./images/instagram.svg" alt="instagram">
-        </a>
-        <img src="./images/arrowup.svg" alt="arrow up">
-        <span>Social</span>
+      <a href="https://www.linkedin.com/in/pedro-isacss/" target="__blank">
+        <img src="./images/linkedin.svg" alt="linkedin">
+      </a>
+      <a href="https://www.instagram.com/ss.pedroisac/" target="__blank">
+        <img src="./images/instagram.svg" alt="instagram">
+      </a>
+      <img src="./images/arrowup.svg" alt="arrow up">
+      <span>Social</span>
+    </div>
+    <div class="services">
+      <h1>
+        <img src="./images/line-logo.svg" alt="Pedro Isac" onload="SVGInject(this)">
+        Pedro Isac
+      </h1>
+      <p>Front-end developer and UI designer</p>
+      <a href="https://www.fiverr.com/sspedroisac" target="__blank">Services</a>
+      <div class="music-controller">
+        <audio id="musics" src="./music/music01.mp3"></audio>
+        <button id="play-pause-music">
+          <img id="play-pause-music-icon" src="./images/play.svg" alt="play music">
+        </button>
+        <button id="skip-music">
+          <img src="./images/skip.svg" alt="skip music">
+        </button>
       </div>
-      <div class="services">
-        <h1>Pedro Isac</h1>
-        <p>Front-end developer and UI designer</p>
-        <a href="https://www.fiverr.com/sspedroisac" target="__blank">Services</a>
-        <div class="music-controller">
-          <audio id="musics" src="./music/music01.mp3"></audio>
-          <button id="play-pause-music">
-            <img id="play-pause-music-icon" src="./images/play.svg" alt="play music">
-          </button>
-          <button id="skip-music">
-            <img src="./images/skip.svg" alt="skip music">
-          </button>
-        </div>
-      </div>
-      <div class="projects">
-        <span>Projects</span>
-        <img src="./images/arrowdown.svg" alt="arrowdown">
-        <a href="#">
-          <img src="./images/suitcase.svg" alt="projects">
-        </a>
-      </div>
-    </section>
-  </section>
+    </div>
+    <div class="projects">
+      <span>Projects</span>
+      <img src="./images/arrowdown.svg" alt="arrowdown">
+      <a href="#">
+        <img src="./images/suitcase.svg" alt="projects">
+      </a>
+    </div>
+  </header>
   <!-- ===== Projects ===== -->
   <section id="projects-container">
     <h2>Some projects</h2>

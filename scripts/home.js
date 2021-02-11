@@ -1,27 +1,11 @@
 // ===== Variables =====
-let isMenuOpen = false;
 let isMusicPlaying = false;
 let currentMusic = 1;
 
 // ===== Elements =====
-const menuBtn = document.querySelector("button#menu-btn");
 const playPauseMusic = document.querySelector("button#play-pause-music");
 const skipMusic = document.querySelector("button#skip-music");
 const musics = document.querySelector("audio#musics");
-
-// ==== Open/Close menu event =====
-menuBtn.addEventListener("click", () => {
-  const imgMenuBtn = document.querySelector("img#menu-img-btn");
-  const menu = document.querySelector("nav#nav-menu");
-  isMenuOpen = !isMenuOpen;
-  if (isMenuOpen) {
-    imgMenuBtn.src = "./images/menu-close.svg";
-    menu.style.display = "flex";
-  } else {
-    imgMenuBtn.src = "./images/menu-open.svg";
-    menu.style.display = "none";
-  }
-});
 
 // ===== Play/Pause music =====
 playPauseMusic.addEventListener("click", () => {

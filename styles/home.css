@@ -17,16 +17,6 @@
 
 body {
   background: var(--gradientGreen);
-  padding: 24px;
-}
-
-.container-100vh {
-  min-height: 100vh;
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 button {
@@ -38,12 +28,36 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 10vh;
   width: 100%;
+  min-height: 100vh;
+  padding: 24px;
 }
 
-header img {
+header svg {
   max-width: 30px;
+  margin-right: 12px;
+}
+
+header h1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header svg path {
+  animation: path 10s ease infinite;
+}
+
+@keyframes path {
+  0% {
+    stroke-dasharray: 1 100;
+  }
+  50% {
+    stroke-dasharray: 100 0;
+  }
+  100% {
+    stroke-dasharray: 1 100;
+  }
 }
 
 header button#menu-btn {
@@ -74,13 +88,6 @@ header nav ul li a {
 }
 
 /* ===== MAIN ===== */
-.main {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-top: 24px;
-}
 
 .social {
   display: flex;
@@ -177,6 +184,7 @@ header nav ul li a {
   justify-content: center;
   flex-direction: column;
   align-items: center;
+  padding: 24px;
 }
 
 #projects-container h2 {
@@ -243,5 +251,13 @@ header nav ul li a {
   }
   #projects-container div {
     grid-template-columns: auto auto;
+  }
+  header svg {
+    margin-right: 0;
+    margin-bottom: 12px;
+  }
+
+  header h1 {
+    flex-direction: column;
   }
 }
