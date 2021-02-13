@@ -6,14 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./images/logo.svg" type="image/x-icon">
-  <link rel="stylesheet" href="./styles/home.css">
+  <link rel="stylesheet" href="./styles/index.css">
   <title>Pedro Isac | Front-end developer and UI designer</title>
 </head>
 
 <body>
   <!-- ====== HEADER ===== -->
-  <header>
-    <div class="social">
+  <header class="flex-r-b-c">
+    <!-- === LEFT COLUMN === -->
+    <div class="social flex-c-c-c">
       <a href="https://github.com/pedro-isacss" target="__blank">
         <img src="./images/github.svg" alt="github">
       </a>
@@ -23,8 +24,9 @@
       <img src="./images/arrowup.svg" alt="arrow up">
       <span>Social</span>
     </div>
-    <div class="services">
-      <h1>
+    <!-- === CENTER === -->
+    <div class="services flex-c-c-c">
+      <h1 class="flex-r-c-c">
         <img src="./images/line-logo.svg" alt="Pedro Isac" onload="SVGInject(this)">
         Pedro Isac
       </h1>
@@ -40,7 +42,8 @@
         </button>
       </div>
     </div>
-    <div class="projects">
+    <!-- === RIGHT COLUMN === -->
+    <div class="projects flex-c-c-c">
       <span>Projects</span>
       <img src="./images/arrowdown.svg" alt="arrowdown">
       <a href="#">
@@ -49,7 +52,7 @@
     </div>
   </header>
   <!-- ===== Projects ===== -->
-  <section id="projects-container">
+  <section class="flex-c-c-c" id="projects-container">
     <h2>Some projects</h2>
     <div>
 
