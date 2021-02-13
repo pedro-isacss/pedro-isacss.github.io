@@ -1,0 +1,25 @@
+.h1 {
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--white);
+}
+
+.h2 {
+  font-weight: 500;
+  font-size: 24px;
+  color: var(--white);
+}
+
+.p {
+  color: var(--white);
+  text-align: center;
+}
+
+.vertical-text {
+  text-transform: uppercase;
+  width: 1ch;
+  word-wrap: break-word;
+  text-align: center;
+  color: var(--gray);
+  line-height: 32px;
+}
