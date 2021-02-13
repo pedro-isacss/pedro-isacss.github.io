@@ -40,6 +40,7 @@ fetch("../data/projects.json")
       const container = document.createElement("a");
       const img = document.createElement("img");
       container.setAttribute("href", project.link);
+      container.setAttribute("target", "__blank");
       img.setAttribute("src", project.img);
       container.appendChild(img);
       projects.appendChild(container);
