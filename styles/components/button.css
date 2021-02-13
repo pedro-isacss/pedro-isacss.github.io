@@ -1,0 +1,10 @@
+.main-btn {
+  max-width: 168px;
+  width: 100%;
+  padding: 8px 0;
+  border-radius: 8px;
+  color: var(--white);
+  text-decoration: none;
+  text-align: center;
+  background: var(--gradientBlue);
+}

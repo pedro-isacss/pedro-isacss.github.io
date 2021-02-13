@@ -2,7 +2,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap");
 @import "./layout/flex.css";
 @import "./layout/margin.css";
+@import "./layout/padding.css";
 @import "./components/text.css";
+@import "./components/button.css";
+@import "./animation/draw.css";
 
 :root {
   --gradientGreen: linear-gradient(270deg, #003b5b 0%, #001427 100%);
@@ -25,51 +28,20 @@ body {
 
 button {
   outline: none;
+  background-color: transparent;
+  border: none;
 }
 
 /* ===== HEADER ===== */
 header {
-  width: 100%;
   min-height: 100vh;
-  padding: 24px;
 }
 
 header svg {
-  max-width: 30px;
-}
-
-header svg path {
-  animation: path 10s ease infinite;
-}
-
-@keyframes path {
-  0% {
-    stroke-dasharray: 1 100;
-  }
-  50% {
-    stroke-dasharray: 100 0;
-  }
-  100% {
-    stroke-dasharray: 1 100;
-  }
+  max-width: 32px;
 }
 
 /* ===== MAIN ===== */
-
-.services a {
-  max-width: 168px;
-  width: 100%;
-  padding: 8px 0;
-  border-radius: 8px;
-  color: var(--white);
-  text-decoration: none;
-  text-align: center;
-  background: var(--gradientBlue);
-}
-.music-controller button {
-  background-color: transparent;
-  border: none;
-}
 
 .projects img {
   max-width: 48px;
@@ -80,9 +52,6 @@ header svg path {
 }
 
 /* ===== Projects ===== */
-#projects-container {
-  padding: 24px;
-}
 
 #projects-container div {
   display: grid;
