@@ -1,18 +1,22 @@
 /* === IMPORTS === */
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600&display=swap");
-@import "./layout/flex.css";
-@import "./layout/margin.css";
-@import "./layout/padding.css";
-@import "./components/text.css";
-@import "./components/button.css";
-@import "./animation/draw.css";
+
+@import "./components/header.css";
+@import "./components//links.css";
+@import "./components/projects.css";
 
 :root {
   --gradientGreen: linear-gradient(270deg, #003b5b 0%, #001427 100%);
-  --gradientBlue: linear-gradient(270deg, #007cf0 0%, #003a70 100%);
-  --gray: #7e7e7e;
   --white: #ffffff;
-  --blue: #007cf0;
+  --green: #003b5b;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px 24px 24px;
 }
 
 * {
@@ -20,76 +24,4 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Maven Pro", sans-serif;
-}
-
-body {
-  background: var(--gradientGreen);
-}
-
-button {
-  outline: none;
-  background-color: transparent;
-  border: none;
-}
-
-/* ===== HEADER ===== */
-header {
-  min-height: 100vh;
-}
-
-header svg {
-  max-width: 32px;
-}
-
-/* ===== MAIN ===== */
-
-.projects img {
-  max-width: 48px;
-}
-
-.projects a img {
-  max-width: 24px;
-}
-
-/* ===== Projects ===== */
-
-#projects-container div {
-  display: grid;
-  gap: 12px;
-  grid-template-columns: auto auto auto auto auto;
-}
-
-#projects-container div a img {
-  max-width: 100%;
-  filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
-}
-
-/* ===== RESPONSIVE ===== */
-@media (max-width: 950px) {
-  #projects-container div {
-    grid-template-columns: auto auto auto;
-  }
-}
-@media (max-width: 450px) {
-  .social img {
-    max-width: 24px;
-  }
-  .projects img {
-    max-width: 24px;
-  }
-  .services p {
-    max-width: 168px;
-    width: 100%;
-  }
-  #projects-container div {
-    grid-template-columns: auto auto;
-  }
-  header svg {
-    margin-right: 0;
-    margin-bottom: 12px;
-  }
-
-  header h1 {
-    flex-direction: column;
-  }
 }
