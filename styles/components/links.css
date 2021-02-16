@@ -5,6 +5,7 @@
   flex-direction: column;
   width: 100%;
   max-width: 744px;
+  transition: all 10s ease-in;
 }
 
 .links a {
@@ -35,4 +36,10 @@
 
 .links span {
   margin: auto;
+}
+
+/* ===== ANIMATIONS ===== */
+.links a:hover {
+  transform: scale(1.01);
+  transition: all 0.5s linear;
 }
