@@ -1,5 +1,9 @@
 [
   {
+    "link": "https://pedro-isacss.github.io/portfolio/frontend/dog-model/index.html",
+    "img": "../images/portfolio-dog-model.jpg"
+  },
+  {
     "link": "https://pedro-isacss.github.io/portfolio/frontend/countries/build/index.html",
     "img": "../images/portfolio-countries.jpg"
   },
