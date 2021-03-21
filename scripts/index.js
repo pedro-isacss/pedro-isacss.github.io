@@ -1,5 +1,7 @@
 // ===== Loading projects =====
-fetch("../data/projects.json")
+fetch(
+  "https://raw.githubusercontent.com/pedro-isacss/projects/master/projects.json"
+)
   .then((response) => response.json())
   .then((res) => {
     const projects = document.querySelector("section#projects-container");
