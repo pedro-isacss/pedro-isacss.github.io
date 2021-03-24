@@ -1,0 +1,142 @@
+/* === HEADER === */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 24px 24px 24px;
+}
+
+.container header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--gradientGreen);
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
+  height: 240px;
+  padding: 16px;
+  width: 100%;
+  max-width: 744px;
+}
+
+.container div {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.container div h1 {
+  font-weight: 500;
+  font-size: 32px;
+  color: var(--white);
+}
+
+.container div p {
+  font-size: 12px;
+  color: var(--white);
+}
+
+.container svg {
+  margin-right: 16px;
+  max-width: 32px;
+  animation: draw-infinite 10s ease infinite;
+}
+
+/* === LINKS === */
+.links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 744px;
+  transition: all 10s ease-in;
+}
+
+.links a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  width: 100%;
+  margin-top: 24px;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  color: var(--green);
+  padding: 8px;
+}
+
+.links div {
+  background: var(--gradientGreen);
+  padding: 8px;
+  border-radius: 8px;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.links span {
+  margin: auto;
+}
+
+.links svg {
+  animation: none;
+  margin: 0;
+}
+
+/* === PROJECTS === */
+.projects {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: auto auto auto;
+  width: 100%;
+  max-width: 744px;
+  margin-top: 40px;
+}
+
+.projects a img {
+  max-width: 100%;
+  filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
+  border-radius: 8px;
+}
+
+/* ===== ANIMATIONS ===== */
+@keyframes draw-infinite {
+  0% {
+    stroke-dasharray: 1 100;
+  }
+  50% {
+    stroke-dasharray: 100 0;
+  }
+  100% {
+    stroke-dasharray: 1 100;
+  }
+}
+
+/* ===== RESPOSIVE ===== */
+@media (max-width: 450px) {
+  .container {
+    flex-direction: column;
+  }
+  .container div {
+    align-items: center;
+  }
+  .container div p {
+    margin-top: 4px;
+  }
+  .container svg {
+    margin: 0 0 8px 0;
+  }
+  .projects {
+    grid-template-columns: auto auto;
+  }
+  .links svg {
+    margin: 0;
+  }
+}
