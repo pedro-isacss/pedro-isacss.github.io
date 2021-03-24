@@ -124,6 +124,9 @@
   .container {
     flex-direction: column;
   }
+  .container header {
+    flex-direction: column;
+  }
   .container div {
     align-items: center;
   }
