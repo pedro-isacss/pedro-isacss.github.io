@@ -111,23 +111,32 @@ export default function Home({ projects }) {
           )}
         </button>
       </section>
-      {/* === PROJECTS === */}
-      <section className={styles.projects}>
-        {(valueSearch === ""
-          ? projects
-          : projects.filter(
-              (item) =>
-                item.link
-                  .replace("-", " ")
-                  .indexOf(valueSearch.toLowerCase()) !== -1
-            )
-        ).map((project) => {
-          return (
-            <a href={project.link} target="__blank" key={project.img}>
-              <img src={project.img} />
-            </a>
-          );
-        })}
+      {/* === GALLERY === */}
+      {/* Projects */}
+      <section className={styles.gallery}>
+        {selectedTab === "projects" ? (
+          <>
+            {(valueSearch === ""
+              ? projects
+              : projects.filter(
+                  (item) =>
+                    item.link
+                      .replace("-", " ")
+                      .indexOf(valueSearch.toLowerCase()) !== -1
+                )
+            ).map((gallery) => {
+              return (
+                <a href={gallery.link} target="__blank" key={gallery.img}>
+                  <img src={gallery.img} />
+                </a>
+              );
+            })}
+          </>
+        ) : null}
+      </section>
+      {/* Tools */}
+      <section className={styles.gallery}>
+        {selectedTab === "tools" ? <>{/* TOOLS */}</> : null}
       </section>
     </div>
   );

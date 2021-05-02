@@ -151,7 +151,7 @@
 }
 
 /* === PROJECTS === */
-.projects {
+.gallery {
   display: grid;
   gap: 12px;
   grid-template-columns: 33% 33% 33%;
@@ -160,7 +160,7 @@
   margin-top: 40px;
 }
 
-.projects a img {
+.gallery a img {
   max-width: 100%;
   filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
   border-radius: 8px;
@@ -215,7 +215,7 @@
   .container svg {
     margin: 0 0 8px 0;
   }
-  .projects {
+  .gallery {
     grid-template-columns: 50% 50%;
   }
   .links svg {
