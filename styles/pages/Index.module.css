@@ -58,7 +58,7 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  box-shadow: 1px 1px 50px rgba(0, 0, 0, 0.15);
+  box-shadow: var(--shadow);
   border-radius: 8px;
   width: 100%;
   margin-top: 24px;
@@ -89,11 +89,72 @@
   margin: 0;
 }
 
+/* === TAB === */
+.tab {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 744px;
+  margin-top: 40px;
+  position: relative;
+}
+
+.tab div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.tab div button {
+  background-color: var(--light);
+  color: var(--primaryDark);
+  border: none;
+  padding: 4px 8px;
+  font: var(--h6);
+  border-radius: 8px;
+  margin-right: 12px;
+  cursor: pointer;
+  outline: none;
+}
+
+.tab div .selectedTab {
+  background-color: var(--primaryLight);
+  color: var(--lightLight);
+}
+
+.tab input {
+  width: 100%;
+  margin-right: 12px;
+  padding: 16px;
+  box-shadow: var(--shadow);
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  animation: input-search 0.7s ease;
+}
+
+.tab .toggleSearch {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: auto;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  outline: none;
+}
+
+.tab svg {
+  animation: none;
+}
+
 /* === PROJECTS === */
 .projects {
   display: grid;
   gap: 12px;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: 33% 33% 33%;
   width: 100%;
   max-width: 744px;
   margin-top: 40px;
@@ -103,6 +164,11 @@
   max-width: 100%;
   filter: drop-shadow(2px 4px 5px rgba(0, 0, 0, 0.25));
   border-radius: 8px;
+}
+
+/* === GOBAL === */
+.hide {
+  display: none;
 }
 
 /* ===== ANIMATIONS ===== */
@@ -116,6 +182,19 @@
   }
   100% {
     stroke-dasharray: 1 100;
+  }
+}
+
+@keyframes input-search {
+  0% {
+    width: 0%;
+    position: absolute;
+    right: 0;
+  }
+  100% {
+    width: 90%;
+    position: absolute;
+    right: 30px;
   }
 }
 
@@ -137,7 +216,7 @@
     margin: 0 0 8px 0;
   }
   .projects {
-    grid-template-columns: auto auto;
+    grid-template-columns: 50% 50%;
   }
   .links svg {
     margin: 0;

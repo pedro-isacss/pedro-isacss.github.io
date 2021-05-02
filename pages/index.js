@@ -2,10 +2,15 @@ import Head from "next/head";
 import styles from "../styles/pages/Index.module.css";
 import Svg from "../public/icons/logo.js";
 import { BsViewList } from "react-icons/bs";
-import { FiInstagram, FiGithub, FiLinkedin } from "react-icons/fi";
-import { RiStore2Line } from "react-icons/ri";
+import { FiInstagram, FiGithub, FiLinkedin, FiSearch } from "react-icons/fi";
+import { RiStore2Line, RiCloseLine } from "react-icons/ri";
+import { useState } from "react";
 
 export default function Home({ projects }) {
+  const [isSearching, setIsSearching] = useState(false);
+  const [valueSearch, setValueSearch] = useState("");
+  const [selectedTab, setSelectedTab] = useState("projects");
+
   return (
     <div className={styles.container}>
       {/* === HEADER === */}
@@ -49,9 +54,74 @@ export default function Home({ projects }) {
           <span>LinkedIn</span>
         </a>
       </section>
+      <hr
+        style={{
+          width: "100%",
+          border: "0.5px solid var(--light)",
+          maxWidth: "744px",
+          margin: "52px 0 12px",
+        }}
+      />
+      {/* === TAB === */}
+      <section className={styles.tab}>
+        <div>
+          <button
+            className={
+              isSearching
+                ? styles.hide
+                : selectedTab === "tools"
+                ? styles.selectedTab
+                : ""
+            }
+            onClick={() => setSelectedTab("tools")}
+          >
+            Tools
+          </button>
+          <button
+            className={
+              isSearching
+                ? styles.hide
+                : selectedTab === "projects"
+                ? styles.selectedTab
+                : ""
+            }
+            onClick={() => setSelectedTab("projects")}
+          >
+            Projects
+          </button>
+        </div>
+        <input
+          className={isSearching ? "" : styles.hide}
+          type="text"
+          placeholder={`Use "-" in place of space ;)`}
+          onChange={(e) => setValueSearch(e.target.value)}
+          value={valueSearch}
+        />
+        <button
+          onClick={() => {
+            setIsSearching(!isSearching);
+            setValueSearch("");
+          }}
+          className={styles.toggleSearch}
+        >
+          {isSearching ? (
+            <RiCloseLine size={24} color="var(--primary)" />
+          ) : (
+            <FiSearch size={24} color="var(--primary)" />
+          )}
+        </button>
+      </section>
       {/* === PROJECTS === */}
       <section className={styles.projects}>
-        {projects.map((project) => {
+        {(valueSearch === ""
+          ? projects
+          : projects.filter(
+              (item) =>
+                item.link
+                  .replace("-", " ")
+                  .indexOf(valueSearch.toLowerCase()) !== -1
+            )
+        ).map((project) => {
           return (
             <a href={project.link} target="__blank" key={project.img}>
               <img src={project.img} />
