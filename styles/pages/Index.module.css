@@ -11,9 +11,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background: var(--gradientGreen);
+  background: var(--primaryLight);
   border-bottom-left-radius: 16px;
   border-bottom-right-radius: 16px;
+  color: var(--lightLight);
   height: 240px;
   padding: 16px;
   width: 100%;
@@ -28,19 +29,17 @@
 }
 
 .container div h1 {
-  font-weight: 500;
-  font-size: 32px;
-  color: var(--white);
+  font: var(--h4Bold);
 }
 
 .container div p {
-  font-size: 12px;
-  color: var(--white);
+  font: var(--small);
+  text-align: center;
 }
 
 .container svg {
   margin-right: 16px;
-  max-width: 32px;
+  max-width: 48px;
   animation: draw-infinite 10s ease infinite;
 }
 
@@ -66,12 +65,12 @@
   text-decoration: none;
   font-weight: 500;
   font-size: 18px;
-  color: var(--green);
+  color: var(--primaryDark);
   padding: 8px;
 }
 
 .links div {
-  background: var(--gradientGreen);
+  background: var(--primaryLight);
   padding: 8px;
   border-radius: 8px;
   height: 48px;
@@ -110,6 +109,7 @@
 @keyframes draw-infinite {
   0% {
     stroke-dasharray: 1 100;
+    fill: none;
   }
   50% {
     stroke-dasharray: 100 0;

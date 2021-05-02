@@ -2,20 +2,10 @@ import Head from "next/head";
 import styles from "../styles/pages/Index.module.css";
 import Svg from "../public/icons/logo.js";
 import { BsViewList } from "react-icons/bs";
-import { FiInstagram, FiGithub } from "react-icons/fi";
-import { useEffect, useState } from "react";
+import { FiInstagram, FiGithub, FiLinkedin } from "react-icons/fi";
+import { RiStore2Line } from "react-icons/ri";
 
-export default function Home() {
-  const [projects, setProjects] = useState([]);
-  useEffect(() => {
-    fetch(
-      "https://raw.githubusercontent.com/pedro-isacss/projects/master/projects.json"
-    )
-      .then((response) => response.json())
-      .then((res) => {
-        setProjects(res);
-      });
-  }, []);
+export default function Home({ projects }) {
   return (
     <div className={styles.container}>
       {/* === HEADER === */}
@@ -30,21 +20,33 @@ export default function Home() {
       <section className={styles.links}>
         <a href="https://www.fiverr.com/sspedroisac" target="__blank">
           <div>
-            <BsViewList size={24} color="var(--white)" />
+            <BsViewList size={24} color="var(--lightLight)" />
           </div>
           <span>Services</span>
         </a>
+        <a href="https://gumroad.com/sspedroisac" target="__blank">
+          <div>
+            <RiStore2Line size={24} color="var(--lightLight)" />
+          </div>
+          <span>Store</span>
+        </a>
         <a href="https://www.instagram.com/ss.pedroisac/" target="__blank">
           <div>
-            <FiInstagram size={24} color="var(--white)" />
+            <FiInstagram size={24} color="var(--lightLight)" />
           </div>
           <span>Instagram</span>
         </a>
         <a href="https://github.com/pedro-isacss" target="__blank">
           <div>
-            <FiGithub size={24} color="var(--white)" />
+            <FiGithub size={24} color="var(--lightLight)" />
           </div>
           <span>GitHub</span>
+        </a>
+        <a href="https://www.linkedin.com/in/pedro-isacss/" target="__blank">
+          <div>
+            <FiLinkedin size={24} color="var(--lightLight)" />
+          </div>
+          <span>LinkedIn</span>
         </a>
       </section>
       {/* === PROJECTS === */}
@@ -60,3 +62,17 @@ export default function Home() {
     </div>
   );
 }
+
+export const getStaticProps = async () => {
+  const projects = await fetch(
+    "https://raw.githubusercontent.com/pedro-isacss/projects/master/projects.json"
+  )
+    .then((response) => response.json())
+    .then((res) => res);
+  return {
+    props: {
+      projects: projects,
+    },
+    revalidate: 60 * 60 * 8,
+  };
+};
