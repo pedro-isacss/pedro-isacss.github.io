@@ -25,5 +25,5 @@ function getSites(until) {
 if (window.innerWidth > 530) {
   getSites(3);
 } else {
-  getSites(2);
+  getSites(1);
 }
