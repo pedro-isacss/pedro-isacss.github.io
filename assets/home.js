@@ -9,6 +9,7 @@ function getSites(until) {
         const img = document.createElement("img");
         link.setAttribute("href", site.link);
         link.setAttribute("class", "col m-3");
+        link.setAttribute("target", "_blank");
         img.setAttribute("src", site.img);
         img.setAttribute("class", "rounded shadow-lg");
         img.style.maxWidth = "250px";
