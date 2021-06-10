@@ -74,3 +74,9 @@
 ```html
 <p class="text-dark"></p>
 ```
+
+```html
+<div class="code">
+  <hr class="w-100 my-3" style="background-color: rgb(63, 63, 63); ">
+</div>
+```
