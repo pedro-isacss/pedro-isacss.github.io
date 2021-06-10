@@ -22,4 +22,27 @@ fetch("../data/sites.json")
       link.appendChild(img);
       divSites.appendChild(link);
     });
+    $(document).ready(function () {
+      $("div#sites").slick({
+        swipeToSlide: true,
+        infinite: true,
+        autoplay: true,
+        variableWidth: true,
+        slidesToScroll: 3,
+        slidesToShow: 3,
+        autoplaySpeed: 3000,
+        arrows: false,
+        responsive: [
+          {
+            breakpoint: 500,
+            settings: {
+              slidesToShow: 1,
+              slidesToScroll: 1,
+              infinite: true,
+              variableWidth: false,
+            },
+          },
+        ],
+      });
+    });
   });
