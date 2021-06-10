@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <title>React: Understanding hooks</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="p-5 d-flex flex-column justify-content-center align-items-center" style="background-color: #1262d1;">
+    <h1 class="text-light text-center">React: Understanding hooks</h1>
+    <div class="btn-group mt-2" role="group" aria-label="Buttons">
+      <a href="../index.html" class="btn btn-light">Home</a>
+      <a href="./index.html" class="btn btn-light">Blog</a>
+    </div>
+  </header>
+
+  <section class="py-3 px-5">
+    <p class="fs-5">Hooks allow us to create functional components with state, lifecycle, and other properties
+      that
+      were previously
+      only possessable using classes. This allows us to write cleaner code and therefore more readable.</p>
+    <p class="fs-5">
+      In this tutorial we will learn how to use two hooks: useState and useEffect.
+    </p>
+    <h2>useState</h2>
+    <p class="fs-5">useState is the hook that allows us to add states to a function-created component.</p>
+    <p class="fs-5">To see how this hook works let's create a counter.</p>
+    <p class="fs-5">Primeiramente, vamos criar a estrutura básica do nosso componente:</p>
+    <div class="code">
+      <script src="https://gist.github.com/pedro-isacss/d8087d5c18d838c2e978ab6311b906f8.js?file=useState1.js"></script>
+    </div>
+    <p class="fs-5">Now import the useState hook:</p>
+    <p class="fst-italic">import React, {useState} from "react";</p>
+    <p class="fs-5">And finally, let's create a state for our component:</p>
+    <p class="fst-italic">const [counter, setConter] = useState(0);</p>
+    <p class="fs-5"><strong>Explanation:</strong></p>
+    <p class="fs-5">Using destructuring, we assign the value zero to our state “counter” and a function “setCounter”
+      that we will use to change the value of our state.</p>
+    <p class="fs-5">Once that's done, we just need to assign the function that changes the state in the "button" element
+      and make the "p" element show the value of the state, that is:</p>
+    <p class="fst-italic">&lt;button onClick​={() => setConter(counter + 1)}>Contar &lt;/button><br>
+      &lt;p>{counter} &lt;/p></p>
+    <p class="fs-5">At the end, we will have the following code:</p>
+    <div class="code">
+      <script src="https://gist.github.com/pedro-isacss/d8087d5c18d838c2e978ab6311b906f8.js?file=useState2.js"></script>
+    </div>
+    <p class="fs-5">And on screen we will have as a result:</p>
+    <div class="code">
+      <img
+        src="https://res.cloudinary.com/practicaldev/image/fetch/s--B-6Has9I--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.pinimg.com/originals/8c/09/f8/8c09f8147d976d56ce1b73c0ff1a8bc4.gif"
+        alt="useState example">
+    </div>
+    <p class="fs-5"><strong>NOTE:</strong> as in the state of classes, whenever the state is changed, the component will
+      be rendered
+      again.</p>
+    <h2>useEffect</h2>
+    <p class="fs-5">
+      If you are already familiar with using classes to create components, the useEffect hook can be compared to
+      lifecycle methods (componentDidMount(), componentWillUnmount() and componentWillUpdate()).
+    </p>
+    <p class="fs-5">useEffect takes two parameters: a function and an array of dependencies. Look:</p>
+    <p class="fst-italic">useEffect(() => {}, [])</p>
+    <p class="fs-5">useEffect saves the passed function to execute it in one of three situations: whenever an element of
+      the dependency array is updated, after the component is rendered, or after the component is disassembled.</p>
+    <h3>Running whenever an element of the dependency array is updated</h3>
+    <p class="fs-5">To execute the function whenever an element of the dependency array is updated, just add that
+      element to the dependency array.</p>
+    <p class="fst-italic">useEffect(() => {}, [element])</p>
+    <p class="fs-5">As an example, let's take the useState example. Let's update our page title according to the state
+      counter value.</p>
+    <p class="fs-5">First we need to import useEffect:</p>
+    <p class="fst-italic">import React, { useState, useEffect } from "react";</p>
+    <p class="fs-5">Now let's create the function that will change the page title and add the state counter to the
+      dependency array:</p>
+    <p class="fst-italic">
+      useEffect(() => {<br>
+      &nbsp;&nbsp;document.title = `${counter} cliks`;<br>
+      }, [counter]);
+    </p>
+    <p class="fs-5">At the end of that our code will be:</p>
+    <div class="code">
+      <script
+        src="https://gist.github.com/pedro-isacss/d8087d5c18d838c2e978ab6311b906f8.js?file=useEffect1.js"></script>
+    </div>
+    <p class="fs-5">And the result on screen will be:</p>
+    <div class="code">
+      <img
+        src="https://res.cloudinary.com/practicaldev/image/fetch/s--5cspl1EC--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.pinimg.com/originals/8b/60/24/8b6024647245784d89ee79b4d44c72f1.gif"
+        alt="example useEffect">
+    </div>
+    <h3>Running after component is rendered</h3>
+    <p class="fs-5">To execute the function after the component is rendered (only once), just leave the dependency array
+      empty.</p>
+    <p class="fst-italic">useEffect(() => {}, [])</p>
+    <p class="fs-5">For example, let's create a component called Text and let's render it after three seconds. After it
+      is mounted on canvas, the title of our page will be changed.</p>
+    <p class="fs-5">First let's create the Text component passing two parameters to useEffect. The first a function that
+      will change the page title and the second an empty array.</p>
+    <p class="fst-italic">
+      function Text() {<br>
+      &nbsp;&nbsp;useEffect(() => {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;document.title = "O componente foi montado";<br>
+      &nbsp;&nbsp;}, []);<br>
+
+      &nbsp;&nbsp;return &lt;p>O contador está visível!&lt;/p>;<br>
+      }
+    </p>
+    <p class="fs-5">Now let's recreate our Counter component by adding a “visible” state to it (with a default value of
+      false) and a setTimeout function that will change the state value after 3 seconds:</p>
+    <p class="fst-italic">
+      const [visible, setVisible] = useState(false);<br>
+
+      setTimeout(() => {<br>
+      &nbsp;&nbsp;setVisible(true);<br>
+      }, 3000);
+    </p>
+    <p class="fs-5">Finally, let's render the Text component only if the “visible” state has the value true:</p>
+    <p class="fst-italic">return &lt;div>{visible ? &lt;Text /> : ""}&lt;/div>;</p>
+    <p class="fs-5">The final code will be:</p>
+    <div class="code">
+      <script
+        src="https://gist.github.com/pedro-isacss/d8087d5c18d838c2e978ab6311b906f8.js?file=useEffect2.js"></script>
+    </div>
+    <p class="fs-5">And the result on screen:</p>
+    <div class="code">
+      <img
+        src="https://res.cloudinary.com/practicaldev/image/fetch/s--dfTGfd-Q--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.pinimg.com/originals/71/df/7d/71df7d7ed8c19b655c4ea41f4e3dc813.gif"
+        alt="example useEffect">
+    </div>
+    <p class="fst-italic">
+      O contador está visível! (The counter is visible!)<br>
+      O componente foi montado (The component has been assembled)
+    </p>
+    <h3>Running after component is disassembled</h3>
+    <p class="fs-5">To execute a function after the component is disassembled, just return a function:</p>
+    <p class="fst-italic">
+      useEffect(() => {<br>
+      &nbsp;&nbsp;return () => {} <br>
+      }, [])
+    </p>
+    <p class="fs-5">
+      To illustrate, let's do the opposite of the previous example. This time we are going to change the title of our
+      page when the component is unmounted.
+    </p>
+    <p class="fs-5">For this we will keep the structure of the previous example, making only three changes to our code.
+    </p>
+    <p class="fs-5">First, let's change the value of state “visible” from false to true:</p>
+    <p class="fst-italic">const [visible, setVisible] = useState(true);</p>
+    <p class="fs-5">Second, in the setTimeout function, let's change the value passed in setVisible from true to false:
+    </p>
+    <p class="fst-italic">
+      setTimeout(() => {<br>
+      &nbsp;&nbsp;setVisible(false);<br>
+      }, 3000);
+    </p>
+    <p class="fs-5">Third, let's return, in useEffect, a function that changes the title of our page:</p>
+    <p class="fst-italic">
+      useEffect(() => {<br>
+      &nbsp;&nbsp;document.title = "O componente foi montado";<br>
+      &nbsp;&nbsp;return () => {<br>
+      &nbsp;&nbsp;&nbsp;&nbsp;document.title = "O componente foi desmontado";<br>
+      &nbsp;&nbsp;};<br>
+      })
+    </p>
+    <p class="fs-5">At the end, we will have the following code:</p>
+    <div class="code">
+      <script
+        src="https://gist.github.com/pedro-isacss/d8087d5c18d838c2e978ab6311b906f8.js?file=useEffect3.js"></script>
+    </div>
+    <p class="fs-5">And on screen:</p>
+    <div class="code">
+      <img
+        src="https://res.cloudinary.com/practicaldev/image/fetch/s--ajQoIC6K--/c_limit%2Cf_auto%2Cfl_progressive%2Cq_66%2Cw_880/https://i.pinimg.com/originals/6c/03/4e/6c034e692d31b35e69093a1a46d05b86.gif"
+        alt="execute useEffect">
+    </div>
+    <div class="code">
+      <hr class="w-100 my-3" style="background-color: rgb(63, 63, 63); ">
+    </div>
+    <p class="fs-5">And that's it I hope I helped you better understand these two important hooks :)</p>
+  </section>
+
+  <footer class="p-3 d-flex flex-column justify-content-center align-items-center" style="background-color: #1262d1;">
+    <span class="text-light">&copy; Pedro Isac</span>
+    <div>
+      <a href="https://www.instagram.com/ss.pedroisac/" target="_blank" class="text-light mx-2">Instagram</a>
+      <a href="https://github.com/pedro-isacss" target="_blank" class="text-light mx-2">GitHub</a>
+    </div>
+  </footer>
+
+  <!-- === SCRIPTS === -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"
+    integrity="sha384-Atwg2Pkwv9vp0ygtn1JAojH0nYbwNJLPhwyoVbhoPwBhjQPR5VtM2+xf0Uwh9KtT"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
