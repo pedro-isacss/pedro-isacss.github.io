@@ -72,7 +72,11 @@
 # Components
 
 ```html
-<p class="text-dark"></p>
+<p class="fs-5">
+```
+
+```html
+<p class="fst-italic">useEffect(() => {}, [])</p>
 ```
 
 ```html
