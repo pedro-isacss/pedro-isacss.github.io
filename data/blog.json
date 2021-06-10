@@ -1,0 +1,7 @@
+[
+  {
+    "link": "https://pedro-isacss.github.io/blog/react-understanding-hooks.html",
+    "title": "React: Understanding hooks",
+    "prev": "Hooks allow us to create functional components with state, lifecycle, and other properties that were previously only possessable using classes. This allows us to write cleaner code and therefore more readable."
+  }
+]
