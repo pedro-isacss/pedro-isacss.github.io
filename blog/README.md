@@ -76,7 +76,7 @@
 ```
 
 ```html
-<p class="fst-italic">useEffect(() => {}, [])</p>
+<p class="fst-italic"></p>
 ```
 
 ```html
