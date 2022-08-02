@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords"
+    content="mouseee, mousemove, cursor, cursors, mouse-movement, custom-cursor, cursor-movement, custom-cursors, mouse-trail, cursor-trail">
+  <meta name="description" content="A simple custom cursor that leaves a temporary trail wherever it goes.">
+  <title>Mouseee | custom cursor</title>
+  <link rel="shortcut icon" href="../../icons/mouseee.svg" type="image/x-icon">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <!-- === HEADER === -->
+  <header>
+    <h1>Mouseee</h1>
+    <p>A simple custom cursor that leaves a temporary trail wherever it goes.</p>
+    <div>
+      <a target="_blank" href="https://github.com/pedro-isacss/mouseee">GitHub</a>
+      <a target="_blank" href="https://github.com/pedro-isacss/mouseee/archive/refs/heads/master.zip">Download</a>
+    </div>
+  </header>
+
+  <!-- === ADS === -->
+  <div class="ads-728-90">
+    <script type="text/javascript">
+      atOptions = {
+        'key': '4cf1af95b9ea2d05b5ea3738bffb8d3a',
+        'format': 'iframe',
+        'height': 90,
+        'width': 728,
+        'params': {}
+      };
+      document.write('<scr' + 'ipt type="text/javascript" src="http' + (location.protocol === 'https:' ? 's' : '') + '://www.effectivecreativeformats.com/4cf1af95b9ea2d05b5ea3738bffb8d3a/invoke.js"></scr' + 'ipt>');
+    </script>
+  </div>
+
+  <!-- === MAIN === -->
+  <main>
+    <section>
+      <div>
+        <h2>1 - Add Mouseee to your project</h2>
+        <p>You can add Mouseee to your project using jsDelivr CDN by replacing {version} with one of the available
+          <a href="https://www.npmjs.com/package/mouseee" target="_blank">versions</a>.
+        </p>
+      </div>
+      <code id="import-code" class="code">
+      </code>
+    </section>
+    <section>
+      <div>
+        <h2>2 - Hide the default cursor (Optional)</h2>
+        <p>Optionally, you can hide the default mouse cursor.</p>
+      </div>
+      <code id="hide-cursor-code" class="code"></code>
+    </section>
+    <section>
+      <div>
+        <h2>3 - Customize the cursor (Optional)</h2>
+        <p>Optionally, you can change some cursor settings.</p>
+      </div>
+      <code id="config-code" class="code"></code>
+    </section>
+  </main>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <div>
+      <a target="_blank" href="https://github.com/pedro-isacss/mouseee">Collaborate</a>
+      <a target="_blank" href="https://github.com/pedro-isacss/mouseee/blob/master/LICENSE">License</a>
+    </div>
+    <hr>
+    <span>&copy; <span id="year"></span> Pedro Isac</span>
+  </footer>
+
+  <!-- === SCRIPTS === -->
+  <script src="https://unpkg.com/shiki"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mouseee@1.1.2/lib/index.js" type="module"></script>
+  <script>
+    const mouseeeConfig = {
+      color: "var(--greenLight)",  // cursor border color
+      size: 20,  // cursor size
+      trailColor: "var(--greenLight)",  // trail color
+      trailTime: 300  // trail duration time
+    }
+
+    shiki
+      .getHighlighter({
+        theme: 'github-light'
+      })
+      .then(highlighter => {
+        const code = highlighter.codeToHtml(`<script src="https://cdn.jsdelivr.net/npm/mouseee@{version}/lib/index.js" type="module">&lt;/script>`.replace("&lt;", "<"), { lang: 'html' })
+        document.getElementById('import-code').innerHTML = code
+      })
+
+    shiki
+      .getHighlighter({
+        theme: 'github-light'
+      })
+      .then(highlighter => {
+        const code = highlighter.codeToHtml(`* {
+  cursor: none;
+}`, { lang: 'css' })
+        document.getElementById('hide-cursor-code').innerHTML = code
+      })
+
+    shiki
+      .getHighlighter({
+        theme: 'github-light'
+      })
+      .then(highlighter => {
+        const code = highlighter.codeToHtml(`const mouseeeConfig = {
+  color: "#fff",  // cursor border color
+  size: 20,  // cursor size
+  trailColor: "#fff",  // trail color
+  trailTime: 300  // trail duration time
+}`, { lang: 'js' })
+        document.getElementById('config-code').innerHTML = code
+      })
+
+    document.getElementById("year").innerHTML = new Date().getFullYear()
+  </script>
+</body>
+
+</html>
