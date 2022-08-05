@@ -1,0 +1,141 @@
+@import "../../global.css";
+
+/* === HEADER === */
+header {
+  background: var(--blackGradient);
+  min-height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--white);
+}
+
+header h1 {
+  font-weight: 500;
+}
+
+header p {
+  margin-top: 12px;
+  text-align: center;
+  padding: 0 24px;
+  max-width: 760px;
+}
+
+header div {
+  margin-top: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header div a {
+  text-decoration: none;
+  min-width: 120px;
+  padding: 8px;
+  text-align: center;
+  border-radius: var(--borderRadius);
+  margin: 0 10px;
+  font-weight: 500;
+}
+
+header div a:nth-child(1) {
+  background-color: var(--white);
+  color: var(--black);
+}
+
+header div a:nth-child(2) {
+  color: var(--white);
+  border: 1px solid var(--white);
+}
+
+/* === MAIN === */
+main {
+  margin: 40px auto;
+  max-width: var(--widthScreen);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 24px;
+}
+
+main section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 88px;
+  flex-direction: column;
+  width: 100%;
+}
+
+main section:last-child {
+  margin-bottom: 0;
+}
+
+main section div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
+
+main section div h2 {
+  color: var(--black);
+  font-weight: 500;
+  text-align: center;
+}
+
+main section div p {
+  margin-top: 16px;
+  text-align: center;
+}
+
+main section div a {
+  color: var(--black);
+}
+
+/* === FOOTER === */
+footer {
+  background-color: var(--black);
+  padding: 56px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div a {
+  color: var(--white);
+  margin: 0 8px;
+  text-decoration: none;
+}
+
+footer hr {
+  background-color: var(--white);
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin: 24px 0;
+  opacity: 0.3;
+}
+
+footer span {
+  color: var(--white);
+}
+
+/* === SCROLL BAR === */
+::-webkit-scrollbar-thumb {
+  background-color: var(--blackLight);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 870px) {
+
+  main code,
+  main section div {
+    width: 100%;
+  }
+}
