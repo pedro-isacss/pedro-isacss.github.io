@@ -1,0 +1,159 @@
+@import "../../global.css";
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--black);
+}
+
+.clock-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 24px;
+  background-color: var(--black);
+}
+
+main {
+  position: relative;
+  width: 25vw;
+  height: 25vw;
+  min-height: 150px;
+  min-width: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  border: 8px solid var(--white);
+}
+
+.pointer {
+  height: 2%;
+  width: 10%;
+  background-color: var(--white);
+  position: absolute;
+}
+
+#pointer-12 {
+  top: 0;
+  height: 20%;
+  width: 2%;
+}
+
+#pointer-11 {
+  transform: rotate(-120deg) translate(452%)
+}
+
+#pointer-10 {
+  transform: rotate(-150deg) translate(452%)
+}
+
+#pointer-9 {
+  left: 0;
+  height: 2%;
+  width: 20%;
+}
+
+#pointer-8 {
+  transform: rotate(-210deg) translate(452%)
+}
+
+#pointer-7 {
+  transform: rotate(-240deg) translate(452%)
+}
+
+#pointer-6 {
+  bottom: 0;
+  height: 20%;
+  width: 2%;
+}
+
+#pointer-5 {
+  transform: rotate(-300deg) translate(452%)
+}
+
+#pointer-4 {
+  transform: rotate(-330deg) translate(452%)
+}
+
+#pointer-3 {
+  right: 0;
+  height: 2%;
+  width: 20%;
+}
+
+#pointer-2 {
+  transform: rotate(-30deg) translate(452%)
+}
+
+#pointer-1 {
+  transform: rotate(-60deg) translate(452%)
+}
+
+#point {
+  width: 5%;
+  height: 5%;
+  border-radius: 50%;
+  z-index: 100;
+}
+
+#hour {
+  height: 2%;
+  width: 20%;
+}
+
+#minute {
+  height: 2%;
+  width: 25%;
+}
+
+#second {
+  height: 1%;
+  width: 20%;
+}
+
+#digital-clock {
+  color: var(--white);
+  margin-top: 64px;
+  font-size: 24px;
+  font-weight: 800
+}
+
+/* === FOOTER === */
+footer {
+  padding: 56px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+footer div p {
+  color: var(--white);
+  text-align: center;
+}
+
+footer hr {
+  background-color: var(--white);
+  border: none;
+  height: 1px;
+  width: 100%;
+  margin: 24px 0;
+  opacity: 0.3;
+}
+
+footer span {
+  color: var(--white);
+}
+
+/* === SCROLL BAR === */
+::-webkit-scrollbar-thumb {
+  background-color: var(--blackLight);
+}
