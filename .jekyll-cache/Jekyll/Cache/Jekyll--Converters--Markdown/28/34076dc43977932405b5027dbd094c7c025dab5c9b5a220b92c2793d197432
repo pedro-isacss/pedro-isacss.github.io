@@ -1,0 +1,68 @@
+I"/<p>NPM (Node Package Manager) is an essential tool for anyone developing with JavaScript. So in this post I will list some useful commands when using NPM.</p>
+
+<h2 id="starting-a-project">Starting a project</h2>
+<p>We can start a project by running <code class="language-plaintext highlighter-rouge">npm init</code>.</p>
+
+<p>We can also do <code class="language-plaintext highlighter-rouge">npm init -y</code> if we want a default package.json.</p>
+
+<h2 id="searching-packages">Searching packages</h2>
+<p>You can fetch NPM packages in two ways. The first way is by directly accessing the <a href="https://www.npmjs.com/">NPM website</a>. The second way is using the NPM CLI:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre>npm search &lt;package&gt;
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="installing-packages">Installing packages</h2>
+<p>A very important NPM command is <strong>install</strong>. It allows us to add dependencies to our project.</p>
+
+<p>Some use cases:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+5
+6
+</pre></td> --><td class="rouge-code"><pre>npm <span class="nb">install</span>   <span class="c"># install the packages specified in package.json</span>
+npm <span class="nb">install </span>package   <span class="c"># install a package</span>
+npm <span class="nb">install </span>package@4.0.1   <span class="c"># install a specific version</span>
+npm <span class="nb">install </span>package@latest   <span class="c"># install the latest version</span>
+npm <span class="nb">install </span>package <span class="nt">-D</span>   <span class="c"># install as development dependency</span>
+npm <span class="nb">install</span> <span class="nt">-g</span> package   <span class="c"># install package globally</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="uninstalling-packages">Uninstalling packages</h2>
+<p>We can uninstall a package using <strong>uninstall</strong>:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre>npm uninstall package
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="updating-packages">Updating packages</h2>
+<p>We can update packages using <strong>update</strong>:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+</pre></td> --><td class="rouge-code"><pre>npm update // update packages
+npm update package // update a specific package
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<p>We can still list outdated packages by doing:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+</pre></td> --><td class="rouge-code"><pre>npm outdated
+</pre></td></tr></tbody></table></code></pre></div></div>
+
+<h2 id="other-useful-npm-commands">Other useful NPM commands</h2>
+<p>Some other commands that can be useful when we are working with NPM:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code><table class="rouge-table"><tbody><tr><!-- <td class="rouge-gutter gl"><pre class="lineno">1
+2
+3
+4
+</pre></td> --><td class="rouge-code"><pre>npm login   <span class="c"># log in</span>
+npm <span class="nb">logout</span>   <span class="c"># log out</span>
+npm <span class="nb">whoami</span>   <span class="c"># display logged in user</span>
+npm publish   <span class="c"># publish a package</span>
+</pre></td></tr></tbody></table></code></pre></div></div>
+:ET

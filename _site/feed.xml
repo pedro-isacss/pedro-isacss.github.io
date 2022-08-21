@@ -1,0 +1,105 @@
+
+
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>http://localhost:4000/</id>
+  <title>Pedro Isac</title>
+  <subtitle>Hello, my name is Pedro Isac. I work as a programmer and love to create new things. Welcome to my blog.</subtitle>
+  <updated>2022-08-21T19:22:13+08:00</updated>
+  <author>
+    <name>Pedro Isac</name>
+    <uri>http://localhost:4000/</uri>
+  </author>
+  <link rel="self" type="application/atom+xml" href="http://localhost:4000/feed.xml"/>
+  <link rel="alternate" type="text/html" hreflang="en"
+    href="http://localhost:4000/"/>
+  <generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator>
+  <rights> © 2022 Pedro Isac </rights>
+  <icon>//assets/img/favicons/favicon.ico</icon>
+  <logo>//assets/img/favicons/favicon-96x96.png</logo>
+
+
+  
+  <entry>
+    <title>Creating an analog clock with css and javascript</title>
+    <link href="http://localhost:4000/posts/creating-an-analog-clock-with-css-and-javascript/" rel="alternate" type="text/html" title="Creating an analog clock with css and javascript" />
+    <published>2022-03-21T11:33:00+08:00</published>
+  
+    <updated>2022-03-21T11:33:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/creating-an-analog-clock-with-css-and-javascript/</id>
+    <content src="http://localhost:4000/posts/creating-an-analog-clock-with-css-and-javascript/" />
+    <author>
+      <name>{"name"=>"Pedro Isac", "link"=>"https://github.com/pedro-isacss"}</name>
+    </author>
+
+  
+    
+    <category term="Mini projects" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      Hey guys. Some time ago I challenged myself to create an analog clock using html, css and javascript. In this post I will share my line of reasoning to arrive at the result
+
+Initial files
+
+First of all, I created three files: index.html, styles.css and scripts.js.
+
+The index.html will contain the skeleton of the analog clock, the styles.css the appearance and the scripts.js is what will make th...
+    </summary>
+  
+
+  </entry>
+
+  
+  <entry>
+    <title>Useful NPM commands</title>
+    <link href="http://localhost:4000/posts/useful-npm-commands/" rel="alternate" type="text/html" title="Useful NPM commands" />
+    <published>2022-02-19T11:33:00+08:00</published>
+  
+    <updated>2022-02-19T11:33:00+08:00</updated>
+  
+    <id>http://localhost:4000/posts/useful-npm-commands/</id>
+    <content src="http://localhost:4000/posts/useful-npm-commands/" />
+    <author>
+      <name>{"name"=>"Pedro Isac", "link"=>"https://github.com/pedro-isacss"}</name>
+    </author>
+
+  
+    
+    <category term="Lists" />
+    
+  
+
+  
+    <summary>
+      
+
+
+
+
+
+      NPM (Node Package Manager) is an essential tool for anyone developing with JavaScript. So in this post I will list some useful commands when using NPM.
+
+Starting a project
+We can start a project by running npm init.
+
+We can also do npm init -y if we want a default package.json.
+
+Searching packages
+You can fetch NPM packages in two ways. The first way is by directly accessing the NPM website. Th...
+    </summary>
+  
+
+  </entry>
+
+</feed>
+
+
