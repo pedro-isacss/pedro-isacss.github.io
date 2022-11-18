@@ -8,22 +8,22 @@
 html {
   @media (prefers-color-scheme: light) {
     &:not([data-mode]),
-    [data-mode=light] {
+    &[data-mode="light"] {
       @include light-syntax;
     }
 
-    &[data-mode=dark] {
+    &[data-mode="dark"] {
       @include dark-syntax;
     }
   }
 
   @media (prefers-color-scheme: dark) {
     &:not([data-mode]),
-    &[data-mode=dark] {
+    &[data-mode="dark"] {
       @include dark-syntax;
     }
 
-    &[data-mode=light] {
+    &[data-mode="light"] {
       @include light-syntax;
     }
   }
@@ -87,29 +87,27 @@ $code-radius: 6px;
     text-align: right;
     color: var(--highlight-lineno-color);
     -webkit-user-select: none;
-    -khtml-user-select: none;
     -moz-user-select: none;
-    -ms-user-select: none;
     -o-user-select: none;
     user-select: none;
   }
 
   /* set the dollar sign to non-selectable */
   .gp {
+    -webkit-user-select: none;
+    -moz-user-select: none;
     user-select: none;
   }
-
-} //.highlight
+} /* .highlight */
 
 code {
   -webkit-hyphens: none;
-  -ms-hyphens: none;
-  -moz-hyphens: none;
   hyphens: none;
 
   &.highlighter-rouge {
     font-size: $code-font-size;
     padding: 3px 5px;
+    word-break: break-word;
     border-radius: 4px;
     background-color: var(--inline-code-bg);
   }
@@ -122,7 +120,7 @@ code {
   }
 
   a > &.highlighter-rouge {
-    padding-bottom: 0; // show link's underlinke
+    padding-bottom: 0; /* show link's underlinke */
     color: inherit;
   }
 
@@ -142,23 +140,24 @@ code {
 td.rouge-code {
   @extend %code-snippet-padding;
 
-  // Prevent some browser extends from
-  // changing the URL string of code block.
+  /*
+    Prevent some browser extends from
+    changing the URL string of code block.
+  */
   a {
     color: inherit !important;
     border-bottom: none !important;
     pointer-events: none;
   }
-
 }
 
 /* Hide line numbers for default, console, and terminal code snippets */
 div {
-  &[class^='highlighter-rouge'],
+  &[class^="highlighter-rouge"],
+  &.nolineno,
   &.language-plaintext.highlighter-rouge,
   &.language-console.highlighter-rouge,
-  &.language-terminal.highlighter-rouge,
-  &.nolineno {
+  &.language-terminal.highlighter-rouge {
     pre.lineno {
       display: none;
     }
@@ -197,9 +196,9 @@ div {
       ($dot-size + $dot-margin) * 2 0 0 var(--code-header-muted-color);
   }
 
-  // the label block
+  /* the label block */
   span {
-    // label icon
+    /* label icon */
     i {
       font-size: 1rem;
       margin-right: 0.4rem;
@@ -212,10 +211,10 @@ div {
 
     @at-root [file] #{&} > i {
       position: relative;
-      top: 1px; // center the file icon
+      top: 1px; /* center the file icon */
     }
 
-    // label text
+    /* label text */
     &::after {
       content: attr(data-label-text);
       font-size: 0.85rem;
@@ -224,7 +223,7 @@ div {
     }
   }
 
-  // clipboard
+  /* clipboard */
   button {
     @extend %cursor-pointer;
 
@@ -249,6 +248,10 @@ div {
       }
     }
 
+    &:focus {
+      outline: none;
+    }
+
     &:not([timeout]):hover {
       background-color: rgba(128, 128, 128, 0.37);
 
@@ -256,18 +259,12 @@ div {
         color: white;
       }
     }
-
-    &:focus {
-      outline: none;
-    }
-
   }
-
 }
 
 @media all and (max-width: 576px) {
   .post-content {
-    > div[class^='language-'] {
+    > div[class^="language-"] {
       @include ml-mr(-1.25rem);
 
       border-radius: 0;

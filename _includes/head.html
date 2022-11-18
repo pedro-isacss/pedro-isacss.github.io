@@ -6,11 +6,6 @@
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Allow having a localized datetime different from the appearance language -->
-  {% if site.prefer_datetime_locale %}
-    <meta name="prefer-datetime-locale" content="{{ site.prefer_datetime_locale }}">
-  {% endif %}
-
   {% if page.layout == 'home' or page.layout == 'post' %}
 
     {% if site.google_analytics.pv.proxy_endpoint %}
@@ -23,7 +18,29 @@
 
   {% endif %}
 
-  {% seo title=false %}
+  {% capture seo_tags %}
+    {% seo title=false %}
+  {% endcapture %}
+
+  {% if page.image %}
+    {% assign img = page.image.path | default: page.image %}
+    {% assign img_path = page.img_path | append: '/' | append: img | replace: '//', '/' %}
+    {% capture target %}"{{ img | absolute_url }}"{% endcapture %}
+
+    {% if site.img_cdn contains '//' %}
+      <!-- it's a cross-origin URL -->
+      {% capture replacement %}"{{ site.img_cdn }}{{ img_path }}"{% endcapture %}
+    {% else %}
+      <!-- it's a local file path -->
+      {%- capture replacement -%}
+        "{{ site.img_cdn | append: '/' | append: img_path | replace: '//', '/' | absolute_url }}"
+      {%- endcapture -%}
+    {% endif %}
+
+    {% assign seo_tags = seo_tags | replace: target, replacement %}
+  {% endif %}
+
+  {{ seo_tags }}
 
   <title>
   {%- unless page.layout == "home" -%}
@@ -45,7 +62,7 @@
       <link rel="dns-prefetch" href="{{ cdn.url }}" {{ cdn.args }}>
     {% endfor %}
 
-    <link rel="stylesheet" href="{{ site.data.assets[origin].webfonts }}">
+    <link rel="stylesheet" href="{{ site.data.assets[origin].webfonts | relative_url }}">
 
   {% endif %}
 
@@ -67,24 +84,27 @@
   {% endif %}
 
   <!-- Bootstrap -->
-  <link rel="stylesheet" href="{{ site.data.assets[origin].bootstrap.css }}">
+  <link rel="stylesheet" href="{{ site.data.assets[origin].bootstrap.css | relative_url}}">
 
   <!-- Font Awesome -->
-  <link rel="stylesheet" href="{{ site.data.assets[origin].fontawesome.css }}">
+  <link rel="stylesheet" href="{{ site.data.assets[origin].fontawesome.css | relative_url }}">
 
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
   {% if site.toc and page.toc %}
-    <link rel="stylesheet" href="{{ site.data.assets[origin].bootstrap-toc.css }}">
+    <link rel="stylesheet" href="{{ site.data.assets[origin].bootstrap-toc.css | relative_url }}">
   {% endif %}
 
   {% if page.layout == 'page' or page.layout == 'post' %}
     <!-- Manific Popup -->
-    <link rel="stylesheet" href="{{ site.data.assets[origin].magnific-popup.css }}">
+    <link rel="stylesheet" href="{{ site.data.assets[origin].magnific-popup.css | relative_url }}">
   {% endif %}
 
   <!-- JavaScript -->
 
-  <script src="{{ site.data.assets[origin].jquery.js }}"></script>
+  <script src="{{ site.data.assets[origin].jquery.js | relative_url }}"></script>
 
+  {% unless site.theme_mode %}
+    {% include mode-toggle.html %}
+  {% endunless %}
 </head>

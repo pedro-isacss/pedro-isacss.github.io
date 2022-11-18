@@ -3,8 +3,6 @@ layout: page
 # The Home page layout
 ---
 
-{% include lang.html %}
-
 {% assign pinned = site.posts | where: "pin", "true" %}
 {% assign default = site.posts | where_exp: "item", "item.pin != true and item.hidden != true" %}
 
@@ -22,7 +20,6 @@ layout: page
 {% else %}
   {% assign pinned_num = 0 %}
 {% endif %}
-
 
 <!-- Get default posts -->
 
@@ -58,15 +55,11 @@ layout: page
     </div>
 
     <div class="post-meta text-muted d-flex">
-
       <div class="mr-auto">
+
         <!-- posted date -->
         <i class="far fa-calendar fa-fw"></i>
-        {% include timeago.html date=post.date tooltip=true capitalize=true %}
-
-        <!-- time to read -->
-        <i class="far fa-clock fa-fw"></i>
-        {% include read-time.html content=post.content %}
+        {% include datetime.html date=post.date %}
 
         <!-- categories -->
         {% if post.categories.size > 0 %}
@@ -78,12 +71,13 @@ layout: page
           {% endfor %}
           </span>
         {% endif %}
+
       </div>
 
       {% if post.pin %}
       <div class="pin">
         <i class="fas fa-thumbtack fa-fw"></i>
-        <span>{{ site.data.locales[lang].post.pin_prompt }}</span>
+        <span>{{ site.data.locales[site.lang].post.pin_prompt }}</span>
       </div>
       {% endif %}
 

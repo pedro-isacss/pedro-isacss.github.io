@@ -9,10 +9,11 @@
   we suround the markdown table with `<div class="table-wrapper">` and `</div>`
 -->
 
-{% if _content contains '<table>' %}
+{% if _content contains '<table' %}
   {% assign _content = _content
-    | replace: '<table>', '<div class="table-wrapper"><table>'
+    | replace: '<table', '<div class="table-wrapper"><table'
     | replace: '</table>', '</table></div>'
+    | replace: '<code><div class="table-wrapper">', '<code>'
     | replace: '</table></div></code>', '</table></code>'
   %}
 {% endif %}
@@ -30,11 +31,15 @@
   %}
 {% endif %}
 
-<!-- Add attribute 'hide-bullet' to the checkbox list -->
-
-{% if _content contains '<li class="task-list-item"><' %}
+<!-- Change the icon of checkbox -->
+{% if _content contains '<input type="checkbox"' %}
   {% assign _content = _content
-    | replace: '"task-list-item"><', '"task-list-item" hide-bullet><'
+    | replace:
+        '<input type="checkbox" class="task-list-item-checkbox" disabled="disabled" checked="checked" />',
+        '<i class="fas fa-check-circle fa-fw checked"></i>'
+    | replace:
+        '<input type="checkbox" class="task-list-item-checkbox" disabled="disabled" />',
+        '<i class="far fa-circle fa-fw"></i>'
   %}
 {% endif %}
 
@@ -91,20 +96,18 @@
 
         <!-- Add CDN URL -->
         {% if site.img_cdn %}
-          {% assign _src_prefix = site.img_cdn %}
+          {% if site.img_cdn contains '//' %}
+            {% assign _src_prefix = site.img_cdn %}
+          {% else %}
+            {% assign _src_prefix = site.img_cdn | relative_url %}
+          {% endif %}
         {% else %}
           {% assign _src_prefix = site.baseurl %}
         {% endif %}
 
         <!-- Add image path -->
         {% if page.img_path %}
-          {% assign _path = page.img_path %}
-          {% assign last_char = _path | slice: -1 %}
-
-          {% unless last_char == '/' %}
-            {% assign _path = _path | append: '/' %}
-          {% endunless %}
-
+          {% assign _path = page.img_path | append: '/' | replace: '//', '/' %}
           {% assign _src_prefix = _src_prefix | append: _path %}
         {% endif %}
 
@@ -172,7 +175,7 @@
           | append: '<div class="code-header">'
           | append: _label
           | append: '<button aria-label="copy" data-title-succeed="'
-          | append: site.data.locales[lang].post.button.copy_code.succeed
+          | append: site.data.locales[site.lang].post.button.copy_code.succeed
           | append: '"><i class="far fa-clipboard"></i></button></div>'
           | append: '<div class="highlight"><code>'
       %}
@@ -205,15 +208,14 @@
       {% endif %}
 
       {% assign id = snippet | split: '"' | first %}
-      {% capture anchor %} <a href="#{{ id }}" class="anchor"><i class="fas fa-hashtag"></i></a>{% endcapture %}
+      {% capture anchor %}<a href="#{{ id }}" class="anchor text-muted"><i class="fas fa-hashtag"></i></a>{% endcapture %}
 
       {% assign left = snippet | split: mark_end | first %}
-      {% assign _start_index = left | size %}
-      {% assign _end_index = snippet | size | minus: 1 %}
-      {% assign right = snippet | slice: _start_index, _end_index %}
+      {% assign right = snippet | slice: left.size, snippet.size %}
+      {% assign left = left | replace_first: '">', '"><span class="mr-2">' | append: '</span>' %}
 
       {% assign _new_content = _new_content | append: mark_start
-          | append: left | append: anchor | append: mark_end | append: right
+          | append: left | append: anchor | append: right
       %}
 
     {% endfor %}

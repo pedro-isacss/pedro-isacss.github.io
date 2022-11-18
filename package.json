@@ -1,13 +1,10 @@
 {
   "name": "jekyll-theme-chirpy",
-  "version": "5.0.2",
+  "version": "5.3.1",
   "description": "A minimal, responsive, and powerful Jekyll theme for presenting professional writing.",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/cotes2020/jekyll-theme-chirpy.git"
-  },
-  "scripts": {
-    "start": "bundle exec jekyll serve --livereload --watch"
   },
   "author": "Cotes Chung",
   "license": "MIT",
@@ -15,12 +12,19 @@
     "url": "https://github.com/cotes2020/jekyll-theme-chirpy/issues"
   },
   "homepage": "https://github.com/cotes2020/jekyll-theme-chirpy#readme",
-  "dependencies": {
+  "scripts": {
+    "test": "npx stylelint _sass/**/*.scss",
+    "fixlint": "npx stylelint _sass/**/*.scss --fix",
+    "start": "bundle exec jekyll serve --livereload --watch"
+  },
+  "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-concat": "^2.6.1",
     "gulp-insert": "^0.5.0",
     "gulp-rename": "^2.0.0",
     "gulp-uglify": "^3.0.2",
+    "stylelint": "^14.14.0",
+    "stylelint-config-standard-scss": "^5.0.0",
     "uglify-js": "^3.14.3"
   }
 }

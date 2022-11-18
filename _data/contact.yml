@@ -3,9 +3,9 @@
 -
   type: github
   icon: 'fab fa-github'
-# -
-#   type: twitter
-#   icon: 'fab fa-twitter'
+-
+  type: twitter
+  icon: 'fab fa-twitter'
 -
   type: email
   icon: 'fas fa-envelope'
@@ -15,6 +15,7 @@
   icon: 'fas fa-rss'
   noblank: true
 
+# Uncomment and complete the url below to enable more contact options
 # -
 #   type: mastodon
 #   icon: 'fab fa-mastodon'   # icons powered by <https://fontawesome.com/>
