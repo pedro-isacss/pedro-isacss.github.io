@@ -4,7 +4,7 @@ author:
   name: Pedro Isac
   link: https://github.com/pedro-isacss
 date: 2022-03-21 11:33:00 +0800
-categories: [Mini projects]
+categories: [Tutorials]
 tags: [html, css, javascript, analog clock, mini project]
 math: true
 mermaid: true

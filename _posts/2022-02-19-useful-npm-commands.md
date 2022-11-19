@@ -4,7 +4,7 @@ author:
   name: Pedro Isac
   link: https://github.com/pedro-isacss
 date: 2022-02-19 11:33:00 +0800
-categories: [Lists]
+categories: [CLIs]
 tags: [npm, nodejs]
 math: true
 mermaid: true
