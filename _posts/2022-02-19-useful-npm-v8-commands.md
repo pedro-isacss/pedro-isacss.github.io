@@ -1,5 +1,5 @@
 ---
-title: Useful NPM (v8) commands
+title: Useful NPM v8 commands
 by:
   name: Pedro Isac
   link: https://github.com/pedro-isacss
