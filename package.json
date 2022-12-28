@@ -15,7 +15,8 @@
   "scripts": {
     "test": "npx stylelint _sass/**/*.scss",
     "fixlint": "npx stylelint _sass/**/*.scss --fix",
-    "start": "bundle exec jekyll serve --livereload --watch"
+    "start": "bundle exec jekyll serve --livereload --watch",
+    "build": "JEKYLL_ENV=production bundle exec jekyll b -d 'docs'"
   },
   "devDependencies": {
     "gulp": "^4.0.2",
