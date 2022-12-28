@@ -1,11 +1,11 @@
 ---
-title: Useful NPM commands
-author:
+title: Useful NPM (v8) commands
+by:
   name: Pedro Isac
   link: https://github.com/pedro-isacss
 date: 2022-02-19 11:33:00 +0800
-categories: [CLIs]
-tags: [npm, nodejs]
+categories: [Programming]
+tags: [npm]
 math: true
 mermaid: true
 ---
