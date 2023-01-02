@@ -129,7 +129,7 @@ if playAgain == "1":
 **NOTE:** the **play** function is a recursive function, that is, it is a function that calls itself.
 
 ## Starting the game
-Por fim, chame a função **play** para que o jogo seja iniciado assim que o arquivo for executado:
+Finally, call the **play** function so that the game starts as soon as the file is executed:
 
 ```python
 play()
