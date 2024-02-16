@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Cabin:wght@400;500;700&family=Open+Sans&family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+
+:root {
+    --black: #1E1E24;
+    --red: ##92140C;
+    --white: #FFF8F0;
+    --primary: #FFCF99;
+    --primary-strong: #fcb15d;
+    --primary-light: #e6bd8f;
+    --blue: #111D4A;
+    --gradient: linear-gradient(to right, #1c1c1d, #161618);
+    --gradient-primary: linear-gradient(to right, var(--primary), var(--primary-strong));
+}
+
+* {
+    font-family: "Roboto Mono", monospace;
+    font-optical-sizing: auto;
+    font-style: normal;
+    line-height: 1.5;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+}
+
+.button {
+    background: var(--gradient-primary);
+    color: var(--black);
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 12px rgba(0, 0, 0, 0.3);
+    transition: box-shadow 0.6s ease-in;
+}
+
+.button:hover {
+    box-shadow: 2px 2px 12px rgba(70, 70, 70, 0.6);
+    transition: box-shadow 0.6s ease-in;
+}
+
+h2 {
+    font-size: 2rem;
+}

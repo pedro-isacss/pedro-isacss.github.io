@@ -1,0 +1,165 @@
+@import "../index.css";
+
+/* === PRESENTATION === */
+.section.presentation {
+    background: url("../images/background-noise.png"), var(--black);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: var(--white);
+    animation: background-presentation 40s linear 0s infinite;
+    padding: 32px;
+}
+
+@keyframes background-presentation {
+    0% {
+        background-position: center;
+    } 50% {
+        background-position: left bottom;
+    } 100% {
+        background-position: center;
+    }
+}
+
+.section.presentation .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.section.presentation .content h1 {
+    font-weight: 700;
+    font-size: 4em;
+    text-align: center;
+    text-shadow: 4px 4px 16px rgba(0, 0, 0, 0.4);
+    letter-spacing: 8px;
+}
+
+.section.presentation .content p {
+    width: 702px;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 12px;
+}
+
+.section.presentation .content .social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    margin-top: 24px;
+}
+
+.section.presentation .content .social a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 24px;
+}
+
+/* === OPEN SOURCE */
+.section.open-source {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--gradient);
+    color: var(--white);
+    padding: 32px;
+    margin: auto;
+}
+
+.section.open-source .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.section.open-source .content .left {
+    flex: 1;
+}
+
+.section.open-source .content .left h2 {
+    color: var(--primary);
+    margin-bottom: 24px;
+}
+
+.section.open-source .content .left a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    width: 100%;
+    max-width: 120px;
+    margin-top: 40px;
+}
+
+.section.open-source .content .right {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+
+.section.open-source .content .right a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: var(--black);
+    width: 100%;
+    max-width: 502px;
+    padding: 32px;
+    border-radius: 8px;
+    color: var(--white);
+    text-decoration: none;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.4);
+    transition: box-shadow 0.6s ease-in;
+}
+
+.section.open-source .content .right a:hover {
+    transition: box-shadow 0.6s ease-in;
+    box-shadow: 4px 4px 18px rgba(0, 0, 0, 0.7);
+}
+
+.section.open-source .content .right a div span {
+    margin-top: 12px;
+    font-size: 0.8em;
+}
+
+.section.open-source .content .right img {
+    max-width: 24px;
+}
+
+@media (max-width: 760px) {
+    .section.open-source .content {
+        flex-direction: column;
+    }
+
+    .section.open-source .content .left {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .section.open-source .content .left h2 {
+        text-align: center;
+    }
+
+    .section.open-source .content .left p {
+        text-align: center;
+        display: none;
+    }
+
+    .section.open-source .content .left a {
+        margin: 0;
+    }
+}
