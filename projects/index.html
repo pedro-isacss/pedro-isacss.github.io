@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords"
+        content="programming, front-end devoloper, back-end developer, full-stack developer, jpage, canime, iicons, pedro santana, developer">
+    <meta name="description"
+        content="Hello, my name is Pedro Santana. I work as a programmer and love to create new things. This time I created a digital clock using JavaScript, HTML and CSS">
+
+    <!-- === Google tag (gtag.js) === -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-ZZ7PR99E20"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-ZZ7PR99E20');
+    </script>
+    <!-- ====== -->
+
+    <title>Pedro Santana | Analog Clock</title>
+    <link rel="stylesheet" href="./index.css">
+</head>
+
+<body>
+    <div class="clock-container">
+        <!-- === CLOCK === -->
+        <main>
+            <canvas class="pointer" id="pointer-12"></canvas>
+            <canvas class="pointer" id="pointer-1"></canvas>
+            <canvas class="pointer" id="pointer-2"></canvas>
+            <canvas class="pointer" id="pointer-3"></canvas>
+            <canvas class="pointer" id="pointer-4"></canvas>
+            <canvas class="pointer" id="pointer-5"></canvas>
+            <canvas class="pointer" id="pointer-6"></canvas>
+            <canvas class="pointer" id="pointer-7"></canvas>
+            <canvas class="pointer" id="pointer-8"></canvas>
+            <canvas class="pointer" id="pointer-9"></canvas>
+            <canvas class="pointer" id="pointer-10"></canvas>
+            <canvas class="pointer" id="pointer-11"></canvas>
+            <canvas class="pointer" id="point"></canvas>
+            <canvas class="pointer" id="hour"></canvas>
+            <canvas class="pointer" id="minute"></canvas>
+            <canvas class="pointer" id="second"></canvas>
+        </main>
+
+        <!-- === DIGITAL CLOCK === -->
+        <div>
+            <p id="digital-clock"></p>
+        </div>
+
+        <!-- === GITHUB === -->
+        <a href="https://github.com/pedro-isacss/analog-clock" class="link-btn">GitHub</a>
+    </div>
+
+    <!-- === FOOTER === -->
+    <footer>
+        <div>
+            <p>An analog clock made with HTML, CSS and JavaScript developed just for fun :)</p>
+        </div>
+        <hr>
+        <span>&copy; <span id="year"></span> Pedro Santana</span>
+    </footer>
+
+    <!-- === SCRIPTS === -->
+    <script src="./index.js"></script>
+</body>
+
+</html>
